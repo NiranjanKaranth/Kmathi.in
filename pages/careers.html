@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+            color: rgba(0, 0, 0, 0.9);
+
+        }
+
+        h1 {
+            font-size: 40px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 115%;
+
+        }
+
+        .p-career {
+            text-align: justify;
+            /* width: 81%; */
+            width: 67%;
+        }
+
+        ul {
+            font-size: 14px;
+        }
+
+        li {
+            font-size: 14px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        .ul-list {
+            padding-left: 16px;
+        }
+
+        .careers-banner {
+            width: 100%;
+            height: 427px;
+            background: url(../resources/careers_banner.png);
+            margin-top: 83px;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+
+
+        .careers-heading {
+            position: absolute;
+            left: 8.5%;
+            top: 25%;
+        }
+
+        .careers-main {
+            padding: 0px 31% 0px 9%;
+            position: absolute;
+            top: 32%;
+            margin-top: 30px;
+        }
+
+        .we-are-looking {
+            font-weight: 700;
+            margin-top: 30px;
+            margin-bottom: 12px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc6c6;
+            font-size: 14px;
+            text-align: center;
+            padding: 0px;
+        }
+
+        th {
+            background-color: #ECE8E7;
+            font-weight: normal;
+
+        }
+
+        .apply-now-p {
+            padding-left: 0;
+        }
+
+        .role {
+
+            text-align: left;
+            padding-left: 10px;
+
+        }
+
+        .experience-1 {
+            width: 113px;
+        }
+
+        .position-1 {
+            width: 103px;
+        }
+
+        .type-1 {
+            width: 103px;
+        }
+
+        .joining-1 {
+            width: 166px;
+        }
+
+        .location-1 {
+            width: 90px;
+        }
+
+        .experience-2 {
+            width: 114px;
+        }
+
+        .position-2 {
+            width: 103px
+        }
+
+        .type-2 {
+            width: 103px;
+        }
+
+        .joining-2 {
+            width: 165px;
+        }
+
+        .location-2 {
+            width: 91px;
+        }
+
+        .full-stack {
+            text-align: left;
+            padding: 15px 10px;
+            color: #5C3284;
+            font-weight: 700;
+            background-color: #ECE8E7;
+            width: 196px;
+
+        }
+
+        .software {
+            text-align: left;
+            padding: 15px 10px;
+            color: #5C3284;
+            font-weight: 700;
+            background-color: #ECE8E7;
+            width: 195px;
+        }
+
+        .apply-now-p {
+            color: rgba(255, 255, 255, 0.9);
+            background-color: #FC611F;
+            width: 125px;
+            padding: 2px 7px;
+            margin-top: 10px;
+
+        }
+
+        .arrow {
+            width: 35%;
+            margin-left: 20px;
+        }
+
+        .role2-div {
+            width: 385px;
+            border: 1px solid gray;
+            padding: 10px;
+            /* margin-right: 10px; */
+        }
+
+        .whole-div {
+            display: flex;
+        }
+
+        /* media query  1600px*/
+
+        @media only screen and (min-width: 1367px) and (max-width: 1600px) {
+            .careers-banner {
+                background-size: 100% 100%;
+                height: 357px;
+            }
+
+            .careers-heading {
+                top: 28%;
+            }
+
+            .careers-main {
+                padding: 0px 31% 0px 9%;
+                position: absolute;
+                top: 35%;
+                margin-top: 30px;
+            }
+
+            .p-career {
+                width: 69%;
+            }
+        }
+
+        @media only screen and (min-width: 1025px) and (max-width: 1280px) {
+            .careers-banner {
+                background-size: 100% 100%;
+                height: 289px;
+            }
+
+            .careers-heading {
+
+                top: 31%;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            .careers-main {
+
+                top: 32%;
+
+            }
+
+
+            .p-career {
+
+                margin-top: 10px;
+            }
+
+            .we-are-looking {
+
+                margin-top: 20px;
+
+            }
+
+            .full-stack {
+                width: 210px;
+            }
+
+            .software {
+                width: 206px;
+
+            }
+
+            .experience-2 {
+                width: 116px;
+            }
+
+            .position-2 {
+                width: 106px;
+            }
+
+            .type-2 {
+                width: 103px;
+            }
+
+            .joining-2 {
+                width: 162px;
+            }
+
+            .location-2 {
+                width: 91px;
+            }
+        }
+
+        @media only screen and (max-width: 1366px) and (min-width: 1281px) {
+            .careers-banner {
+                background-size: 100% 100%;
+                height: 304px;
+            }
+
+            .careers-heading {
+                top: 31%;
+
+            }
+
+            h1 {
+                font-size: 28px;
+
+            }
+
+
+            .careers-main {
+
+                top: 34%;
+
+            }
+
+            .we-are-looking {
+
+                margin-bottom: 18px;
+            }
+        }
+
+        @media only screen and (max-width: 1000px) and (min-width: 1024px) {
+            .careers-banner {
+                height: 230px;
+            }
+
+            .careers-heading {
+                top: 26.5%;
+            }
+
+            h1 {
+                font-size: 26.5px;
+                color: rgba(255, 255, 255, 0.9);
+            }
+
+            .careers-main {
+                top: 52%;
+            }
+        }
+
+        /* mobile devices */
+        @media only screen and (min-width:320px) and (max-width:992px) {
+            .careers-banner {
+                width: 56em;
+                height: 221px;
+            }
+
+            .carousel-nav{
+                display: contents;
+            }
+
+            .carousel-nav a {
+                font-size: 0.75rem !important;
+                margin-left: 6px;
+            }
+
+            .p-career {
+                width: 55%;
+            }
+
+            .careers-heading {
+                font-size: 20px;
+                top: 30%;
+            }
+
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <!-- Navbar -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top " style="top: 27px;">
+        <a class="navbar-brand ml-5 mt-n4" href="../index.html"><img class="logo" src="../resources/logo.png" alt=""
+                loading="lazy"></a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="top-nav bg-light">
+            <ul class="d-flex justify-content-end top-nav-buttons ">
+
+                <li class=" nav-item" style="border-right: none">
+                    <a class="" href="./csr.html">CSR
+                        <img src="../resources/navbar_arrow.png" class="nav-arrow"></a>
+                </li>
+                <li class="nav-item" style="border-right: none">
+                    <a class="" href="./careers.html">Careers
+                        <img src="../resources/navbar_arrow.png" class="nav-arrow"></a>
+                </li>
+                <li class="nav-item" style="border-right: none">
+                    <a class="" href="./contact.html">Contact
+                        <img src="../resources/navbar_arrow.png" class="nav-arrow"></a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar  ml-auto display-list-mob">
+                <li class="nav-item home-icon-li "><a href="../index.html" class=" "><img class="home-icon-img"
+                            src="../resources/Home icon.png" alt=""></a></li>
+
+                <li class="nav-item dropdown" style="color: black !important;">
+                    <a class=" nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                        style="color: black !important; font-size: 16px; ">
+                        Industry
+                        Solutions
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                        <a class=" dropdown-item " href=" ./healthcare.html"
+                            style="color: black !important; font-size: 16px; ">Healthcare</a>
+                        <a class="dropdown-item" href="./retail.html"
+                            style="color: black !important; font-size: 16px; ">Retail</a>
+
+                        <a class="dropdown-item" href="./automotive.html"
+                            style="color: black !important; font-size: 16px; ">Automotive</a>
+                        <a class="dropdown-item" href="./financial_services.html"
+                            style="color: black !important; font-size: 16px; ">Financial Services</a>
+                    </div>
+                </li>
+
+
+                <li class="nav-item">
+                    <a href="./Services.html" class=" nav-link"
+                        style="color: black !important; font-size: 16px; ">Services</a>
+                </li>
+                <li class="nav-item border-0">
+                    <a href="./AboutKushagramati.html" class=" nav-link"
+                        style="color: black !important; font-size: 16px; ">About Us</a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+    <!-- Navbar Ends -->
+    <!-- <div class="navbar-bottom-right">
+        <a href="./leadership.html">Leadership</a>
+        <a href="#">Partners</a>
+        <a href="./values.html">Values</a>
+        <a href="./vision_and_mission.html">Vision and Mission</a>
+        <a href="#" style="border: none;">Awards</a>
+        </div> -->
+
+    <!-- cover image -->
+    <div class="careers-banner">
+        <div class="carousel-nav text-light mt-1 row">
+            <a href="./leadership.html">LEADERSHIP</a>
+            <a href="./partners.html">PARTNERS</a>
+            <a href="#">AWARDS</a>
+            <a href="./values.html">VALUES</a>
+            <a href="./vision_and_mission.html">VISION & MISSION</a>
+            <a href="./blog_main.html" class="border-0">USE CASES</a>
+        </div>
+        <h1 class="careers-heading">CAREERS</h1>
+    </div>
+
+    <div class="careers-main">
+        <p class="p-career">
+            Kushagramati Analytics is an environment that fosters innovation and empowers our employees to bring out the
+            best
+            of their abilities. We believe in the highest order of business ethics and encourage a value based mutually
+            beneficial relationship amongst all our stakeholders. At Kushagramati, your opportunities to learn and grow
+            are
+            boundless and we’re looking for talented individuals to take that journey with us.</p>
+        <p class="we-are-looking">We are looking for the following:</p>
+        <div class="role1-div">
+            <table class="role1">
+                <tr>
+                    <th class="role">ROLE</th>
+                    <th>EXPERIENCE</th>
+                    <th>POSITION(S)</th>
+                    <th>TYPE</th>
+                    <th>EXPECTED TO JOIN</th>
+                    <th>LOCATION</th>
+                </tr>
+                <tr>
+                    <td class="full-stack">Project Manager</td>
+                    <td class="experience-1">3-5 years</td>
+                    <td class="position-1">2</td>
+                    <td class="type-1">Full Time</td>
+                    <td class="joining-1">Immediate</td>
+                    <td class="location-1">Bangalore</td>
+                </tr>
+            </table>
+            <!-- <a class="apply-now-a" href="mailto:sales@kmati.in">
+                <p class="apply-now-p">APPLY
+                    <img src="../resources/Arrow.png" class="arrow">
+                </p>
+            </a> -->
+        </div>
+
+        <p class="p-career" style="margin-top: 1em;">We are looking for committed, passionate and hardworking Project
+            Managers with experience working on Big Data and SaaS projects. This position requires well-rounded
+            individuals who focus on details, thrive in a fast-paced environment, know how to cultivate collaborative
+            working relationships, can communicate effectively to executives and drive projects to completion.</p>
+
+        <p class="we-are-looking">Who you are</p>
+        <div class="whole-div">
+            <div class="role2-div">
+                <p style="font-weight: 600;">Key requirements of the role are as follows:</p>
+                <ul class="ul-list">
+                    <li>Experience delivering, and successfully closing projects</li>
+                    <li>Successful track record of delivering projects on time and on budget</li>
+                    <li>Successful track record of delivery success rate of > 95% with a project margin >50%</li>
+                    <li>Ability to run and monitor multiple projects simultaneously</li>
+                    <li>Formal approach to project execution (has applied a methodology) from "interest to invoice"</li>
+                    <li>Customer savvy and sales friendly</li>
+                    <li>Be seen as a leader on the team and projects</li>
+                    <li>Ability to anticipate and get ahead of potential problems is key</li>
+                </ul>
+            </div>
+            <div class="role2-div">
+                <p style="font-weight: 600;">Additional soft skills we are looking for:</p>
+                <ul class="ul-list">
+                    <li>Professional and Confident presence</li>
+                    <li>Polished, collaborative and consultative demeanor</li>
+                    <li>Ability to be firm when required</li>
+                    <li>Good presentation and facilitation skills</li>
+                    <li>Takes pride in delivering customer success, without compromising project-financial goals</li>
+                    <li>Desire to learn new technologies and willingness to understand the business problems customers
+                        are
+                        trying to solve</li>
+                </ul>
+            </div>
+        </div>
+        <p class="we-are-looking" style="font-weight: 600;">What you will do</p>
+        <div class="whole-div">
+            <div class="role2-div">
+                <p style="font-weight: 600;">Project/Program Management</p>
+                <ul class="ul-list">
+                    <li>Take ownership of all commercial delivery of services from a project administration and director
+                        perspective across numerous concurrent projects</li>
+                    <li>Capable of overseeing multiple concurrent projects and modifying management
+                        approaches depending on project size and duration</li>
+                    <li>Projects may range from a single individual for 2-3 weeks to 6 month engagements of multi-person
+                        teams
+                    </li>
+                    <li>Execute and enforce Project reporting and milestone tracking</li>
+                    <li>Work closely with the account management teams to manage handover from sales to delivery team
+                    </li>
+                    <li>Work closely with the account management team to ensure accurate reporting on projects and
+                        keeping all
+                        relevant parties up to date with project activity and success</li>
+                    <li>Manages scope and mitigates risk across projects.</li>
+                </ul>
+            </div>
+            <div class="role2-div">
+                <p style="font-weight: 600;">Practice Accounting</p>
+                <ul class="ul-list">
+                    <li>Take ownership of margin and revenue targets for projects</li>
+                    <li>Timely billing, timesheet approval</li>
+                    <li>Determine appropriate revenue recognition, ensures accurate invoicing, and monitor
+                        receivables for all
+                        projects under his/her direction.</li>
+                    <li>Manages to and achieves revenue goals set for projects</li>
+                    <li>Accurately forecasts revenue, profitability, margins, bill rates and utilization across projects
+                    </li>
+                    <li>Sets expectations upward regarding revenue and profitability projection.</li>
+                </ul>
+            </div>
+        </div>
+
+        <p class="p-career" style="margin-top: 1em;">
+            Are you passionate about this opportunity, but worried that you don’t have 100% of the experience we’re
+            looking for? We still want to hear from you! Apply online and let us know why you would make a great
+            addition to the Kushagramati team.</p>
+        <!-- <div class="role1-div">
+            <table class="role1">
+                <tr class=" " style="display: none;">
+                    <th class="role">ROLE</th>
+                    <th>EXPERIENCE</th>
+                    <th>POSITION(S)</th>
+                    <th>TYPE</th>
+                    <th>EXPECTED TO JOIN</th>
+                    <th>LOCATION</th>
+                </tr>
+                <tr class="tr">
+                    <td class="software">Software Developer</td>
+                    <td class="experience-2">1-2 years</td>
+                    <td class="position-2">4</td>
+                    <td class="type-2">Full Time</td>
+                    <td class="joining-2">Immediate</td>
+                    <td class="location-2">Bangalore</td>
+                </tr>
+            </table>
+            <a class="apply-now-a" href="mailto:sales@kmati.in">
+                <p class="apply-now-p">APPLY
+                    <img src="../resources/Arrow.png" class="arrow">
+                </p>
+            </a>
+        </div> -->
+
+        <!-- <div class="role1-div">
+            <table class="role1">
+            
+                <tr>
+                    <td class="full-stack">Data Engineer / 
+                        Data Scientist
+                    </td>
+                    <td class="experience-1">2-3 years</td>
+                    <td class="position-1">1-2</td>
+                    <td class="type-1">Full Time</td>
+                    <td class="joining-1">Immediate</td>
+                    <td class="location-1">Bangalore</td>
+                </tr>
+            </table>
+            <a class="apply-now-a" href="mailto:sales@kmati.in">
+                <p class="apply-now-p">APPLY
+                    <img src="../resources/Arrow.png" class="arrow">
+                </p>
+            </a>
+        </div> -->
+
+
+        <!-- <div class="role2-div">
+      <table class="role2">
+        <tr>
+          <th>ROLE</th>
+          <th>EXPERIENCE</th>
+          <th>POSITION(S)</th>
+          <th>TYPE</th>
+          <th>EXPECTED TO JOIN</th>
+          <th>LOCATION</th>
+        </tr>
+
+
+        <tr>
+          <td>Software Developer</td>
+          <td>1-2 years</td>
+          <td>4</td>
+          <td>Full Time</td>
+          <td>Immediate</td>
+          <td>Bangalore</td>
+        </tr>
+
+      </table>
+      <a href="">
+        <p>APPLY</p>
+      </a>
+    </div> -->
+
+    </div>
+    <!-- footer -->
+
+    </div>
+
+</body>
+
+</html>

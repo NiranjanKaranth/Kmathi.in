@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+            /* color: rgba(255, 255, 255, 0.9); */
+
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 115%;
+            margin-bottom: 40px;
+        }
+
+        ul {
+            font-size: 14px;
+        }
+
+        li {
+            font-size: 14px;
+        }
+
+        .vission-banner {
+            width: 100%;
+            height: 427px;
+            background: url(../resources/blog_cover.png);
+            margin-top: 69px;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            margin-top: 83px;
+        }
+
+        .vission-main-img {
+            width: 1027px;
+            height: 530px;
+            background: url(../resources/vision_mission_main.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            margin-left: 63px;
+            margin-top: -213px;
+        }
+
+        .vission-heading {
+            position: absolute;
+            left: 8.5%;
+            top: 25%;
+        }
+
+        /* Blog css */
+        .blog-content {
+            padding: 0px 0px 0px 8.5%;
+            width: 1010px;
+            margin-top: -200px;
+        }
+
+        .blog-heading {
+            color: #5d318a;
+            letter-spacing: 7px;
+            font-size: 17px;
+            margin-top: 69px;
+        }
+
+        .blog-title {
+            margin: 20px 0 20px 0;
+            font-size: 30px;
+            color: rgba(0, 0, 0, 0.9);
+        }
+
+        .gray-bg {
+            background-color: #F2F2F2;
+            padding: 20px;
+            color: rgba(0, 0, 0, 0.8);
+            font-size: 17px;
+        }
+
+        .blog-image-div img {
+            width: 70%;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .gray-text {
+            color: #757575;
+            margin: 15px 0px 40px 0px;
+            font-size: 14px;
+
+        }
+
+        .rishan-img {
+            width: 130px;
+        }
+
+        .blog-author-div {
+            width: 60%;
+        }
+
+        .author-details {
+            margin-right: 30px;
+        }
+
+        .author-details p {
+            margin-top: 15px;
+            margin-bottom: 0;
+        }
+
+        .author-line {
+            background-color: #5d318a;
+            height: 1px;
+            margin: 0;
+        }
+
+        .blog-comment {
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        .blog-comment textarea {
+            display: block;
+            width: 60%;
+            height: 150px;
+            padding: 10px 20px;
+        }
+
+        #submit-comment {
+            background-color: #FF4500;
+            color: rgba(255, 255, 255, 0.9);
+            border: none;
+            border-radius: 5px;
+            padding: 5px 20px;
+            margin-top: 10px;
+        }
+
+
+        /* Blog css ends*/
+
+
+        /* Media Query */
+        @media only screen and (min-width: 1367px) and (max-width: 1600px) {
+            h1 {
+                font-size: 33px;
+            }
+
+            .blog-content {
+                width: 750px;
+                margin-top: -170px;
+            }
+
+            .blog-author-div {
+                width: 80%;
+            }
+
+            .vission-banner {
+                height: 360px;
+            }
+
+            .vission-main-img {
+                width: 900px;
+                background-size: 900px 464px;
+                margin-top: -179px;
+                height: 464px;
+            }
+
+            .vission-heading {
+                top: 28%;
+
+            }
+        }
+
+        @media only screen and (min-width: 1281px) and (max-width: 1366px) {
+            .vission-banner {
+                height: 307px;
+            }
+
+            .vission-main-img {
+                width: 720px;
+                background-size: 720px 371px;
+                margin-top: -153px;
+                margin-left: 58px;
+                height: 371px;
+            }
+
+            .vission-heading {
+                top: 31%;
+
+                font-size: 28px;
+            }
+
+            .blog-content {
+                width: 700px;
+                margin-top: -140px;
+            }
+
+            .blog-author-div {
+                width: 80%;
+            }
+        }
+
+        @media only screen and (min-width: 1025px) and (max-width: 1280px) {
+            .vission-banner {
+                height: 288px;
+            }
+
+            .vission-main-img {
+                margin-left: 47px;
+                margin-top: -144px;
+                background-size: 715px 369px;
+                height: 369px;
+                width: 715px;
+            }
+
+            .vission-heading {
+                top: 29%;
+
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            .blog-content {
+
+                width: 650px;
+                margin-top: -130px;
+            }
+
+            .blog-author-div {
+                width: 80%;
+            }
+        }
+
+        @media only screen and (min-width: 1000px) and (max-width: 1024px) {
+            .vission-banner {
+                height: 230px;
+            }
+
+            .vission-main-img {
+                width: 98%;
+                background-size: 677px 420px;
+                margin-left: 10px;
+                margin-top: -116px;
+                height: 420px;
+            }
+
+            .vission-heading {
+                top: 26.5%;
+            }
+
+            h1 {
+                font-size: 26.5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand ml-5 mt-1" href="../index.html"><img class="logo" src="../resources/logo.png" alt=""
+                loading="lazy"></a>
+        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button> -->
+        <div class="navbar-items  ml-auto  ">
+            <div class=" navbar-expand float-right mt-n2" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <!-- <li class="nav-item active">
+      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+    </li> -->
+                    <!-- <li class="nav-item">
+                        <a class="" href="./newsroom.html">Newsroom
+                            <img src="../resources/navbar_arrow.png" class="nav-arrow"></a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="" href="./csr.html">CSR
+                            <img src="../resources/navbar_arrow.png" class="nav-arrow"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="" href="./careers.html">Careers
+                            <img src="../resources/navbar_arrow.png" class="nav-arrow"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="" href="./contact.html">Contact
+                            <img src="../resources/navbar_arrow.png" class="nav-arrow"></a>
+                    </li>
+
+            </div>
+            <div>&nbsp;</div>
+            <div class="navbar-items2 d-flex align-items-end ml-auto mt-4 float-right mb-n4 ">
+                <ul class="ul right-bar-nav ">
+
+                    <li class="home-icon-li "><a href="../index.html" class="list-a"><img class="home-icon-img"
+                                src="../resources/Home icon.png" width="24px" height="22px" alt=""></a></li>
+                    <li class="li nav-item dropdown ">
+                        <a class=" nav-link dropdown-toggle industry-dropdown-heading" href="#" data-toggle="dropdown"
+                            style="color: black !important;padding: 0;">Industry
+                            Solutions</a>
+                        <ul class="dropdown-menu bg-light ">
+                            <li><a class=" dropdown-item " href=" ./healthcare.html"
+                                    style="color: black !important;">Healthcare</a>
+                            </li>
+                            <li><a class="dropdown-item" href="./retail.html"
+                                    style="color: black !important;">Retail</a></li>
+                            <li><a class="dropdown-item" href="./automotive.html"
+                                    style="color: black !important;">Automotive</a></li>
+                            <li><a class="dropdown-item" href="./financial_services.html"
+                                    style="color: black !important;">Financial Services</a></li>
+                        </ul>
+
+                    </li>
+
+
+                    <li class="li "><a href="./Services.html" class="list-a">Services</a></li>
+                    <li class="li li1"><a href="./AboutKushagramati.html" class="list-a">About Us</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+    <!-- navbar end -->
+    <!-- <div class="navbar-bottom-right">
+        <a href="./leadership.html">Leadership</a>
+        <a href="#">Partners</a>
+        <a href="./values.html">Values</a>
+        <a href="./vision_and_mission.html">Vision and Mission</a>
+        <a href="#" style="border: none;">Awards</a>
+    </div> -->
+    <!-- cover image -->
+    <div class="vission-banner">
+        <div class="  carousel-nav text-light mt-1 row">
+            <a href="./leadership.html">LEADERSHIP</a>
+            <a href="./partners.html">PARTNERS</a>
+            <a href="#">AWARDS</a>
+            <a href="./values.html">VALUES</a>
+            <a href="./vision_and_mission.html">VISION & MISSION</a>
+            <a href="./blog_main.html" class="border-0">USE CASES</a>
+        </div>
+        <h1 class="vission-heading text-light">BLOG</h1>
+    </div>
+    <!-- Blog  -->
+    <div class="blog-content">
+        <!-- <h1 class="blog-heading">BLOG</h1> -->
+        <h1 class="blog-title">Predicting Michael Jordan’s Scoring with Machine Learning</h1>
+        <p>I began my journey in the vast world of data with Kushagramati Analytics. The avenues of training afforded to
+            me by this job have been extraordinary to say the least and the freedom to learn has been tremendously
+            encouraging. I started off with learning Python, Pandas and Numpy and subsequently moved on to ML concepts.
+            I decided to use an NBA dataset (upto 2017, found on Kaggle) as a part of my learning owing to my passion
+            for the game of basketball and what better way to begin my journey in predictive analytics than predicting
+            MJ’s scoring.</p>
+        <p>I began my project with the standard exploration of data. I had split his 15 season career into 10 seasons as
+            a training set for the ML model and 5 seasons as a testing set. The ML model I used for this was linear
+            regression.
+        </p>
+        <p>Using Linear Regression I obtained the following equation :</p>
+        <p class="gray-bg mb-0">The equation yielded was PTS = -178.5739 + 34.7715*G and fitting without intercept was
+            PTS = 32.4790*G</p>
+        <p class="gray-bg">PTS = 34.7715*G + pos_coef</p>
+        <p>SG pos coeff = -178.57 — Michael being a shooting guard, this was the coefficient I obtained for him.</p>
+        <p>The errors that pertain to this model are:</p>
+        <p class="gray-bg">MSE is 432839.0, RMSE is 657.9</p>
+        <p>This was what I finally obtained:</p>
+        <div class="blog-image-div">
+            <img src="../resources/test_data_set.png" alt="">
+            <p class=" d-flex justify-content-center gray-text">The Test Data Set with Predicted Points</p>
+            <img src="../resources/actual_vs_predective.png" alt="">
+            <p class="d-flex justify-content-center gray-text">Predicted Points vs Actual Points</p>
+        </div>
+        <p>It would appear that my model has overestimated Jordan’s scoring averages but I can forgive it for making
+            that mistake with the GOAT. Currently I’m looking at how I can improve the accuracy and I’ve been learning a
+            lot about various ML Models.</p>
+        <p>In my next little attempt at ML, I’ll be looking at predicting the outcomes of the Los Angles Lakers’ playoff
+            matches.</p>
+
+        <div class="d-flex justify-content-around gray-bg blog-author-div">
+            <div class="author-details">
+                <h5>Rishan Sanjay</h5>
+                <hr class="author-line">
+                <p>Software (Data) Engineer and<br>Product Management<br>at Kushagramati</p>
+            </div>
+            <div class="author-image">
+                <img class="rishan-img" src="../resources/rishan_shetty.png" alt="rishan shetty"></div>
+        </div>
+        <div class="blog-comment">
+            <form>
+                <textarea name="Blog" placeholder="Comment here" id=""></textarea>
+                <a href="sales@kmathi.in"><input type="submit" id="submit-comment" value="Submit"></a>
+            </form>
+        </div>
+
+    </div>
+
+
+
+    </div>
+
+</body>
+
+</html>

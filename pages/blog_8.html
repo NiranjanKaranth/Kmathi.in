@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+            /* color: rgba(255, 255, 255, 0.9); */
+
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+
+        h3 {
+            font-size: 22px;
+            line-height: 115%;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 115%;
+            margin-bottom: 35px;
+        }
+
+        ul {
+            font-size: 14px;
+        }
+
+        li {
+            font-size: 14px;
+        }
+
+        .vission-banner {
+            width: 100%;
+            height: 427px;
+            background: url(../resources/blog_cover.png);
+            margin-top: 69px;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            margin-top: 83px;
+        }
+
+        .vission-main-img {
+            width: 1027px;
+            height: 530px;
+            background: url(../resources/vision_mission_main.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            margin-left: 63px;
+            margin-top: -213px;
+        }
+
+        .vission-heading {
+            position: absolute;
+            left: 8.5%;
+            top: 25%;
+        }
+
+        /* Blog css */
+        .blog-content {
+            padding: 0px 0px 0px 8.5%;
+            width: 1010px;
+            margin-top: -200px;
+        }
+
+        .blog-heading {
+            color: #5d318a;
+            letter-spacing: 7px;
+            font-size: 17px;
+            margin-top: 69px;
+        }
+
+        .blog-title {
+            margin: 20px 0 20px 0;
+            font-size: 30px;
+            color: rgba(0, 0, 0, 0.9);
+        }
+
+        .gray-bg {
+            background-color: #F2F2F2;
+            padding: 20px;
+            color: rgba(0, 0, 0, 0.8);
+            font-size: 17px;
+        }
+
+        .blog-image-div img {
+
+            display: block;
+            margin: 0 auto;
+        }
+
+        .gray-text {
+            color: #757575;
+            margin: 15px 0px 40px 0px;
+            font-size: 14px;
+
+        }
+
+        .rishan-img {
+            width: 130px;
+            height: 150px;
+            border-radius: 70px !important;
+        }
+
+        .blog-author-div {
+            width: 60%;
+        }
+
+        .author-details {
+            margin-right: 30px;
+        }
+
+        .author-details p {
+            margin-top: 15px;
+            margin-bottom: 0;
+        }
+
+        .author-line {
+            background-color: #5d318a;
+            height: 1px;
+            margin: 0;
+        }
+
+        .blog-comment {
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        .blog-comment textarea {
+            display: block;
+            width: 60%;
+            height: 150px;
+            padding: 10px 20px;
+        }
+
+        #submit-comment {
+            background-color: #FF4500;
+            color: rgba(255, 255, 255, 0.9);
+            border: none;
+            border-radius: 5px;
+            padding: 5px 20px;
+            margin-top: 10px;
+        }
+
+        .blog-categories-heading {
+            font-size: 25px;
+
+            margin-bottom: 12px;
+        }
+
+        .blog-desc-links,
+        .blog-desc-links:visited,
+        .blog-desc-links:active {
+            color: rgba(0, 0, 0, 0.9);
+            text-decoration: underline;
+        }
+
+        .blog-desc-links:hover {
+            color: rgba(0, 0, 0, 0.9);
+            text-decoration: none;
+        }
+
+        .blog-categories-list {
+            padding-left: 16px;
+            margin-bottom: 35px;
+
+        }
+
+        .blog-categories-list {
+            font-size: 20px;
+            padding-left: 16px;
+
+        }
+
+        .ordered-list {
+            margin-left: 12px;
+        }
+
+        .ordered-list>li {
+            font-size: 20px;
+        }
+
+        .blog-categories-list>li>p {
+            margin: 0px 0 8px 0;
+        }
+
+        .blog8-img1-fig {
+            margin-bottom: 20px !important;
+        }
+
+        .blog8-img1-p {
+            margin-top: 40px;
+        }
+
+        .edge-detection {
+            margin-top: 40px;
+        }
+
+        .margin-heading {
+            margin-bottom: 25px;
+        }
+
+        .fig-2a {
+            width: 295px;
+        }
+
+        .fig-8 {
+            width: 628px;
+        }
+
+        .fig-8a {
+            margin-bottom: 40px !important;
+        }
+
+        .blog8-p-mb {
+            margin-bottom: 0px !important;
+        }
+
+        .p-img-desc {
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .a-instagram,
+        .a-disqus,
+        .a-mozilla,
+        .a-bitbucket,
+        .a-pyton {
+            font-weight: bold;
+            color: black;
+        }
+
+        .a-instagram:hover,
+        .a-disqus:hover,
+        .a-mozilla:hover,
+        .a-bitbucket:hover,
+        .a-pyton:hover {
+            text-decoration: none;
+        }
+
+        .blog-graphs {
+            width: 628px;
+        }
+
+        /* Blog css ends*/
+
+
+        /* Media Query */
+        @media only screen and (min-width: 1367px) and (max-width: 1600px) {
+            h1 {
+                font-size: 33px;
+            }
+
+            .blog-content {
+                width: 750px;
+                margin-top: -170px;
+            }
+
+            .blog-author-div {
+                width: 80%;
+            }
+
+            .vission-banner {
+                height: 360px;
+            }
+
+            .vission-main-img {
+                width: 900px;
+                background-size: 900px 464px;
+                margin-top: -179px;
+                height: 464px;
+            }
+
+            .vission-heading {
+                top: 28%;
+
+            }
+
+            .thus-a-great {
+                width: 96%;
+            }
+
+            .the-best-reviewers {
+                width: 95%;
+            }
+
+            .by-aggregating {
+                width: 95%;
+            }
+        }
+
+        @media only screen and (min-width: 1281px) and (max-width: 1366px) {
+            .vission-banner {
+                height: 307px;
+            }
+
+            .vission-main-img {
+                width: 720px;
+                background-size: 720px 371px;
+                margin-top: -153px;
+                margin-left: 58px;
+                height: 371px;
+            }
+
+            .vission-heading {
+                top: 31%;
+
+                font-size: 28px;
+            }
+
+            .blog-content {
+                width: 700px;
+                margin-top: -140px;
+            }
+
+            .blog-author-div {
+                width: 80%;
+            }
+        }
+
+        @media only screen and (min-width: 1025px) and (max-width: 1280px) {
+            .vission-banner {
+                height: 288px;
+            }
+
+            .vission-main-img {
+                margin-left: 47px;
+                margin-top: -144px;
+                background-size: 715px 369px;
+                height: 369px;
+                width: 715px;
+            }
+
+            .vission-heading {
+                top: 29%;
+
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            .blog-content {
+
+                width: 650px;
+                margin-top: -130px;
+            }
+
+            .blog-author-div {
+                width: 80%;
+            }
+        }
+
+        @media only screen and (min-width: 1000px) and (max-width: 1024px) {
+            .vission-banner {
+                height: 230px;
+            }
+
+            .vission-main-img {
+                width: 98%;
+                background-size: 677px 420px;
+                margin-left: 10px;
+                margin-top: -116px;
+                height: 420px;
+            }
+
+            .vission-heading {
+                top: 26.5%;
+            }
+
+            h1 {
+                font-size: 26.5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand ml-5 mt-1" href="../index.html"><img class="logo" src="../resources/logo.png" alt=""
+                loading="lazy"></a>
+        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button> -->
+        <div class="navbar-items  ml-auto  ">
+            <div class=" navbar-expand float-right mt-n2" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <!-- <li class="nav-item active">
+      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+    </li> -->
+                    <!-- <li class="nav-item">
+                        <a class="" href="./newsroom.html">Newsroom
+                            <img src="../resources/navbar_arrow.png" class="nav-arrow"></a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="" href="./csr.html">CSR
+                            <img src="../resources/navbar_arrow.png" class="nav-arrow"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="" href="./careers.html">Careers
+                            <img src="../resources/navbar_arrow.png" class="nav-arrow"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="" href="./contact.html">Contact
+                            <img src="../resources/navbar_arrow.png" class="nav-arrow"></a>
+                    </li>
+
+            </div>
+            <div>&nbsp;</div>
+            <div class="navbar-items2 d-flex align-items-end ml-auto mt-4 float-right mb-n4 ">
+                <ul class="ul right-bar-nav ">
+
+                    <li class="home-icon-li "><a href="../index.html" class="list-a"><img class="home-icon-img"
+                                src="../resources/Home icon.png" width="24px" height="22px" alt=""></a></li>
+                    <li class="li nav-item dropdown ">
+                        <a class=" nav-link dropdown-toggle industry-dropdown-heading" href="#" data-toggle="dropdown"
+                            style="color: black !important;padding: 0;">Industry
+                            Solutions</a>
+                        <ul class="dropdown-menu bg-light ">
+                            <li><a class=" dropdown-item " href=" ./healthcare.html"
+                                    style="color: black !important;">Healthcare</a>
+                            </li>
+                            <li><a class="dropdown-item" href="./retail.html"
+                                    style="color: black !important;">Retail</a></li>
+                            <li><a class="dropdown-item" href="./automotive.html"
+                                    style="color: black !important;">Automotive</a></li>
+                            <li><a class="dropdown-item" href="./financial_services.html"
+                                    style="color: black !important;">Financial Services</a></li>
+                        </ul>
+
+                    </li>
+
+
+                    <li class="li "><a href="./Services.html" class="list-a">Services</a></li>
+                    <li class="li li1"><a href="./AboutKushagramati.html" class="list-a">About Us</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+    <!-- navbar ends -->
+    <!-- <div class="navbar-bottom-right">
+        <a href="./leadership.html">Leadership</a>
+        <a href="#">Partners</a>
+        <a href="./values.html">Values</a>
+        <a href="./vision_and_mission.html">Vision and Mission</a>
+        <a href="#" style="border: none;">Awards</a>
+    </div> -->
+    <!-- cover image -->
+    <div class="vission-banner">
+        <div class="  carousel-nav text-light mt-1 row">
+            <a href="./leadership.html">LEADERSHIP</a>
+            <a href="./partners.html">PARTNERS</a>
+            <a href="#">AWARDS</a>
+            <a href="./values.html">VALUES</a>
+            <a href="./vision_and_mission.html">VISION & MISSION</a>
+            <a href="./blog_main.html" class="border-0">USE CASES</a>
+        </div>
+        <h1 class="vission-heading text-light">BLOG</h1>
+    </div>
+
+    <!-- Blog  -->
+    <div class="blog-content">
+        <!-- <h1 class="blog-heading">BLOG</h1> -->
+        <h1 class="blog-title">Time Series Forecasting on COVID 19 using ARIMA</h1>
+        <h1 class="blog-categories-heading">Time Series Basics</h1>
+        <p>Time Series data is experimental data that has been observed at different points in time (usually evenly
+            spaced, like once a day). For example, the data of airline ticket sales per day is a time series. However,
+            just because a series of events has a time element does not automatically make it a time series, such as the
+            dates of major airline disasters, which are randomly spaced and are not time series. These types of random
+            processes are known as point process.</p>
+        <p>Time Series have several key features such as trend, seasonality, and noise.</p>
+
+        <h1 class="blog-categories-heading">Forecasting with ARIMA</h1>
+        <p>Forecasting is the process of making predictions of the future, based on past and present data. One of the
+            most common methods for this is the ARIMA model, which stands for <b>AutoRegressive Integrated Moving
+                Average.</b>
+        </p>
+        <p>In an ARIMA model there are 3 parameters that are used to help model the major aspects of a times series:
+            seasonality, trend, and noise. These parameters are labelled p, d and q.</p>
+        <p>p is the parameter associated with the auto-regressive aspect of the model, which incorporates past values.
+            For example, forecasting that if it rained a lot over the past few days, you state it’s likely that it will
+            rain tomorrow as well.</p>
+        <p>d is the parameter associated with the integrated part of the model, which effects the amount of differencing
+            to apply to a time series. You can imagine an example of this as forecasting that the amount of rain
+            tomorrow will be similar to the amount of rain today, if the daily amounts of rain have been similar over
+            the past few days.</p>
+        <p>q is the parameter associated with the moving average part of the model.</p>
+        <p>If our model has a seasonal component, we use a seasonal ARIMA model (SARIMA). In that case we have another
+            set of parameters: p, d and q which describe the same associations as p, d and q, but correspond with the
+            seasonal components of the model.</p>
+
+        <h1 class="blog-categories-heading">Variation</h1>
+        <p>One of the most important features of a time series is variation. Variations are patterns in the times series
+            data. A time series that has patterns that repeat over known and fixed periods of time is said to have
+            seasonality. Seasonality is a general term for variations that periodically repeat in data. In general, we
+            think of variations as 4 categories: Seasonal, Cyclic, Trend, and Irregular fluctuations.</p>
+        <p>Seasonal variation is usually defined as variation that is annual in period, such as sweaters sales being
+            higher in winter and lower in summer. Cyclic Variation is a variation that occurs at other fixed periods,
+            such as the daily variation in temperature. Both Seasonal and Cyclic variation would be examples of
+            seasonality in a time series data set.</p>
+        <p>Trends are long-term changes in the mean level, relative to the number of observations.</p>
+
+        <h1 class="blog-categories-heading">Steps for ARIMA implementation</h1>
+        <p>The general steps to implement an ARIMA model are –</p>
+
+        <ul class="blog-categories-list">
+            <li class="">
+                <p><b>Load the data:</b> The first step for model building is of course to load the dataset</p>
+            </li>
+            <li>
+                <p><b>Preprocessing:</b> Depending on the dataset, the steps of preprocessing will be defined. This will
+                    include creating timestamps, converting the dtype of date/time column, making the series univariate,
+                    etc.</p>
+            </li>
+            <li>
+                <p><b>Make series stationary:</b> In order to satisfy the assumption, it is necessary to make the series
+                    stationary. This would include checking the stationarity of the series and performing required
+                    transformations</p>
+            </li>
+            <li>
+                <p><b>Determine d value:</b> For making the series stationary, the number of times the difference
+                    operation was performed will be taken as the d value</p>
+            </li>
+            <li>
+                <p><b>Determine the p and q values:</b> Read the values of p and q using auto_arima model</p>
+            </li>
+            <li>
+                <p><b>Fit ARIMA model:</b> Using the processed data and parameter values we calculated from the previous
+                    steps, fit the ARIMA model</p>
+            </li>
+            <li>
+                <p><b>Predict values on validation set:</b> Predict the future values</p>
+            </li>
+            <li>
+                <p><b>Calculate MAPE:</b> To check the performance of the model, check the MAPE value using the
+                    predictions and actual values on the validation set</p>
+            </li>
+        </ul>
+
+        <h1 class="blog-categories-heading">Steps for ARIMA implementation</h1>
+        <p>Let’s explore the COVID 19 Indian dataset statewise cases
+            You can access this data here:</p>
+        <p><a
+                href="https://api.covid19india.org/csv/latest/state_wise_daily.csv">https://api.covid19india.org/csv/latest/state_wise_daily.csv</a>
+        </p>
+        <p><a
+                href="https://www.kaggle.com/sudalairajkumar/covid19-in-india">https://www.kaggle.com/sudalairajkumar/covid19-in-india</a>
+        </p>
+
+        <h1 class="blog-categories-heading">Import Packages</h1>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a blog8-img1-fig" src="../resources/blog8_pic1.png" alt="">
+        </div>
+
+        <h1 class="blog-categories-heading">Processing the Data</h1>
+        <p class="blog8-img1-p">Pandas makes this easy, let’s quickly check the head of the data (the first 5 rows) to
+            see what default
+            format it comes in:</p>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a " src="../resources/blog8_pic2.png" alt="">
+        </div>
+
+        <p class="blog8-img1-p">Data contains statewise confirmed, recovered and death cases on daily basis count.</p>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a blog8-img1-fig " src="../resources/blog8_pic3.png" alt="">
+        </div>
+
+        <p>Dropping the ‘Recovered’ and ‘Deceased’ row and resetting the index because we are predicting the confirmed
+            cases.</p>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a blog8-img1-fig " src="../resources/blog8_pic4.png" alt="">
+        </div>
+
+        <p>Checking the null values in the dataset</p>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a blog8-img1-fig " src="../resources/blog8_pic5.png" alt="">
+        </div>
+
+        <p>Converting the “Date_YMD” column into a proper timestamps format with the help of pandas</p>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a blog8-img1-fig " src="../resources/blog8_pic6.png" alt="">
+        </div>
+
+        <p>Setting up the “Date_YMD” as index, that way our forecasting analysis will be able to interpret these values.
+        </p>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a blog8-img1-fig " src="../resources/blog8_pic7.png" alt="">
+        </div>
+
+        <p>We are predicting on daily basis, so resampling our data into Daily and taking the mean, which is similar to
+            our original data. If we are predicting either weekly or monthly or yearly, then the mean value will change.
+        </p>
+        <p>For example, resampling on weekly, monthly and yearly basis</p>
+        <p>y = df1 [‘KA’].resample (‘W’).mean ()</p>
+        <p>y = df1 [‘KA’].resample (‘M’).mean ()</p>
+        <p>y = df1 [‘KA’].resample (‘Y’).mean ()</p>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a blog8-img1-fig " src="../resources/blog8_pic8.png" alt="">
+        </div>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a blog8-img1-fig " src="../resources/blog8_pic9.png" alt="">
+        </div>
+
+        <p>Split into train and test datasets to build the model on the training dataset and forecast using the test
+            dataset.</p>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a blog8-img1-fig blog8-p-mb" src="../resources/blog8_pic10.png" alt="">
+        </div>
+
+        <p>Fig: Daily Trend</p>
+        <h1 class="blog-categories-heading">Analysis</h1>
+        <p>Plotly is a collaborative, web-based graphing and analytics platform. It allows users to import, copy and
+            paste or stream data to be analyzed and visualized. For analysis and styling graphs, Plotly offers a Python
+            sandbox (NumPy supported), datagrid, and GUI. Python scripts can be saved, shared, and collaboratively
+            edited in Plotly.</p>
+
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a blog8-img1-fig" src="../resources/blog8_pic11.png" alt="">
+        </div>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a blog8-img1-fig" src="../resources/blog8_pic12.png" alt="">
+        </div>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a blog8-img1-fig" src="../resources/blog8_pic13.png" alt="">
+        </div>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a blog8-img1-fig blog8-p-mb" src="../resources/blog8_pic14.png" alt="">
+        </div>
+
+        <p>Fig: Statewise cases with detailed information</p>
+        <h1 class="blog-categories-heading">Analysis of a Trend</h1>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a blog8-img1-fig" src="../resources/blog8_pic15.png" alt="">
+        </div>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a blog8-img1-fig" src="../resources/blog8_pic16.png" alt="">
+        </div>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a blog8-img1-fig" src="../resources/blog8_pic17.png" alt="">
+        </div>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a blog8-img1-fig blog8-p-mb" src="../resources/blog8_pic18.png" alt="">
+        </div>
+
+        <p>Fig: Trend Analysis</p>
+        <h1 class="blog-categories-heading">Analysis of Top 10 highest confirmed cases</h1>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a blog8-img1-fig" src="../resources/blog8_pic19.png" alt="">
+        </div>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a blog8-img1-fig" src="../resources/blog8_pic20.png" alt="">
+        </div>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a blog8-img1-fig" src="../resources/blog8_pic21.png" alt="">
+        </div>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a blog8-img1-fig" src="../resources/blog8_pic22.png" alt="">
+        </div>
+
+        <h1 class="blog-categories-heading">Analysis of Top 10 highest cured cases</h1>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a blog8-img1-fig" src="../resources/blog8_pic23.png" alt="">
+        </div>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a blog8-img1-fig" src="../resources/blog8_pic24.png" alt="">
+        </div>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a blog8-img1-fig" src="../resources/blog8_pic25.png" alt="">
+        </div>
+
+        <h1 class="blog-categories-heading">Analysis of Top 10 highest death cases</h1>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a blog8-img1-fig" src="../resources/blog8_pic26.png" alt="">
+        </div>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a blog8-img1-fig" src="../resources/blog8_pic27.png" alt="">
+        </div>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a blog8-img1-fig" src="../resources/blog8_pic28.png" alt="">
+        </div>
+
+        <h1 class="blog-categories-heading">Analysis of Death, confirmed & death in percentage for Top 10 states</h1>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a blog8-img1-fig blog8-p-mb" src="../resources/blog8_pic29.png" alt="">
+        </div>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a blog8-img1-fig blog8-p-mb" src="../resources/blog8_pic30.png" alt="">
+        </div>
+
+        <p>Fig: Top 10 states with highest death cases (in percentage)</p>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a blog8-img1-fig blog8-p-mb" src="../resources/blog8_pic31.png" alt="">
+        </div>
+
+        <p>Fig: Top 10 states with highest confirmed cases (in percentage)</p>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a blog8-img1-fig blog8-p-mb" src="../resources/blog8_pic32.png" alt="">
+        </div>
+
+        <p>Fig: Top 10 states with highest recovered cases (in percentage)</p>
+
+        <h1 class="blog-categories-heading">Analysis of male vaccinated</h1>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a blog8-img1-fig" src="../resources/blog8_pic33.png" alt="">
+        </div>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a blog8-img1-fig" src="../resources/blog8_pic34.png" alt="">
+        </div>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a blog8-img1-fig" src="../resources/blog8_pic35.png" alt="">
+        </div>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a blog8-img1-fig" src="../resources/blog8_pic36.png" alt="">
+        </div>
+
+        <h1 class="blog-categories-heading">Analysis of female vaccinated</h1>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a blog8-img1-fig" src="../resources/blog8_pic37.png" alt="">
+        </div>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a blog8-img1-fig" src="../resources/blog8_pic38.png" alt="">
+        </div>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a blog8-img1-fig" src="../resources/blog8_pic39.png" alt="">
+        </div>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a blog8-img1-fig" src="../resources/blog8_pic40.png" alt="">
+        </div>
+
+        <h1 class="blog-categories-heading">Analysis of total male and female administered for vaccines</h1>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a blog8-img1-fig" src="../resources/blog8_pic41.png" alt="">
+        </div>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a blog8-img1-fig" src="../resources/blog8_pic42.png" alt="">
+        </div>
+
+        <h1 class="blog-categories-heading">Analysis of Covaxin vs Covishield</h1>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a blog8-img1-fig" src="../resources/blog8_pic43.png" alt="">
+        </div>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a blog8-img1-fig" src="../resources/blog8_pic44.png" alt="">
+        </div>
+
+        <h1 class="blog-categories-heading">Auto ARIMA</h1>
+        <p>Usually, in the basic ARIMA model, we need to provide the p, d, and q values which are essential. We use
+            statistical techniques to generate these values by performing the difference to eliminate the
+            non-stationarity and plotting ACF and PACF graphs. In Auto ARIMA, the model itself will generate the optimal
+            p, d, and q values which would be suitable for the data set to provide better forecasting.</p>
+        <p>Once fitting the whole dataset into auto_arima model, it will generate the best fit values of p, d and q
+            which is suitable for our data</p>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a blog8-img1-fig" src="../resources/blog8_pic45.png" alt="">
+        </div>
+
+        <p>Finalized the best model – ARIMA (5, 1, 2) – (p, d, q)</p>
+        <p>Last 3 zeros (0, 0, 0) represents that, our data does not have any seasonality.</p>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a blog8-img1-fig" src="../resources/blog8_pic46.png" alt="">
+        </div>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a blog8-img1-fig blog8-p-mb" src="../resources/blog8_pic47.png" alt="">
+        </div>
+
+        <p>Fig: Summary of the model</p>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a blog8-img1-fig" src="../resources/blog8_pic48.png" alt="">
+        </div>
+
+        <p>Now, fitting the ARIMA model with whole data with best fit value of p, d and q to check how accurately our
+            model is getting trained.</p>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a blog8-img1-fig" src="../resources/blog8_pic49.png" alt="">
+        </div>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a blog8-img1-fig blog8-p-mb" src="../resources/blog8_pic50.png" alt="">
+        </div>
+
+        <p>Fig: Graphical representation Actual vs Prediction</p>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a blog8-img1-fig blog8-p-mb" src="../resources/blog8_pic51.png" alt="">
+        </div>
+
+        <p>Fig: comparing actual cases vs prediction</p>
+        <h1 class="blog-categories-heading">Checking Accuracy and Error</h1>
+        <p>Mean Absolute Percentage Error (MAPE)</p>
+        <p>The MAPE has an advantage over MAE or RMSE as it is unit-free and thus is safe to use for comparing
+            performances of time series forecast values with different units.</p>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a blog8-img1-fig" src="../resources/blog8_pic52.png" alt="">
+        </div>
+
+        <p>Using ARIMA model, we achieved an accuracy of 91% which is a better model for time series prediction.</p>
+        <h1 class="blog-categories-heading">Prediction</h1>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a blog8-img1-fig" src="../resources/blog8_pic53.png" alt="">
+        </div>
+
+        <p>Again, fitting the data into the arima model and get trained</p>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a blog8-img1-fig" src="../resources/blog8_pic54.png" alt="">
+        </div>
+
+        <p>Predicting the confirmed cases for next two weeks from the current date using the above trained model</p>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a blog8-img1-fig" src="../resources/blog8_pic55.png" alt="">
+        </div>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a blog8-img1-fig" src="../resources/blog8_pic56.png" alt="">
+        </div>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a blog8-img1-fig" src="../resources/blog8_pic57.png" alt="">
+        </div>
+
+        <p>Using the following above steps, we able to train and test our model for confirmed cases, death cases, cured
+            cases, gender wise getting vaccination, brand wise vaccination (covaxin & covishield)</p>
+        <p>Let’s reorganize this set of predictions by creating a dataframe that contains our future forecast</p>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a blog8-img1-fig" src="../resources/blog8_pic58.png" alt="">
+        </div>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a blog8-img1-fig" src="../resources/blog8_pic59.png" alt="">
+        </div>
+
+        <p>Now that we’ve evaluated our data and satisfied with the performance, the next step would be to refit our
+            model to all the states and then forecast into the real future.</p>
+
+        <!-- Blog ends.... -->
+
+        <div class="d-flex justify-content-around gray-bg blog-author-div">
+            <div class="author-details">
+                <h5>Mohan Baabu</h5>
+                <hr class="author-line">
+                <p>Kushagramati</p>
+                <p style="visibility: hidden;">Software (Data) Engineer and<br>Product
+                    Management<br>at Kushagramati
+                </p>
+            </div>
+            <div class="author-image">
+                <img class="rishan-img" src="../resources/Mohan Baabu.jpg" alt="rishan shetty"
+                    style="border-radius: 50px;">
+            </div>
+        </div>
+        <div class="blog-comment">
+            <form>
+                <textarea name="Blog" placeholder="Comment here" id=""></textarea>
+                <a href="sales@kmathi.in"><input type="submit" id="submit-comment" value="Submit"></a>
+            </form>
+        </div>
+
+    </div>
+
+
+
+    </div>
+
+</body>
+
+</html>

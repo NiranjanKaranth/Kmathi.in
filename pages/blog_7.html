@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+            /* color: rgba(255, 255, 255, 0.9); */
+
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+
+        h3 {
+            font-size: 22px;
+            line-height: 115%;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 115%;
+            margin-bottom: 35px;
+        }
+
+        ul {
+            font-size: 14px;
+        }
+
+        li {
+            font-size: 14px;
+        }
+
+        .vission-banner {
+            width: 100%;
+            height: 427px;
+            background: url(../resources/blog_cover.png);
+            margin-top: 69px;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            margin-top: 83px;
+        }
+
+        .vission-main-img {
+            width: 1027px;
+            height: 530px;
+            background: url(../resources/vision_mission_main.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            margin-left: 63px;
+            margin-top: -213px;
+        }
+
+        .vission-heading {
+            position: absolute;
+            left: 8.5%;
+            top: 25%;
+        }
+
+        /* Blog css */
+        .blog-content {
+            padding: 0px 0px 0px 8.5%;
+            width: 1010px;
+            margin-top: -200px;
+        }
+
+        .blog-heading {
+            color: #5d318a;
+            letter-spacing: 7px;
+            font-size: 17px;
+            margin-top: 69px;
+        }
+
+        .blog-title {
+            margin: 20px 0 20px 0;
+            font-size: 30px;
+            color: rgba(0, 0, 0, 0.9);
+        }
+
+        .gray-bg {
+            background-color: #F2F2F2;
+            padding: 20px;
+            color: rgba(0, 0, 0, 0.8);
+            font-size: 17px;
+        }
+
+        .blog-image-div img {
+
+            display: block;
+            margin: 0 auto;
+        }
+
+        .gray-text {
+            color: #757575;
+            margin: 15px 0px 40px 0px;
+            font-size: 14px;
+
+        }
+
+        .rishan-img {
+            width: 130px;
+        }
+
+        .blog-author-div {
+            width: 60%;
+        }
+
+        .author-details {
+            margin-right: 30px;
+        }
+
+        .author-details p {
+            margin-top: 15px;
+            margin-bottom: 0;
+        }
+
+        .author-line {
+            background-color: #5d318a;
+            height: 1px;
+            margin: 0;
+        }
+
+        .blog-comment {
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        .blog-comment textarea {
+            display: block;
+            width: 60%;
+            height: 150px;
+            padding: 10px 20px;
+        }
+
+        #submit-comment {
+            background-color: #FF4500;
+            color: rgba(255, 255, 255, 0.9);
+            border: none;
+            border-radius: 5px;
+            padding: 5px 20px;
+            margin-top: 10px;
+        }
+
+        .blog-categories-heading {
+            font-size: 25px;
+
+            margin-bottom: 12px;
+        }
+
+        .blog-desc-links,
+        .blog-desc-links:visited,
+        .blog-desc-links:active {
+            color: rgba(0, 0, 0, 0.9);
+            text-decoration: underline;
+        }
+
+        .blog-desc-links:hover {
+            color: rgba(0, 0, 0, 0.9);
+            text-decoration: none;
+        }
+
+        .blog-categories-list {
+            padding-left: 16px;
+            margin-bottom: 35px;
+
+        }
+
+        .blog-categories-list {
+            font-size: 20px;
+            padding-left: 16px;
+
+        }
+
+        .ordered-list {
+            margin-left: 12px;
+        }
+
+        .ordered-list>li {
+            font-size: 20px;
+
+
+        }
+
+        .blog-categories-list>li>p {
+            margin: 0px 0 8px 0;
+
+        }
+
+        .blog6-img1-p {
+            margin-top: 40px;
+        }
+
+        .edge-detection {
+            margin-top: 40px;
+        }
+
+        .margin-heading {
+            margin-bottom: 25px;
+        }
+
+        .fig-2a {
+            width: 295px;
+        }
+
+        .fig-8 {
+            width: 628px;
+        }
+
+        .fig-8a {
+            margin-bottom: 40px !important;
+        }
+
+        .p-img-desc {
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .a-instagram,
+        .a-disqus,
+        .a-mozilla,
+        .a-bitbucket,
+        .a-pyton {
+            font-weight: bold;
+            color: black;
+        }
+
+        .a-instagram:hover,
+        .a-disqus:hover,
+        .a-mozilla:hover,
+        .a-bitbucket:hover,
+        .a-pyton:hover {
+            text-decoration: none;
+        }
+
+        .blog-graphs {
+            width: 628px;
+        }
+
+        /* Blog css ends*/
+
+
+        /* Media Query */
+        @media only screen and (min-width: 1367px) and (max-width: 1600px) {
+            h1 {
+                font-size: 33px;
+            }
+
+            .blog-content {
+                width: 750px;
+                margin-top: -170px;
+            }
+
+            .blog-author-div {
+                width: 80%;
+            }
+
+            .vission-banner {
+                height: 360px;
+            }
+
+            .vission-main-img {
+                width: 900px;
+                background-size: 900px 464px;
+                margin-top: -179px;
+                height: 464px;
+            }
+
+            .vission-heading {
+                top: 28%;
+
+            }
+
+            .thus-a-great {
+                width: 96%;
+            }
+
+            .the-best-reviewers {
+                width: 95%;
+            }
+
+            .by-aggregating {
+                width: 95%;
+            }
+        }
+
+        @media only screen and (min-width: 1281px) and (max-width: 1366px) {
+            .vission-banner {
+                height: 307px;
+            }
+
+            .vission-main-img {
+                width: 720px;
+                background-size: 720px 371px;
+                margin-top: -153px;
+                margin-left: 58px;
+                height: 371px;
+            }
+
+            .vission-heading {
+                top: 31%;
+
+                font-size: 28px;
+            }
+
+            .blog-content {
+                width: 700px;
+                margin-top: -140px;
+            }
+
+            .blog-author-div {
+                width: 80%;
+            }
+        }
+
+        @media only screen and (min-width: 1025px) and (max-width: 1280px) {
+            .vission-banner {
+                height: 288px;
+            }
+
+            .vission-main-img {
+                margin-left: 47px;
+                margin-top: -144px;
+                background-size: 715px 369px;
+                height: 369px;
+                width: 715px;
+            }
+
+            .vission-heading {
+                top: 29%;
+
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            .blog-content {
+
+                width: 650px;
+                margin-top: -130px;
+            }
+
+            .blog-author-div {
+                width: 80%;
+            }
+        }
+
+        @media only screen and (min-width: 1000px) and (max-width: 1024px) {
+            .vission-banner {
+                height: 230px;
+            }
+
+            .vission-main-img {
+                width: 98%;
+                background-size: 677px 420px;
+                margin-left: 10px;
+                margin-top: -116px;
+                height: 420px;
+            }
+
+            .vission-heading {
+                top: 26.5%;
+            }
+
+            h1 {
+                font-size: 26.5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand ml-5 mt-1" href="../index.html"><img class="logo" src="../resources/logo.png" alt=""
+                loading="lazy"></a>
+        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button> -->
+        <div class="navbar-items  ml-auto  ">
+            <div class=" navbar-expand float-right mt-n2" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <!-- <li class="nav-item active">
+      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+    </li> -->
+                    <!-- <li class="nav-item">
+                        <a class="" href="./newsroom.html">Newsroom
+                            <img src="../resources/navbar_arrow.png" class="nav-arrow"></a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="" href="./csr.html">CSR
+                            <img src="../resources/navbar_arrow.png" class="nav-arrow"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="" href="./careers.html">Careers
+                            <img src="../resources/navbar_arrow.png" class="nav-arrow"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="" href="./contact.html">Contact
+                            <img src="../resources/navbar_arrow.png" class="nav-arrow"></a>
+                    </li>
+
+            </div>
+            <div>&nbsp;</div>
+            <div class="navbar-items2 d-flex align-items-end ml-auto mt-4 float-right mb-n4 ">
+                <ul class="ul right-bar-nav ">
+
+                    <li class="home-icon-li "><a href="../index.html" class="list-a"><img class="home-icon-img"
+                                src="../resources/Home icon.png" width="24px" height="22px" alt=""></a></li>
+                    <li class="li nav-item dropdown ">
+                        <a class=" nav-link dropdown-toggle industry-dropdown-heading" href="#" data-toggle="dropdown"
+                            style="color: black !important;padding: 0;">Industry
+                            Solutions</a>
+                        <ul class="dropdown-menu bg-light ">
+                            <li><a class=" dropdown-item " href=" ./healthcare.html"
+                                    style="color: black !important;">Healthcare</a>
+                            </li>
+                            <li><a class="dropdown-item" href="./retail.html"
+                                    style="color: black !important;">Retail</a></li>
+                            <li><a class="dropdown-item" href="./automotive.html"
+                                    style="color: black !important;">Automotive</a></li>
+                            <li><a class="dropdown-item" href="./financial_services.html"
+                                    style="color: black !important;">Financial Services</a></li>
+                        </ul>
+
+                    </li>
+
+
+                    <li class="li "><a href="./Services.html" class="list-a">Services</a></li>
+                    <li class="li li1"><a href="./AboutKushagramati.html" class="list-a">About Us</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+    <!-- navbar ends -->
+    <!-- <div class="navbar-bottom-right">
+        <a href="./leadership.html">Leadership</a>
+        <a href="#">Partners</a>
+        <a href="./values.html">Values</a>
+        <a href="./vision_and_mission.html">Vision and Mission</a>
+        <a href="#" style="border: none;">Awards</a>
+    </div> -->
+    <!-- cover image -->
+    <div class="vission-banner">
+        <div class="  carousel-nav text-light mt-1 row">
+            <a href="./leadership.html">LEADERSHIP</a>
+            <a href="./partners.html">PARTNERS</a>
+            <a href="#">AWARDS</a>
+            <a href="./values.html">VALUES</a>
+            <a href="./vision_and_mission.html">VISION & MISSION</a>
+            <a href="./blog_main.html" class="border-0">USE CASES</a>
+        </div>
+        <h1 class="vission-heading text-light">BLOG</h1>
+    </div>
+    <!-- Blog  -->
+    <div class="blog-content">
+        <!-- <h1 class="blog-heading">BLOG</h1> -->
+        <h1 class="blog-title">How to Create a Virtual environment and Setup Django project</h1>
+        <h1 class="blog-categories-heading">Table of Topics:</h1>
+        <p>A few of its applications are given below.</p>
+
+        <ul class="blog-categories-list">
+            <li class="">
+                <p>Why Django?</p>
+            </li>
+            <li>
+                <p>Who’s Using Django?</p>
+            </li>
+            <li>
+                <p>COVID-19 diagnosis</p>
+            </li>
+            <li>
+                <p>Install Virtual environment</p>
+            </li>
+            <li>
+                <p>Install requirements inside virtual environment</p>
+            </li>
+            <li>
+                <p>Setup/Create a Django Project</p>
+            </li>
+            <li>
+                <p>Benefits of Django</p>
+            </li>
+            <li>
+                <p>Conclusion</p>
+            </li>
+        </ul>
+
+        <h1 class="blog-categories-heading">Why Django?</h1>
+        <p>Django is a Web framework written in Python. A Web framework is a software that supports the development of
+            dynamic Web sites, applications, and services. It provides a set of tools and functionalities that solves
+            many common problems associated with Web development, such as security features, database access, sessions,
+            template processing, URL routing, internationalization, localization, and much more.</p>
+        <p>Using a Web framework, such as Django, enables us to develop secure and reliable Web applications very
+            quickly in a standardized way, without having to reinvent the wheel.</p>
+        <h1 class="blog-categories-heading">Who’s Using Django?</h1>
+        <p>It’s good to know who is using Django out there, so to have an idea what you can do with it.</p>
+        <p>Among the biggest Web sites using Django we have: <a href="https://instagram.com/"
+                class="a-instagram">Instagram</a>,<a href="https://disqus.com/" class="a-disqus"> Disqus</a>,<a
+                href="https://www.mozilla.org/" class="a-mozilla"> Mozilla</a>,<a href="https://www.mozilla.org/"
+                class="a-bitbucket"> Bitbucket</a>.
+        </p>
+        <h1 class="blog-categories-heading">Installation:</h1>
+        <p>The first thing we need to do is install some programs on our machine so to be able to start playing with
+            Django. The basic setup consists of installing Python, Virtual env, and Django.</p>
+        <p>Using virtual environments is not mandatory, but it’s highly recommended. If you are just getting started,
+            it’s better to start with the right foot.</p>
+        <p>When developing Web sites or Web projects with Django, it’s very common to have to install external libraries
+            to support the development. Using virtual environments, each project you develop will have its isolated
+            environment. So, the dependencies won’t clash. It also allows you to maintain in your local machine projects
+            that run on different Django versions.</p>
+        <p>Go to <a href="https://python.org/" class="a-pyton">www.python.org</a> click on the Python 3.6.2 download
+            page, scroll down
+            until you see the download files listed below:</p>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a " src="../resources/blog7_pic1.png" alt="">
+        </div>
+
+        <p class="blog6-img1-p">Go to your Downloads directory, right click on the installer and click on <b>Run as
+                administrator.</b></p>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a " src="../resources/blog7_pic2.jpg" alt="">
+        </div>
+
+        <p class="blog6-img1-p">Make sure you check the option <b>Add Python 3.6 to PATH</b> and click on the <b>Install
+                Now</b> option.</p>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a " src="../resources/blog7_pic3.jpg" alt="">
+        </div>
+
+        <p class="blog6-img1-p">Now search for the <b>Command Prompt</b> program and open it and type following command:
+        </p>
+        <p>python --version</p>
+        <p>Great, Python is up and running. Next step: Virtual Environments!</p>
+        <h1 class="blog-categories-heading">Install Virtual environment:</h1>
+        <p>For the next step, we are going to use <b>pip,</b> a tool to manage and install Python packages, to install
+            <b>virtualenv.</b>
+        </p>
+        <p>In the Command Prompt, execute the command below:</p>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a " src="../resources/blog7_pic4.jpg" alt="">
+        </div>
+
+        <p class="blog6-img1-p">If it is already installed, it will show requirement already satisfied.</p>
+        <p>So far the installations that we performed were system-wide. From now on, everything we install, including
+            Django itself, will be installed inside a Virtual Environment.</p>
+        <p>Think of it like this: for each Django project you start, you will first create a Virtual Environment for it.
+            It’s like having a sandbox for each Django project. So you can play around, install packages, uninstall
+            packages without breaking anything.</p>
+        <p>Let’s start by creating a new folder with the name <b>Development</b> folder. Since this is going to be our
+            very
+            first project, we don’t need to pick a fancy name or anything. For now, we can create a new folder under the
+            <b>Development</b> folder and call it <b>myproject.</b>
+        </p>
+        <p>Run below commands:</p>
+        <p>mkdir myproject1</p>
+        <p>cd myproject1</p>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a " src="../resources/blog7_pic5.jpg" alt="">
+        </div>
+
+        <p class="blog6-img1-p">This folder is the higher level directory that will store all the files and things
+            related to our Django project, including its virtual environment.</p>
+        <p>So let’s start by creating our very first virtual environment and installing Django.</p>
+        <p>Inside the <b>myproject1</b> folder:</p>
+        <p>virtualenv venv</p>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a " src="../resources/blog7_pic6.jpg" alt="">
+        </div>
+
+        <p class="blog6-img1-p">Our virtual environment is created. Now before we start using it, we need to activate:
+        </p>
+        <p>venv\Scripts\activate</p>
+        <p>You will know it worked if you see <b>(venv)</b> in front of the command line, like this:</p>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a " src="../resources/blog7_pic6.jpg" alt="">
+        </div>
+
+        <p class="blog6-img1-p">Let’s try to understand what happened here. We created a special folder named
+            <b>venv.</b> It contains a copy
+            of
+            Python inside this folder. After we activated the <b>venv</b> environment, when we run the python command,
+            it will
+            use our local copy, stored inside <b>venv,</b> instead of the other one we installed earlier.
+        </p>
+        <p>Another important thing is that the pip program is already installed as well, and when we use it to install a
+            Python package, like Django, it will be installed inside the <b>venv</b> environment.</p>
+        <p>Install requirements inside virtualenv:</p>
+
+        <h1 class="blog-categories-heading">Setup a Django Project:</h1>
+        <h3>Install Django :</h3>
+        <p>pip install django</p>
+        <h1 class="blog-categories-heading">Create a new Django project:</h1>
+        <p>To start a new Django project, run the command below:</p>
+        <p>django-admin startproject myproject</p>
+        <p>The command-line utility <b>django-admin</b> is automatically installed with Django.</p>
+        <p>After we run the command above, it will generate the base folder structure for a Django project.</p>
+        <p>Right now, our <b>myproject</b> directory looks like this:</p>
+        <p>myproject1/ <-- higher level folder</p>
+                <p>|-- myproject/ <-- django project folder</p>
+                        <p>| | |-- __init__.py</p>
+                        <p>| | |-- settings.py</p>
+                        <p> | | |-- urls.py</p>
+                        <p>| | |-- wsgi.py</p>
+                        <p>| +-- manage.py</p>
+                        <p>+-- venv/ <-- virtual environment folder</p>
+                                <p class="blog6-img1-p">Our initial project structure is composed of five files:</p>
+
+                                <ul class="blog-categories-list">
+                                    <li class="">
+                                        <p><b>manage.py:</b> a shortcut to use the <b>django-admin</b> command-line
+                                            utility. It’s
+                                            used to run management commands related to our project. We will use it to
+                                            run the development server, run tests, create migrations and much more.</p>
+                                    </li>
+                                    <li>
+                                        <p><b>__init__.py:</b> this empty file tells Python that this folder is a Python
+                                            package.</p>
+                                    </li>
+                                    <li>
+                                        <p><b>settings.py:</b> this file contains all the project’s configuration. We
+                                            will
+                                            refer to this file all the time!</p>
+                                    </li>
+                                    <li>
+                                        <p><b>urls.py:</b> this file is responsible for mapping the routes and paths in
+                                            our
+                                            project. For example, if you want to show something in the URL /about/, you
+                                            have to map it here first.</p>
+                                    </li>
+                                    <li>
+                                        <p><b>wsgi.py:</b> this file is a simple gateway interface used for deployment.
+                                            You
+                                            don’t have to bother about it. Just let it be for now.</p>
+                                    </li>
+                                </ul>
+                                <p>For now, you can ignore the migration errors; we will get to that later.</p>
+                                <p>Now open the following URL in a Web browser: <b>http://127.0.0.1:8000</b> and you
+                                    should see the following page:</p>
+
+                                <div class="blog-image-div">
+                                    <img class="blog-graphs fig-2a " src="../resources/blog7_pic7.jpg" alt="">
+                                </div>
+
+                                <p class="blog6-img1-p">Navigate to sampleapi:</p>
+                                <p>cd myproject</p>
+                                <h1 class="blog-categories-heading">Django Apps:</h1>
+                                <p class="blog6-img1-p">In the Django philosophy we have two important concepts:</p>
+
+                                <ul class="blog-categories-list">
+                                    <li class="">
+                                        <p><b>app:</b> is a Web application that does something. An app usually is
+                                            composed
+                                            of a set of models (database tables), views, templates, tests.</p>
+                                    </li>
+                                    <li>
+                                        <p><b>project:</b> is a collection of configurations and apps. One project can
+                                            be composed of multiple apps, or a single app.
+                                    </li>
+                                </ul>
+
+                                <p>Start a new app:</p>
+                                <p>Pyhon manage.py startapp firstapp</p>
+                                <p>Here is what your project structure should look like:</p>
+                                <p>Notice that we used the command <b>startapp</b> this time.</p>
+                                <p>This will give us the following directory structure:</p>
+                                <p>myproject1/</p>
+                                <p>|-- myproject/</p>
+                                <p>| |-- firstapp/ <-- our new django app!</p>
+                                        <p>| | |-- migrations/</p>
+                                        <p>| | | +-- __init__.py</p>
+                                        <p> | | |-- __init__.py</p>
+                                        <p> | | |-- admin.py</p>
+                                        <p>| | |-- apps.py</p>
+                                        <p>| | |-- models.py</p>
+                                        <p> | | |-- tests.py</p>
+                                        <p> | | +-- views.py</p>
+                                        <p> | |-- myproject/</p>
+                                        <p>| | |-- __init__.py</p>
+                                        <p> | | |-- settings.py</p>
+                                        <p>| | |-- urls.py</p>
+                                        <p>| | |-- wsgi.py</p>
+                                        <p>| +-- manage.py</p>
+                                        <p>+-- venv/</p>
+                                        <p>So, let’s first explore what each file does:</p>
+
+                                        <ul class="blog-categories-list">
+                                            <li class="">
+                                                <p><b>migrations/:</b> here Django store some files to keep track of the
+                                                    changes
+                                                    you create in the <b>models.py</b> file, so to keep the database and
+                                                    the
+                                                    <b>models.py</b> synchronized.
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p><b>admin.py:</b> this is a configuration file for a built-in Django
+                                                    app
+                                                    called Django Admin.</p>
+                                            </li>
+                                            <li>
+                                                <p><b>apps.py:</b> this is a configuration file of the app itself.</p>
+                                            </li>
+                                            <li>
+                                                <p><b>models.py:</b> here is where we define the entities of our Web
+                                                    application. The models are translated automatically by Django into
+                                                    database tables.</p>
+                                            </li>
+                                            <li>
+                                                <p><b>tests.py:</b> this file is used to write unit tests for the app.
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p><b>views.py:</b> this is the file where we handle the
+                                                    request/response
+                                                    cycle of our Web application.</p>
+                                            </li>
+                                        </ul>
+
+                                        <p>Now that we created our first app, let’s configure our project to use it.</p>
+                                        <p>Add the <b>firstapp</b> app to the INSTALLED_APPS, inside the
+                                            <b>settings.py</b> module
+                                        </p>
+                                        <p># Application definition</p>
+                                        <p>INSTALLED_APPS = [</p>
+                                        <p>'django.contrib.admin',</p>
+                                        <p>'django.contrib.auth',</p>
+                                        <p>'django.contrib.contenttypes',</p>
+                                        <p>'django.contrib.sessions',</p>
+                                        <p>'django.contrib.messages',</p>
+                                        <p>'django.contrib.staticfiles',</p>
+                                        <p>'firstapp',</p>
+                                        <p>]</p>
+                                        <h1 class="blog-categories-heading"><b>Hello, World!</b></h1>
+                                        <p>Let’s write our first <b>view.</b> We will explore it in great detail in the
+                                            next
+                                            tutorial. But for now, let’s just experiment how it looks like to create a
+                                            new page with Django.</p>
+                                        <p>Open the <b>views.py</b> file inside the <b>boards</b> app, and add the
+                                            following code:</p>
+                                        <p><b>views.py</b></p>
+                                        <p>from django.http import HttpResponse</p>
+                                        <p class="blog6-img1-p"><b>def</b> home(request):</p>
+                                        <p><b>return</b> HttpResponse('Hello, World!')</p>
+                                        <p>Views are Python functions that receive an HttpRequest object and returns an
+                                            HttpResponse object. Receive a request as a parameter and returns a response
+                                            as a result. That’s the flow you have to keep in mind!</p>
+                                        <p>So, here we defined a simple view called <b>home</b> which simply returns a
+                                            message saying <b>Hello, World!.</b></p>
+                                        <p>Now we have to tell Django when to serve this view. It’s done inside the
+                                            <b>urls.py</b> file:
+                                        </p>
+                                        <p><b>urls.py</b></p>
+                                        <p>from django.conf.urls import url</p>
+                                        <p>from django.contrib import admin</p>
+                                        <p>from boards import views</p>
+                                        <p>urlpatterns = [</p>
+                                        <p>url(r'^$', views.home, name='home'),</p>
+                                        <p>url(r'^admin/', admin.site.urls),</p>
+                                        <p>]</p>
+                                        <p>Let’s see what happen when you run below command:</p>
+                                        <p>In a Web browser, open the http://127.0.0.1:8000 URL:</p>
+
+                                        <div class="blog-image-div">
+                                            <img class="blog-graphs fig-2a " src="../resources/blog7_pic8.jpg" alt="">
+                                        </div>
+
+                                        <p class="blog6-img1-p">That’s it! You just created your very first view.</p>
+                                        <h1 class="blog-categories-heading">Benefits of Django:</h1>
+                                        <h3>1. Django has the Model View Template Architecture:</h3>
+                                        <p>Django has a <b>Model-View-Template (MVT) architecture.</b> The MVT (Model
+                                            View
+                                            Template) is a software design pattern. It is a collection of three
+                                            essential components Model, View, and Template. These three layers are
+                                            responsible for different things and can be used independently.</p>
+                                        <p>The Model helps to handle database. It is a data access layer, which contains
+                                            the required fields and behaviors of the data you’re storing. There’s hardly
+                                            an application without a database. <b>The Django framework officially
+                                                supports
+                                                four databases,</b> namely, PostgreSQL, MySQL, SQLite, and Oracle.</p>
+                                        <p>A model is a Python class, and it does not know anything about other Django
+                                            layers. An application programming interface (API) is the only means used to
+                                            communicate between layers.</p>
+                                        <p>Models help developers to create, read, update, and delete objects (CRUD
+                                            operations) in the original database. Also, they hold business logic, custom
+                                            methods, properties, and other things related to data manipulation.</p>
+                                        <p>It accepts HTTP requests, applies business logic provided by Python classes
+                                            and methods, and provides HTTP responses to the client requests.</p>
+                                        <h3>2. Django is Highly Secure:</h3>
+                                        <p>When we make web applications in Django, it makes sure that developers don’t
+                                            commit any mistakes related to security. It will be pretty difficult to find
+                                            security loopholes in Django, even in the user authentication system.</p>
+                                        <p>The framework has protection against the most common security attacks like
+                                            XSS and CSRF (Cross-Site Request Forgery) attacks, SQL injections,
+                                            Clickjacking, etc. The user authentication system of Django is also solid,
+                                            to manage usernames and passwords.</p>
+                                        <p>While transmitting data, Django automatically encrypts the passwords and all
+                                            the essential information with a security key.</p>
+                                        <h3>3. Django Provides a Default Admin Panel:</h3>
+                                        <p>Django automatically comes up with an admin interface. You don’t need to
+                                            write any code to create it. Django gives you everything by default and
+                                            hence reduces a lot of development time.</p>
+
+                                        <div class="blog-image-div">
+                                            <img class="blog-graphs fig-2a " src="../resources/blog7_pic9.jpg" alt="">
+                                        </div>
+
+                                        <h3 class="edge-detection">4. Django is good for Search Engine Optimization
+                                            (SEO):</h3>
+                                        <p>Django offers several useful SEO tools. Django provides a module called the
+                                            Django SEO framework, which developers can use to reduce page loading time
+                                            by using cached templates and compressing CSS and JavaScript.</p>
+                                        <p>Django even provides a tool to manage robots.txt. However, it may not be as
+                                            good as WordPress (the most used CMS software for blogging) when it comes to
+                                            SEO. But Django is one of the best frameworks for search engine
+                                            optimization, compared to other web development frameworks.</p>
+                                        <h3>5. Django Provides Object Relational Mapper (ORM):</h3>
+                                        <p>Django ORM provides an elegant and powerful way to interact with the database
+                                            in an Object-Oriented fashion. ORM is a library that automatically transfers
+                                            data stored in databases into objects commonly used in application code.</p>
+                                        <p>You don’t need to write specific SQL queries to create tables and insert
+                                            data. When a class is defined, ORM generates a table for the class
+                                            automatically. This table contains fields for all the variables inside the
+                                            class. Also, the table adds rows automatically when we create objects.</p>
+                                        <p>ORM is an excellent concept by which you can directly create tables using
+                                            classes and add data with the help of objects of the class.</p>
+                                        <p>The ability of the Django ORM to extract information speeds up the web
+                                            application development process. It also helps developers to make working
+                                            prototypes in no time.</p>
+                                        <h3>6. Django is Highly Scalable:</h3>
+                                        <p>It is yet another benefit of using Django for building web apps. Depending on
+                                            your specific product requirements, development can be scaled up or down,
+                                            altering the number and complexity of Django components as necessary.</p>
+                                        <p>Django can handle any hardware additions. Also, it is capable of meeting
+                                            massive traffic demands. It is the main reason why websites like Instagram,
+                                            Pinterest, Disqus, etc., use the Django framework.</p>
+                                        <p>Django can handle traffic and mobile app API usage of more than 400 million
+                                            users, helping maximize scalability and minimize web hosting costs. Many
+                                            third-party applications come with Django. These applications can be
+                                            integrated, depending on project requirements.</p>
+                                        <p>This scalability of Django makes it one of the best choices for many
+                                            large-scale web applications in the software world.</p>
+                                        <h3>7. Batteries Included:</h3>
+                                        <p>Django prides itself as a batteries-included framework. What that means is
+                                            that it comes with a lot of stuff out of the box, that you may or may not
+                                            use depending on your application. Instead of having to write your own code
+                                            (the power), you just need to import the packages that you want to use.</p>
+                                        <p>It’s a part of the convention over configuration paradigm that Django is part
+                                            of, and it allows you to make use of the solutions implemented by
+                                            world-class professionals.</p>
+                                        <h1 class="blog-categories-heading">Conclusions:</h1>
+                                        <p>Django is the best framework for web applications, as it allows developers to
+                                            use modules for faster development. As a developer, you can make use of
+                                            these modules to create apps, websites from an existing source. It speeds up
+                                            the development process greatly, as you do not have to code everything from
+                                            scratch.</p>
+                                        <p>Django follows the Don’t Repeat Yourself (DRY) principle, making this
+                                            framework time-efficient. In other words, there’s no need to rewrite
+                                            existing code because Django allows you to assemble your website like a Lego
+                                            set. The framework is well-suited for high load systems and can decrease
+                                            development time thanks to lots of helper objects. This is due to the
+                                            architecture, which we’ll have a closer look at below.</p>
+                                                            
+                                        <div class="d-flex justify-content-around gray-bg blog-author-div">
+                                            <div class="author-details">
+                                                <h5>Sudharshan Reddy</h5>
+                                                <hr class="author-line">
+                                                <p>Kushagramati</p>
+                                                <p style="visibility: hidden;">Software (Data) Engineer and<br>Product
+                                                    Management<br>at Kushagramati
+                                                </p>
+                                            </div>
+                                            <div class="author-image">
+                                                <img class="rishan-img" src="../resources/Sudharshan Reddy.jpg" alt="rishan shetty" style="border-radius: 80px;">
+                                            </div>
+                                        </div>
+                                        <div class="blog-comment">
+                                            <form>
+                                                <textarea name="Blog" placeholder="Comment here" id=""></textarea>
+                                                <a href="sales@kmathi.in"><input type="submit" id="submit-comment" value="Submit"></a>
+                                            </form>
+                                        </div>
+
+    </div>
+
+
+
+    </div>
+
+</body>
+
+</html>

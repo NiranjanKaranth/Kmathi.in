@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>CSR</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+    <link rel="stylesheet" href="../style.css?v=timestamp">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        * {
+            box-sizing: border-box;
+            color: rgba(255, 255, 255, 0.9);
+            margin: 0;
+            padding: 0;
+        }
+
+        .healthcare-nav-items a {
+            font-size: 12px;
+        }
+
+        .leadership {
+            /* margin-top: 90px; */
+            width: 100%;
+        }
+
+        .main-jumbotron {
+            background: url(../resources/csr-banner.png);
+            width: 100%;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            margin: 0 auto;
+            /* height: 307px; */
+            height: 854px;
+            margin-top: 83px !important;
+        }
+
+        /* navigation */
+        .healthcare-navigation {
+            background-color: #8240c4;
+            height: 20px;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            /* margin-top: -65px; */
+            color: white;
+            padding-left: 8.5%;
+        }
+
+        .healthcare-navigation li {
+            display: inline-block;
+            margin-right: 15px;
+        }
+
+        .healthcare-navigation a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .dropbtn1 {
+            background-color: #8240c4;
+            display: inline;
+            color: rgba(255, 255, 255, 0.9);
+            border: none;
+            font-size: 12px;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content1 {
+            display: none;
+            /* position: absolute; */
+            z-index: 1;
+            min-width: 800px;
+        }
+
+        .dropdown-content1 a {
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 550;
+            font-size: 10px;
+        }
+
+        .dropdown:hover .dropdown-content1 {
+            display: inline-block;
+        }
+
+        .healthcare-arrow {
+            height: 9px;
+        }
+
+        .services-arrow {
+            height: 9px;
+            margin: 5px;
+        }
+
+        .nav-health {
+            color: rgba(255, 255, 255, 0.9) !important;
+            font-size: 18px;
+        }
+
+        .nav-services {
+            color: rgba(255, 255, 255, 0.9) !important;
+            font-size: 18px;
+        }
+
+        /* navigation ends */
+
+        .mastead-text {
+            width: 100%;
+        }
+
+        .csr-h1 {
+            position: absolute;
+            left: 8.5%;
+            top: 25%;
+            font-size: 40px;
+        }
+
+        .csr-image {
+            width: 100%;
+        }
+
+        .csr-img-child {
+            width: 100%;
+        }
+
+        .csr-img {
+            width: 12%;
+            position: absolute;
+            left: 40%;
+            top: 55%;
+        }
+
+        /* Media Query */
+        @media only screen and (min-width: 1367px) and (max-width: 1600px) {
+
+            .csr-h1 {
+                top: 28%;
+            }
+        }
+
+        /* media query for 1366px */
+        @media only screen and (min-width: 1281px) and (max-width: 1366px) {
+            .mastead-text {
+                width: 100%;
+            }
+
+            .csr-h1 {
+                position: absolute;
+                left: 8.5%;
+                top: 31%;
+                font-size: 28px;
+            }
+
+            .csr-image {
+                width: 100%;
+            }
+
+            .csr-img-child {
+                width: 100%;
+            }
+
+            .csr-img {
+                width: 22%;
+                position: absolute;
+                left: 40%;
+                top: 55%;
+            }
+        }
+
+        @media only screen and (min-width: 1025px) and (max-width: 1280px) {
+
+            .csr-h1 {
+                top: 31%;
+                font-size: 28px;
+            }
+        }
+
+        @media only screen and (min-width: 1000px) and (max-width: 1024px) {
+
+            .csr-h1 {
+                top: 26.5%;
+                font-size: 26.5px;
+            }
+        }
+
+        @media only screen and (min-width: 320px) and (max-width: 992px) {
+            .carousel-nav a {
+                padding-right: 10px;
+                font-size: 0.85rem !important;
+            }
+
+            .csr-h1{
+                top: 9%;
+                font-size: 20px;
+            }
+
+            .csr-img {
+                left: 45%;
+                top: 19%;
+            }
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <!-- Navbar -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top " style="top: 27px;">
+        <a class="navbar-brand ml-5 mt-n4" href="../index.html"><img class="logo" src="../resources/logo.png" alt=""
+                loading="lazy"></a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="top-nav bg-light">
+            <ul class="d-flex justify-content-end top-nav-buttons ">
+
+                <li class=" nav-item" style="border-right: none">
+                    <a class="" href="./csr.html">CSR
+                        <img src="../resources/navbar_arrow.png" class="nav-arrow"></a>
+                </li>
+                <li class="nav-item" style="border-right: none">
+                    <a class="" href="./careers.html">Careers
+                        <img src="../resources/navbar_arrow.png" class="nav-arrow"></a>
+                </li>
+                <li class="nav-item" style="border-right: none">
+                    <a class="" href="./contact.html">Contact
+                        <img src="../resources/navbar_arrow.png" class="nav-arrow"></a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar  ml-auto display-list-mob">
+                <li class="nav-item home-icon-li "><a href="../index.html" class=" "><img class="home-icon-img"
+                            src="../resources/Home icon.png" alt=""></a></li>
+
+                <li class="nav-item dropdown" style="color: black !important;">
+                    <a class=" nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                        style="color: black !important; font-size: 16px; ">
+                        Industry
+                        Solutions
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                        <a class=" dropdown-item " href=" ./healthcare.html"
+                            style="color: black !important; font-size: 16px; ">Healthcare</a>
+                        <a class="dropdown-item" href="./retail.html"
+                            style="color: black !important; font-size: 16px; ">Retail</a>
+
+                        <a class="dropdown-item" href="./automotive.html"
+                            style="color: black !important; font-size: 16px; ">Automotive</a>
+                        <a class="dropdown-item" href="./financial_services.html"
+                            style="color: black !important; font-size: 16px; ">Financial Services</a>
+                    </div>
+                </li>
+
+
+                <li class="nav-item">
+                    <a href="./Services.html" class=" nav-link"
+                        style="color: black !important; font-size: 16px; ">Services</a>
+                </li>
+                <li class="nav-item border-0">
+                    <a href="./AboutKushagramati.html" class=" nav-link"
+                        style="color: black !important; font-size: 16px; ">About Us</a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+    <!-- Navbar Ends -->
+    <!-- cover image -->
+    <div class="values-banner">
+        <div class="  carousel-nav text-light mt-1 row">
+            <a href="./leadership.html">LEADERSHIP</a>
+            <a href="./partners.html">PARTNERS</a>
+            <a href="#">AWARDS</a>
+            <a href="./values.html">VALUES</a>
+            <a href="./vision_and_mission.html">VISION & MISSION</a>
+            <a href="./blog_main.html" class="border-0">USE CASES</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+
+    <div class="leadership">
+
+        <div class="mastead-text">
+            <div class="main-jumbotron d-flex align-items-center " id="healthcare">
+
+                <h1 class="csr-h1">CSR</h1>
+            </div>
+        </div>
+        <div class="csr-image">
+            <div class="csr-img-child">
+                <img src="../resources/careers-img-under.png" class="csr-img">
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+
+    </div>
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

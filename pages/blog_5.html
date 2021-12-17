@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+            /* color: rgba(255, 255, 255, 0.9); */
+
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 115%;
+            margin-bottom: 35px;
+        }
+
+        h3 {
+            font-size: 20px;
+            line-height: 115%;
+            font-weight: 700;
+            margin-bottom: 25px;
+        }
+
+        ul {
+            font-size: 14px;
+        }
+
+        li {
+            font-size: 14px;
+        }
+
+        .p-headings {
+            margin-bottom: 15px;
+        }
+
+        .vission-banner {
+            width: 100%;
+            height: 427px;
+            background: url(../resources/blog_cover.png);
+            margin-top: 69px;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            margin-top: 83px;
+        }
+
+        .vission-main-img {
+            width: 1027px;
+            height: 530px;
+            background: url(../resources/vision_mission_main.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            margin-left: 63px;
+            margin-top: -213px;
+        }
+
+        .vission-heading {
+            position: absolute;
+            left: 8.5%;
+            top: 25%;
+        }
+
+        /* Blog css */
+
+        .attributes-explanation {
+            margin-bottom: 10px;
+        }
+
+        .attributes-points {
+            margin-bottom: 5px;
+        }
+
+        .blog-content {
+            padding: 0px 0px 0px 8.5%;
+            width: 1010px;
+            margin-top: -200px;
+        }
+
+        .blog-heading {
+            color: #5d318a;
+            letter-spacing: 7px;
+            font-size: 17px;
+            margin-top: 69px;
+        }
+
+        .blog-title {
+            margin: 20px 0 20px 0;
+            font-size: 30px;
+            color: rgba(0, 0, 0, 0.9);
+        }
+
+        .gray-bg {
+            background-color: #F2F2F2;
+            padding: 20px;
+            color: rgba(0, 0, 0, 0.8);
+            font-size: 17px;
+        }
+
+        .blog-image-div img {
+
+            display: block;
+            margin: 0 auto;
+            /* margin-bottom: 40px; */
+            margin-bottom: 30px;
+        }
+
+        .gray-text {
+            color: #757575;
+            margin: 15px 0px 40px 0px;
+            font-size: 14px;
+
+        }
+
+        .rishan-img {
+            width: 130px;
+        }
+
+        .blog-author-div {
+            width: 60%;
+        }
+
+        .author-details {
+            margin-right: 30px;
+        }
+
+        .author-details p {
+            margin-top: 15px;
+            margin-bottom: 0;
+        }
+
+        .author-line {
+            background-color: #5d318a;
+            height: 1px;
+            margin: 0;
+        }
+
+        .blog-comment {
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        .blog-comment textarea {
+            display: block;
+            width: 60%;
+            height: 150px;
+            padding: 10px 20px;
+        }
+
+        #submit-comment {
+            background-color: #FF4500;
+            color: rgba(255, 255, 255, 0.9);
+            border: none;
+            border-radius: 5px;
+            padding: 5px 20px;
+            margin-top: 10px;
+        }
+
+        .blog-categories-heading {
+            font-size: 25px;
+
+            margin-bottom: 25px;
+        }
+
+        .blog-desc-links,
+        .blog-desc-links:visited,
+        .blog-desc-links:active {
+            color: rgba(0, 0, 0, 0.9);
+            text-decoration: underline;
+        }
+
+        .blog-desc-links:hover {
+            color: rgba(0, 0, 0, 0.9);
+            text-decoration: none;
+        }
+
+        .blog-categories-list {
+            padding-left: 16px;
+            margin-bottom: 35px;
+
+        }
+
+        .blog-categories-list {
+            font-size: 20px;
+            padding-left: 16px;
+
+        }
+
+        .ordered-list {
+            margin-left: 12px;
+        }
+
+        .ordered-list>li {
+            font-size: 20px;
+
+
+        }
+
+        .blog-categories-list>li>p {
+            margin: 0px 0 8px 0;
+
+        }
+
+        .the-best-reviewers {
+            margin-bottom: 12px;
+        }
+
+        .margin-heading {
+            margin-bottom: 25px;
+        }
+
+        .blog-4-pic-1 a {
+            text-decoration: underline;
+        }
+
+        .blog-4-pic-1 a:hover {
+            color: #757575;
+        }
+
+        .fig-1 {
+            width: 329px;
+        }
+
+        .fig-2a {
+            width: 295px;
+        }
+
+        .fig-2b {
+            width: 321px;
+        }
+
+        .fig-3a {
+            width: 287px;
+        }
+
+        .fig-3b {
+            width: 320px;
+        }
+
+        .fig-4a {
+            width: 280px;
+        }
+
+        .fig-4b {
+            width: 291px;
+        }
+
+        .fig-5a {
+            width: 275px;
+        }
+
+        .fig-5b {
+            width: 275px;
+        }
+
+        .fig-6a {
+            width: 259px;
+        }
+
+        .fig-6b {
+            width: 259px;
+        }
+
+        .fig-7a {
+            width: 267px;
+        }
+
+        .fig-7b {
+            width: 247px;
+        }
+
+        .fig-8 {
+            width: 628px;
+        }
+
+        .blog-graphs {
+            margin-bottom: 40px;
+        }
+
+
+
+        .p-img-desc {
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .image-headings {
+            font-size: 20px;
+        }
+
+        /* Blog css ends*/
+
+
+        /* Media Query */
+        @media only screen and (min-width: 1367px) and (max-width: 1600px) {
+            h1 {
+                font-size: 33px;
+            }
+
+            .blog-content {
+                width: 750px;
+                margin-top: -170px;
+            }
+
+            .blog-author-div {
+                width: 80%;
+            }
+
+            .blog-image-div img {
+
+                max-width: 600px;
+            }
+
+            .vission-banner {
+                height: 360px;
+            }
+
+            .vission-main-img {
+                width: 900px;
+                background-size: 900px 464px;
+                margin-top: -179px;
+                height: 464px;
+            }
+
+            .vission-heading {
+                top: 28%;
+
+            }
+
+            .thus-a-great {
+                width: 96%;
+            }
+
+            .the-best-reviewers {
+                width: 95%;
+            }
+
+            .by-aggregating {
+                width: 95%;
+            }
+        }
+
+        @media only screen and (min-width: 1281px) and (max-width: 1366px) {
+            .vission-banner {
+                height: 307px;
+            }
+
+            .vission-main-img {
+                width: 720px;
+                background-size: 720px 371px;
+                margin-top: -153px;
+                margin-left: 58px;
+                height: 371px;
+            }
+
+            .vission-heading {
+                top: 31%;
+
+                font-size: 28px;
+            }
+
+            .blog-content {
+                width: 700px;
+                margin-top: -140px;
+            }
+
+            .blog-author-div {
+                width: 80%;
+            }
+
+
+            .blog-image-div img {
+
+                max-width: 600px;
+            }
+        }
+
+        @media only screen and (min-width: 1025px) and (max-width: 1280px) {
+            .vission-banner {
+                height: 288px;
+            }
+
+            .vission-main-img {
+                margin-left: 47px;
+                margin-top: -144px;
+                background-size: 715px 369px;
+                height: 369px;
+                width: 715px;
+            }
+
+            .vission-heading {
+                top: 29%;
+
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            .blog-content {
+
+                width: 650px;
+                margin-top: -130px;
+            }
+
+            .blog-author-div {
+                width: 80%;
+            }
+
+            .blog-image-div img {
+                max-width: 450px;
+            }
+        }
+
+        @media only screen and (min-width: 1000px) and (max-width: 1024px) {
+            .vission-banner {
+                height: 230px;
+            }
+
+            .vission-main-img {
+                width: 98%;
+                background-size: 677px 420px;
+                margin-left: 10px;
+                margin-top: -116px;
+                height: 420px;
+            }
+
+            .vission-heading {
+                top: 26.5%;
+            }
+
+            h1 {
+                font-size: 26.5px;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand ml-5 mt-1" href="../index.html"><img class="logo" src="../resources/logo.png" alt=""
+                loading="lazy"></a>
+        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button> -->
+        <div class="navbar-items  ml-auto  ">
+            <div class=" navbar-expand float-right mt-n2" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <!-- <li class="nav-item active">
+      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+    </li> -->
+                    <!-- <li class="nav-item">
+                        <a class="" href="./newsroom.html">Newsroom
+                            <img src="../resources/navbar_arrow.png" class="nav-arrow"></a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="" href="./csr.html">CSR
+                            <img src="../resources/navbar_arrow.png" class="nav-arrow"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="" href="./careers.html">Careers
+                            <img src="../resources/navbar_arrow.png" class="nav-arrow"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="" href="./contact.html">Contact
+                            <img src="../resources/navbar_arrow.png" class="nav-arrow"></a>
+                    </li>
+
+            </div>
+            <div>&nbsp;</div>
+            <div class="navbar-items2 d-flex align-items-end ml-auto mt-4 float-right mb-n4 ">
+                <ul class="ul right-bar-nav ">
+
+                    <li class="home-icon-li "><a href="../index.html" class="list-a"><img class="home-icon-img"
+                                src="../resources/Home icon.png" width="24px" height="22px" alt=""></a></li>
+                    <li class="li nav-item dropdown ">
+                        <a class=" nav-link dropdown-toggle industry-dropdown-heading" href="#" data-toggle="dropdown"
+                            style="color: black !important;padding: 0;">Industry
+                            Solutions</a>
+                        <ul class="dropdown-menu bg-light ">
+                            <li><a class=" dropdown-item " href=" ./healthcare.html"
+                                    style="color: black !important;">Healthcare</a>
+                            </li>
+                            <li><a class="dropdown-item" href="./retail.html"
+                                    style="color: black !important;">Retail</a></li>
+                            <li><a class="dropdown-item" href="./automotive.html"
+                                    style="color: black !important;">Automotive</a></li>
+                            <li><a class="dropdown-item" href="./financial_services.html"
+                                    style="color: black !important;">Financial Services</a></li>
+                        </ul>
+
+                    </li>
+
+
+                    <li class="li "><a href="./Services.html" class="list-a">Services</a></li>
+                    <li class="li li1"><a href="./AboutKushagramati.html" class="list-a">About Us</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+    <!-- navbar ends -->
+    <!-- <div class="navbar-bottom-right">
+        <a href="./leadership.html">Leadership</a>
+        <a href="#">Partners</a>
+        <a href="./values.html">Values</a>
+        <a href="./vision_and_mission.html">Vision and Mission</a>
+        <a href="#" style="border: none;">Awards</a>
+    </div> -->
+    <!-- cover image -->
+    <div class="vission-banner">
+        <div class="  carousel-nav text-light mt-1 row">
+            <a href="./leadership.html">LEADERSHIP</a>
+            <a href="./partners.html">PARTNERS</a>
+            <a href="#">AWARDS</a>
+            <a href="./values.html">VALUES</a>
+            <a href="./vision_and_mission.html">VISION & MISSION</a>
+            <a href="./blog_main.html" class="border-0">USE CASES</a>
+        </div>
+        <h1 class="vission-heading text-light">BLOG</h1>
+    </div>
+
+    <!-- Blog  -->
+    <div class="blog-content">
+        <!-- <h1 class="blog-heading">BLOG</h1> -->
+        <h1 class="blog-title">How to make Multi Label predictions using Multi Label Classifiers for text data.</h1>
+        <!-- <h1 class="blog-categories-heading">Introduction</h1> -->
+        <p>One of the successful implementations of Artificial Intelligence is Natural Language Processing (NLP). NLP is
+            extensively used by industry to understand the customer sentiment and derive more insights from the data.
+            Any successful business operates on the fundamental of its customers’ likes and dislikes, and continuously
+            improve its quality of products and services. Analyzing the sentiment of consumers/users is most required
+            for social media platforms like facebook and twitter to keep the posts and tweets well within the community
+            standards.</p>
+        <h1 class="blog-categories-heading">Multi Label Classification(Kaggle based)</h1>
+        <p>A simple binary classification model predicts whether the text belongs to a particular class or not.
+            Multi-Class classification predicts to which class (out of three or more classes) does the text belong.
+            However, a Multi Label classification is an approach where we classify a text into more than one category
+            which it belongs to. Here we cannot use traditional algorithms like logistic regression etc. by itself. We
+            can understand the process in detail hereinafter.</p>
+        <p style="max-width: 600px;" class="p-img-desc">The difference between classifiers as shown in the picture below
+            :-</p>
+        <div class="blog-image-div">
+            <img class="blog-graphs blog-graphs" src="../resources/blog_5_pic_1.png" alt="">
+        </div>
+        <h1 class="blog-categories-heading">Loading Data</h1>
+        <p class="p-img-desc">The data is loaded to pandas and the first five rows of the data is shown below:-</p>
+        <!-- <div class="blog-image-div"> -->
+        <img class="blog-graphs " src="../resources/blog_5_pic_2.png" alt="">
+        <!-- </div> -->
+        <p class="attributes-explanation"><b>Attribute Explanation:</b></p>
+        <p class="attributes-points">1. ID refers to the unique identification of the text.</p>
+        <p class="attributes-points">2. Comment_text column contains entire text of the comment.</p>
+        <p>3. Malignant, highly_malignant, rude, threat, abuse, loathe are those features wherein 0 denotes that the
+            comment is not categorized as that particular feature and 1 represents the comment is categorized as that
+            particular feature.</p>
+        <h1 class="blog-categories-heading">Shape of The Dataset</h1>
+        <!-- <div class="blog-image-div"> -->
+        <img class="blog-graphs " src="../resources/blog_5_pic_3.png" alt="">
+        <!-- </div> -->
+        <h1 class="blog-categories-heading">Initial Observations</h1>
+        <p>We can observe that many comments are categorized as ‘normal’; just like a real time scenario, we will find a
+            greater number of normal comments than negative comments.</p>
+        <p class="p-img-desc">Out of 159571 no. of records, 143346 records are normal as shown below:-</p>
+        <!-- <div class="blog-image-div"> -->
+        <img class="blog-graphs " src="../resources/blog_5_pic_4.png" alt="">
+        <!-- </div> -->
+
+
+        <h1 class="blog-categories-heading">Analyse the Sentiment of Each and Every Comment</h1>
+        <p class="p-img-desc">We can analyze the sentiment of each comment by just running few lines of codes as shown
+            below: -</p>
+        <!-- <div class="blog-image-div"> -->
+        <img class="blog-graphs " src="../resources/blog_5_pic_5.png" alt="">
+        <!-- </div> -->
+        <!-- <p class=" d-flex justify-content-center gray-text blog-4-pic-1 text-center">We can observe that the as we have
+            considered
+            the dataset with normal comments, neutral (neu) is getting more scores than negative (‘neg’) or positive
+            (‘pos’)</p> -->
+        <p>We can observe that the as we have
+            considered
+            the dataset with normal comments, neutral (neu) is getting more scores than negative (‘neg’) or positive
+            (‘pos’)</p>
+        <h1 class="blog-categories-heading">Visualization In NLP</h1>
+        <p>When we are analyzing huge data, visualization plays a vital role in giving summary of the text.</p>
+        <p>We have a library in python called WordCloud which helps in highlighting the frequently appearing words. We
+            will use the same to visualize the various comments. Before that we need to preprocess the data by cleaning
+            it and segregating it by comment category.</p>
+        <p class="p-img-desc">I have imported necessary libraries and cleaned dataset as below: -</p>
+        <!-- <div class="blog-image-div"> -->
+        <img class="blog-graphs " src="../resources/blog_5_pic_6.png" alt="">
+        <!-- </div> -->
+        <p class="p-img-desc">Cleaning the dataset and creating a new column which contains cleaned text: -</p>
+        <!-- <div class="blog-image-div"> -->
+        <img class="blog-graphs " src="../resources/blog_5_pic_7.png" alt="">
+        <!-- </div> -->
+        <p>I have appended the cleaned dataset column to the original dataset.</p>
+        <!-- <div class="blog-image-div"> -->
+        <img class="blog-graphs " src="../resources/blog_5_pic_8.png" alt="">
+        <!-- </div> -->
+        <p class="attributes-explanation">For the purpose of visualization, I have segregated the dataset into:-</p>
+        <p class="attributes-points">1. Normal without any negative comments</p>
+        <p class="attributes-points">2. Malignant comments</p>
+        <p class="attributes-points">3. Highly malignant comments</p>
+        <p class="attributes-points">4. Rule comments</p>
+        <p class="attributes-points">5. Threat</p>
+        <p class="attributes-points">6. Abuse and</p>
+        <p>7. Loathe</p>
+        <p>After segregation, I have used WordCloud to analyze the datasets.</p>
+        <!-- ===================================================================================================== -->
+
+
+        <h1 class="blog-categories-heading image-headings">Words of the Dataset with Normal Comments</h1>
+        <p>The words which are in bigger font are mostly repeated words.</p>
+        <div class="blog-image-div">
+            <img class="blog-graphs " src="../resources/blog_5_pic_9.png" alt="">
+        </div>
+        <p>We can observe that the above normal dataset does not contain any abusive words.</p>
+        <h1 class="blog-categories-heading image-headings">Words of the Dataset with Malignant Comments</h1>
+        <div class="blog-image-div">
+            <img class="blog-graphs " src="../resources/blog_5_pic_10.png" alt="">
+        </div>
+        <h1 class="blog-categories-heading image-headings">Words of the Dataset with Highly Malignant Comments</h1>
+        <div class="blog-image-div">
+            <img class="blog-graphs " src="../resources/blog_5_pic_11.png" alt="">
+        </div>
+        <p>In Highly Malignant comments, we can see words like ‘piss’, ‘suck, ‘bugger’ is appearing more.</p>
+        <h1 class="blog-categories-heading image-headings">Words of the Dataset with Rude Comments</h1>
+        <div class="blog-image-div">
+            <img class="blog-graphs " src="../resources/blog_5_pic_12.png" alt="">
+        </div>
+        <p>In rude category, we can see words like ‘stupid’, ‘damn’ are appearing more.</p>
+        <h1 class="blog-categories-heading image-headings">Words of the Dataset with Threat Comments </h1>
+        <div class="blog-image-div">
+            <img class="blog-graphs " src="../resources/blog_5_pic_13.png" alt="">
+        </div>
+        <p>In threat category, ‘die’, ‘kill’, ‘kidnap’ unique words are appearing more.</p>
+        <h1 class="blog-categories-heading image-headings">Words of the Dataset with Loathe Comments</h1>
+
+       
+
+        <div class="blog-image-div">
+            <img class="blog-graphs " src="../resources/blog_5_pic_14.png" alt="">
+        </div>
+        <p>Words like ‘yuck, ‘nonsense’ etc. are appearing more in “Loathe” category.</p>
+        <h1 class="blog-categories-heading">Observation from WordCloud</h1>
+        <p>WordCloud was able to capture correct words under its respective category for ex.
+            ‘die’, ‘kill’ under
+            ‘Threat’ category. WordCloud has made us easy to understand the important and
+            repeated words under each
+            category. </p>
+        <h1 class="blog-categories-heading">Model Building in NLP</h1>
+        <p>The next step would be to build Model for Multi Label classification. Before
+            executing that process, we need
+            to convert the text into numbers by using some Techniques like BOW (Bag of Words),
+            Tf-idf-vectorizer and
+            Word2Vec. This is required as Algorithms can only accept numbers and not text for
+            model building.</p>
+        <p>Here, Tf-idf-vectorizer is used to convert the text into vectors. </p>
+        <!-- <div class="blog-image-div"> -->
+        <img class="blog-graphs " src="../resources/blog_5_pic_15.png" alt="">
+        <!-- </div> -->
+        <h1 class="blog-categories-heading">Multi Label Classification</h1>
+        <p>As discussed earlier, we can solve the problem using multi label classification. We
+            must use algorithms like
+            OneVsRest and Multi-Output Classifier on above the classifiers.</p>
+        <h1 class="blog-categories-heading">Classifiers used :-</h1>
+        <h3>1) MultiOutput Classifier on above the RandomForest Classifier</h3>
+        <!-- <div class="blog-image-div"> -->
+        <img class="blog-graphs " src="../resources/blog_5_pic_16.png" alt="">
+        <!-- </div> -->
+        <h3>2) OneVsRest Classifier on above the LinearSVC</h3>
+        <!-- <div class="blog-image-div"> -->
+        <img class="blog-graphs " src="../resources/blog_5_pic_17.png" alt="">
+        <!-- </div> -->
+        <p>OneVsRest over LinearSVC is giving us better results. Hence, it makes good sense to
+            use OneVsRest Classifier.
+        </p>
+        <h1 class="blog-categories-heading">Checking the Model on New Dataset</h1>
+        <p class="p-img-desc">The finalized model for giving predictions on a new dataset after
+            cleaning it is shown
+            below:</p>
+        <!-- <div class="blog-image-div"> -->
+        <img class="blog-graphs " src="../resources/blog_5_pic_18.png" alt="">
+        <!-- </div> -->
+        <h1 class="blog-categories-heading">Generating Predictions on New Data</h1>
+        <!-- <div class="blog-image-div"> -->
+        <img class="blog-graphs " src="../resources/blog_5_pic_19.png" alt="">
+        <!-- </div> -->
+        <p class="p-img-desc">After generating predictions, we export the csv file to a path.
+            The snapshot of our
+            predictions csv file is
+            as below:-</p>
+        <!-- <div class="blog-image-div"> -->
+        <img class="blog-graphs " src="../resources/blog_5_pic_20.png" alt="">
+        <!-- </div> -->
+        <p>In this Project, we have analysed the texts using NLP techniques and successfully
+            made predictions using
+            multi-label classifier.</p>
+
+        <div class="d-flex justify-content-around gray-bg blog-author-div">
+            <div class="author-details">
+                <h5>Rashmi P G</h5>
+                <hr class="author-line">
+                <p>Kushagramati</p>
+                <p style="visibility: hidden;">Software (Data) Engineer and<br>Product
+                    Management<br>at Kushagramati
+                </p>
+
+            </div>
+            <div class="author-image">
+                <img class="rishan-img" src="../resources/rashmi_1.png" alt="rishan shetty">
+            </div>
+        </div>
+        <div class="blog-comment">
+            <form>
+                <textarea name="Blog" placeholder="Comment here" id=""></textarea>
+                <a href="sales@kmathi.in"><input type="submit" id="submit-comment" value="Submit"></a>
+            </form>
+        </div>
+
+    </div>
+
+
+
+
+
+</body>
+
+</html>

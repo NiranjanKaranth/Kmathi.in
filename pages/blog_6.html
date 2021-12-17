@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+            /* color: rgba(255, 255, 255, 0.9); */
+
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+
+        h3 {
+            font-size: 22px;
+            line-height: 115%;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 115%;
+            margin-bottom: 35px;
+        }
+
+        ul {
+            font-size: 14px;
+        }
+
+        li {
+            font-size: 14px;
+        }
+
+        .vission-banner {
+            width: 100%;
+            height: 427px;
+            background: url(../resources/blog_cover.png);
+            margin-top: 69px;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            margin-top: 83px;
+        }
+
+        .vission-main-img {
+            width: 1027px;
+            height: 530px;
+            background: url(../resources/vision_mission_main.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            margin-left: 63px;
+            margin-top: -213px;
+        }
+
+        .vission-heading {
+            position: absolute;
+            left: 8.5%;
+            top: 25%;
+        }
+
+        /* Blog css */
+        .blog-content {
+            padding: 0px 0px 0px 8.5%;
+            width: 1010px;
+            margin-top: -200px;
+        }
+
+        .blog-heading {
+            color: #5d318a;
+            letter-spacing: 7px;
+            font-size: 17px;
+            margin-top: 69px;
+        }
+
+        .blog-title {
+            margin: 20px 0 20px 0;
+            font-size: 30px;
+            color: rgba(0, 0, 0, 0.9);
+        }
+
+        .gray-bg {
+            background-color: #F2F2F2;
+            padding: 20px;
+            color: rgba(0, 0, 0, 0.8);
+            font-size: 17px;
+        }
+
+        .blog-image-div img {
+
+            display: block;
+            margin: 0 auto;
+        }
+
+        .gray-text {
+            color: #757575;
+            margin: 15px 0px 40px 0px;
+            font-size: 14px;
+
+        }
+
+        .rishan-img {
+            width: 130px;
+        }
+
+        .blog-author-div {
+            width: 60%;
+        }
+
+        .author-details {
+            margin-right: 30px;
+        }
+
+        .author-details p {
+            margin-top: 15px;
+            margin-bottom: 0;
+        }
+
+        .author-line {
+            background-color: #5d318a;
+            height: 1px;
+            margin: 0;
+        }
+
+        .blog-comment {
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        .blog-comment textarea {
+            display: block;
+            width: 60%;
+            height: 150px;
+            padding: 10px 20px;
+        }
+
+        #submit-comment {
+            background-color: #FF4500;
+            color: rgba(255, 255, 255, 0.9);
+            border: none;
+            border-radius: 5px;
+            padding: 5px 20px;
+            margin-top: 10px;
+        }
+
+        .blog-categories-heading {
+            font-size: 25px;
+
+            margin-bottom: 12px;
+        }
+
+        .blog-desc-links,
+        .blog-desc-links:visited,
+        .blog-desc-links:active {
+            color: rgba(0, 0, 0, 0.9);
+            text-decoration: underline;
+        }
+
+        .blog-desc-links:hover {
+            color: rgba(0, 0, 0, 0.9);
+            text-decoration: none;
+        }
+
+        .blog-categories-list {
+            padding-left: 16px;
+            margin-bottom: 35px;
+
+        }
+
+        .blog-categories-list {
+            font-size: 20px;
+            padding-left: 16px;
+
+        }
+
+        .ordered-list {
+            margin-left: 12px;
+        }
+
+        .ordered-list>li {
+            font-size: 20px;
+
+
+        }
+
+        .blog-categories-list>li>p {
+            margin: 0px 0 8px 0;
+
+        }
+
+        .blog6-img1-p {
+            margin-top: 40px;
+        }
+
+        .edge-detection {
+            margin-top: 40px;
+        }
+
+        .margin-heading {
+            margin-bottom: 25px;
+        }
+
+        .fig-2a {
+            width: 295px;
+        }
+
+        .fig-8 {
+            width: 628px;
+        }
+
+        .fig-8a {
+            margin-bottom: 40px !important;
+        }
+
+
+
+
+        .p-img-desc {
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        /* Blog css ends*/
+
+
+        /* Media Query */
+        @media only screen and (min-width: 1367px) and (max-width: 1600px) {
+            h1 {
+                font-size: 33px;
+            }
+
+            .blog-content {
+                width: 750px;
+                margin-top: -170px;
+            }
+
+            .blog-author-div {
+                width: 80%;
+            }
+
+            .vission-banner {
+                height: 360px;
+            }
+
+            .vission-main-img {
+                width: 900px;
+                background-size: 900px 464px;
+                margin-top: -179px;
+                height: 464px;
+            }
+
+            .vission-heading {
+                top: 28%;
+
+            }
+
+            .thus-a-great {
+                width: 96%;
+            }
+
+            .the-best-reviewers {
+                width: 95%;
+            }
+
+            .by-aggregating {
+                width: 95%;
+            }
+        }
+
+        @media only screen and (min-width: 1281px) and (max-width: 1366px) {
+            .vission-banner {
+                height: 307px;
+            }
+
+            .vission-main-img {
+                width: 720px;
+                background-size: 720px 371px;
+                margin-top: -153px;
+                margin-left: 58px;
+                height: 371px;
+            }
+
+            .vission-heading {
+                top: 31%;
+
+                font-size: 28px;
+            }
+
+            .blog-content {
+                width: 700px;
+                margin-top: -140px;
+            }
+
+            .blog-author-div {
+                width: 80%;
+            }
+        }
+
+        @media only screen and (min-width: 1025px) and (max-width: 1280px) {
+            .vission-banner {
+                height: 288px;
+            }
+
+            .vission-main-img {
+                margin-left: 47px;
+                margin-top: -144px;
+                background-size: 715px 369px;
+                height: 369px;
+                width: 715px;
+            }
+
+            .vission-heading {
+                top: 29%;
+
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            .blog-content {
+
+                width: 650px;
+                margin-top: -130px;
+            }
+
+            .blog-author-div {
+                width: 80%;
+            }
+        }
+
+        @media only screen and (min-width: 1000px) and (max-width: 1024px) {
+            .vission-banner {
+                height: 230px;
+            }
+
+            .vission-main-img {
+                width: 98%;
+                background-size: 677px 420px;
+                margin-left: 10px;
+                margin-top: -116px;
+                height: 420px;
+            }
+
+            .vission-heading {
+                top: 26.5%;
+            }
+
+            h1 {
+                font-size: 26.5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand ml-5 mt-1" href="../index.html"><img class="logo" src="../resources/logo.png" alt=""
+                loading="lazy"></a>
+        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button> -->
+        <div class="navbar-items  ml-auto  ">
+            <div class=" navbar-expand float-right mt-n2" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <!-- <li class="nav-item active">
+      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+    </li> -->
+                    <!-- <li class="nav-item">
+                        <a class="" href="./newsroom.html">Newsroom
+                            <img src="../resources/navbar_arrow.png" class="nav-arrow"></a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="" href="./csr.html">CSR
+                            <img src="../resources/navbar_arrow.png" class="nav-arrow"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="" href="./careers.html">Careers
+                            <img src="../resources/navbar_arrow.png" class="nav-arrow"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="" href="./contact.html">Contact
+                            <img src="../resources/navbar_arrow.png" class="nav-arrow"></a>
+                    </li>
+
+            </div>
+            <div>&nbsp;</div>
+            <div class="navbar-items2 d-flex align-items-end ml-auto mt-4 float-right mb-n4 ">
+                <ul class="ul right-bar-nav ">
+
+                    <li class="home-icon-li "><a href="../index.html" class="list-a"><img class="home-icon-img"
+                                src="../resources/Home icon.png" width="24px" height="22px" alt=""></a></li>
+                    <li class="li nav-item dropdown ">
+                        <a class=" nav-link dropdown-toggle industry-dropdown-heading" href="#" data-toggle="dropdown"
+                            style="color: black !important;padding: 0;">Industry
+                            Solutions</a>
+                        <ul class="dropdown-menu bg-light ">
+                            <li><a class=" dropdown-item " href=" ./healthcare.html"
+                                    style="color: black !important;">Healthcare</a>
+                            </li>
+                            <li><a class="dropdown-item" href="./retail.html"
+                                    style="color: black !important;">Retail</a></li>
+                            <li><a class="dropdown-item" href="./automotive.html"
+                                    style="color: black !important;">Automotive</a></li>
+                            <li><a class="dropdown-item" href="./financial_services.html"
+                                    style="color: black !important;">Financial Services</a></li>
+                        </ul>
+
+                    </li>
+
+
+                    <li class="li "><a href="./Services.html" class="list-a">Services</a></li>
+                    <li class="li li1"><a href="./AboutKushagramati.html" class="list-a">About Us</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+    <!-- navbar ends -->
+    <!-- <div class="navbar-bottom-right">
+        <a href="./leadership.html">Leadership</a>
+        <a href="#">Partners</a>
+        <a href="./values.html">Values</a>
+        <a href="./vision_and_mission.html">Vision and Mission</a>
+        <a href="#" style="border: none;">Awards</a>
+    </div> -->
+    <!-- cover image -->
+    <div class="vission-banner">
+        <div class="  carousel-nav text-light mt-1 row">
+            <a href="./leadership.html">LEADERSHIP</a>
+            <a href="./partners.html">PARTNERS</a>
+            <a href="#">AWARDS</a>
+            <a href="./values.html">VALUES</a>
+            <a href="./vision_and_mission.html">VISION & MISSION</a>
+            <a href="./blog_main.html" class="border-0">USE CASES</a>
+        </div>
+        <h1 class="vission-heading text-light">BLOG</h1>
+    </div>
+    <!-- Blog  -->
+    <div class="blog-content">
+        <!-- <h1 class="blog-heading">BLOG</h1> -->
+        <h1 class="blog-title">Role of OpenCV in Image Preprocessing</h1>
+        <p>Open CV is a huge open-source library for Computer Vision, Machine Learning and Image Processing. It focuses
+            on image processing, video capture and analysis including face-detection and object detection. It can
+            identify faces, objects or even the hand-writing of a human.</p>
+        <p>When it is integrated with NumPy (highly optimized library for numerical operations), whatever operations one
+            can do in NumPy can be combined with OpenCV.</p>
+        <p>OpenCV supports a wide variety of programming languages such as C++, Python, Java etc. and is available on
+            different platforms. It runs on both desktop (Windows, Linux, Android, MacOS, FreeBSD, OpenBSD) and mobile
+            (Android, Maemo, iOS). It is a cross-platform library.</p>
+        <h1 class="blog-categories-heading">Computer Vision</h1>
+        <p>Computer Vision is the way of teaching intelligence to machines and making
+            them see things just like humans. In its simplest form, Computer Vision is what allows computer to see and
+            process visual data just like humans. It involves analyzing images and videos to produce useful information.
+        </p>
+        <h1 class="blog-categories-heading">Applications:</h1>
+        <p>A few of its applications are given below.</p>
+
+        <ul class="blog-categories-list">
+            <li class="">
+                <p>Face Detection</p>
+            </li>
+            <li>
+                <p>Cancer Detection</p>
+            </li>
+            <li>
+                <p>COVID-19 diagnosis</p>
+            </li>
+            <li>
+                <p>Movement Analysis</p>
+            </li>
+            <li>
+                <p>Mask detection</p>
+            </li>
+            <li>
+                <p>Traffic Flow Analysis</p>
+            </li>
+            <li>
+                <p>Driver Attentiveness Detection</p>
+            </li>
+            <li>
+                <p>Customer Tracking</p>
+            </li>
+            <li>
+                <p>Theft Detection</p>
+            </li>
+        </ul>
+
+        <p>Image processing is the most basic and one of the important concepts in Computer Vision. Just as we do data
+            preprocessing techniques in Machine Learning to make our data ready for easy computation, images should also
+            go through the same preprocessing techniques.</p>
+
+        <h1 class="blog-categories-heading">Image Preprocessing:</h1>
+        <p>In order to add a dataset of images to a convolutional network, all of the images should be of same size.
+            Preprocessing includes image resizing, geometric and color transformations, gray-scale conversion,
+            background removal, noise removal, edge detection and many more.</p>
+        <p>The acquired data is usually messy and come from different sources. To feed them to the ML model (or neural
+            network), they need to be standardized and cleaned up. This can be done with the help of OpenCV.
+            Preprocessing is used to conduct steps that reduce the complexity and increase the accuracy of the applied
+            algorithm. We cannot write a unique algorithm for each of the condition in which an image is taken, thus,
+            when we acquire an image, we convert it into a form that allows a general algorithm to solve it. This is the
+            importance of image preprocessing.
+        </p>
+        <p class="">Let’s take an example of an Image Classification problem.</p>
+
+        <p>Consider the image given below:</p>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a " src="../resources/blog_6_pic_1.png" alt="">
+        </div>
+
+        <p class="blog6-img1-p">You can easily recognize it. It’s a car. When you were shown an image, you
+            classified it to a class it belonged to (car, in this instance). This is what an image classification is all
+            about. When you are given a dataset containing a massive number of images (say 10,000 or 1,00,000), manually
+            checking and classifying is a tedious task. Here we have to build an image classification model.
+        </p>
+        <p>Self-driving car is a great example where image classification is used in real world. To enable autonomous
+            driving, we have to build an image classification model to recognize various objects like vehicles, people,
+            obstacles, moving objects etc. on the road. So, the entire problem involves 4 steps;</p>
+
+        <ol class="blog-categories-list ordered-list">
+            <li>
+                <p>Loading and preprocessing data</p>
+            </li>
+            <li>
+                <p>Defining model architecture</p>
+            </li>
+            <li>
+                <p>Training the model</p>
+            </li>
+            <li>
+                <p>Estimation of performance</p>
+            </li>
+        </ol>
+
+        <p>Now, let us have a look at the role of OpenCV in Image Preprocessing techniques. This is used in cases when
+            you want to analyze the images manually before feeding them into the training model.</p>
+
+        <h3>1. Converting to Gray scale image</h3>
+
+        <p>Gray-scale images reduces the complexity of computation as it
+            removes all the unwanted information from the
+            image. The code for converting an image to gray-scale is given below:</p>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-8 fig-8a" src="../resources/blog_6_pic_2.png" alt="">
+            <img class="blog-graphs fig-8" src="../resources/blog_6_pic_3.png" alt="">
+            <img class="blog-graphs fig-8" src="../resources/blog_6_pic_4.png" alt="">
+        </div>
+
+        <h3 class="edge-detection">2. Edge Detection</h3>
+
+        <p>Edge detection is done using the same image given above.</p>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-8 " src="../resources/blog_6_pic_5.png" alt="">
+            <img class="blog-graphs fig-8 fig-8a" src="../resources/blog_6_pic_6.png" alt="">
+        </div>
+        <p>Canny edge detection is used to detect the edges in an image. It accepts a gray scale image as input and it
+            uses a multistage algorithm which involves noise reduction, finding the edge gradient and direction,
+            non-maximum suppression to remove any unwanted pixels which may not constitute the edge and Hysteresis
+            thresholding to decide which all edges are really edges and which are not based on two threshold values
+            ‘minVal’ and ‘maxVal’.</p>
+
+        <h3>3. Noise Removal</h3>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-8 fig-8a" src="../resources/blog_6_pic_7.png" alt="">
+            <img class="blog-graphs fig-8 fig-8a" src="../resources/blog_6_pic_8.png" alt="">
+            <img class="blog-graphs fig-8 " src="../resources/blog_6_pic_9.png" alt="">
+            <img class="blog-graphs fig-8 fig-8a" src="../resources/blog_6_pic_10.png" alt="">
+        </div>
+
+        <h3>4. Image Contouring</h3>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-8" src="../resources/blog_6_pic_11.png" alt="">
+            <img class="blog-graphs fig-8 fig-8a" src="../resources/blog_6_pic_12.png" alt="">
+            <img class="blog-graphs fig-8" src="../resources/blog_6_pic_13.png" alt="">
+            <img class="blog-graphs fig-8" src="../resources/blog_6_pic_14.png" alt="">
+            <img class="blog-graphs fig-8 fig-8a" src="../resources/blog_6_pic_15.png" alt="">
+        </div>
+
+        <h3>5. Blurring and Smoothing</h3>
+
+        <p>It is done to find features or to remove noise from features.
+            There are many methods available in OpenCV for performing blurring and smoothing. It includes:</p>
+
+        <ul class="blog-categories-list">
+            <li class="">
+                <p>Gaussian Blurring</p>
+            </li>
+            <li>
+                <p>Median Blurring</p>
+            </li>
+            <li>
+                <p>Bilateral Blurring</p>
+            </li>
+            <li>
+                <p>Gamma Correction</p>
+            </li>
+            <li>
+                <p>Using built-in kernels</p>
+            </li>
+            <li>
+                <p>Using user-defined kernels</p>
+            </li>
+        </ul>
+
+        <p style="margin-bottom: 15px;">How it works?</p>
+        <p>Generally, there will be kernel (kernels are nothing but array of numbers) for performing different kinds of
+            operations and we will be multiplying them with the normal image and taking the sum of that and consider
+            that as the pixel value.</p>
+
+            <p>This is the kernel for blurring:</p>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-8 fig-8a" src="../resources/blog_6_pic_16.png" alt="">
+        </div>
+
+        <p >Kernel for sharpening the image:</h1>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-8 fig-8a" src="../resources/blog_6_pic_17.png" alt="">
+        </div>
+
+        <h1 class="blog-categories-heading ">Gaussian Blurring:</h1>
+        <p>It is a type of blurring technique which helps to reduce the Gaussian noise and create blur. We are using a
+            gaussian filter which convolves around the image and do the multiplication and summation task.</p>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-8 " src="../resources/blog_6_pic_18.png" alt="">
+            <img class="blog-graphs fig-8 fig-8a" src="../resources/blog_6_pic_19.png" alt="">
+            <img class="blog-graphs fig-8 fig-8a" src="../resources/blog_6_pic_20.png" alt="">
+        </div>
+
+        <h3>6. Line Detection</h3>
+        <p>This is done to detect the lines in images. For that, we use cv2.HoughLines(P) for doing that along with
+            creating a mask through which we create the edges using Canny edge detector and then apply that output in
+            the Hough line prediction function.</p>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-8 fig-8a" src="../resources/blog_6_pic_21.png" alt="">
+        </div>
+
+        <p>Now, we are applying Gaussian blur function to this image.</p>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-8 fig-8a" src="../resources/blog_6_pic_22.png" alt="">
+        </div>
+
+        <p>Then, we create a mask to segment the lines in the image and create the edges using Canny edge detector. The
+            output of this function is applied to the Hough Line prediction function to find out the lines in the image.
+        </p>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-8" src="../resources/blog_6_pic_23.png" alt="">
+            <img class="blog-graphs fig-8 fig-8a" src="../resources/blog_6_pic_24.png" alt="">
+        </div>
+
+        <p>This is how the output looks like.</p>
+
+        <p>These are few of the image processing techniques which can be done using OpenCV. Other techniques include:
+        </p>
+
+        <ul class="blog-categories-list">
+            <li class="">
+                <p>Removing background from the image</p>
+            </li>
+            <li>
+                <p>Color Detection</p>
+            </li>
+            <li>
+                <p>Extracting text from image</p>
+            </li>
+            <li>
+                <p>Rotate an image</p>
+            </li>
+            <li>
+                <p>Adjust image contrast</p>
+            </li>
+            <li>
+                <p>Crop an image</p>
+            </li>
+            <li>
+                <p>Apply mask for colored image</p>
+            </li>
+            <li>
+                <p>Centroid detection, etc.</p>
+            </li>
+        </ul>
+
+        <p>Image processing allows a much wider range of algorithms to be applied to input data. The aim of image
+            processing is to improve the image data (features) by suppressing unwanted distortions and enhancement of
+            some important image features so that our training models can benefit from this improved data to work on
+            which in turn improves the performance of the model.</p>
+
+        <div class="d-flex justify-content-around gray-bg blog-author-div">
+            <div class="author-details">
+                <h5>Neha V S</h5>
+                <hr class="author-line">
+                <p>Kushagramati</p>
+                <p style="visibility: hidden;">Software (Data) Engineer and<br>Product
+                    Management<br>at Kushagramati
+                </p>
+            </div>
+            <div class="author-image">
+                <img class="rishan-img" src="../resources/neha.png" alt="rishan shetty">
+            </div>
+        </div>
+        <div class="blog-comment">
+            <form>
+                <textarea name="Blog" placeholder="Comment here" id=""></textarea>
+                <a href="sales@kmathi.in"><input type="submit" id="submit-comment" value="Submit"></a>
+            </form>
+        </div>
+
+    </div>
+
+
+
+    </div>
+
+</body>
+
+</html>

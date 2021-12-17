@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+            /* color: rgba(255, 255, 255, 0.9); */
+
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 115%;
+        }
+
+        ul {
+            font-size: 14px;
+        }
+
+        li {
+            font-size: 14px;
+        }
+
+        .blog-banner {
+            width: 100%;
+            height: 427px;
+            background: url(../resources/blog_cover.png);
+            margin-top: 69px;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            margin-top: 83px;
+        }
+
+        .vission-main-img {
+            width: 1027px;
+            height: 530px;
+            background: url(../resources/vision_mission_main.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            margin-left: 63px;
+            margin-top: -213px;
+        }
+
+        .blog-heading {
+            position: absolute;
+            left: 8.5%;
+            top: 25%;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        /* Blog */
+        .blog-posts-div {
+            padding: 0 0 0 8.5%;
+            margin-top: -180px;
+            width: 800px;
+        }
+
+        .blog-posts-div h1 {
+            font-size: 30px;
+        }
+
+
+
+        .blog-posts-pic img {
+            height: 100px;
+        }
+
+        .blog-posts-heading-line {
+            background-color: #5d318a;
+            height: 1px;
+            margin-top: 0;
+        }
+
+        .neha {
+            width: 105%;
+        }
+
+        .akshata {
+            width: 170%;
+        }
+
+        .patel {
+            width: 113%;
+        }
+
+        .blog-description p {
+            font-size: 17px;
+            width: 98%;
+        }
+
+        .btn-read-more,
+        .btn-read-more:visited {
+            color: #5d318a;
+            border: 1px solid #5d318a;
+            border-radius: 5px;
+            padding: 3px 5px;
+            transition: background-color 0.3s;
+
+        }
+
+        .btn-read-more:hover,
+        .btn-read-more:active {
+            background-color: #5d318a;
+            text-decoration: none;
+            color: white;
+            border: 1px solid #5d318a;
+
+
+        }
+
+        .blog-posts-bottom-line {
+            background-color: rgba(0, 0, 0, 0.2);
+            height: 1px;
+            margin-top: 25px;
+            margin-bottom: 30px;
+        }
+
+
+        .blog-3-h1 {
+            max-width: 90%;
+        }
+
+
+        /* Blog ends */
+
+        /* Media Query */
+        @media only screen and (min-width: 1367px) and (max-width: 1600px) {
+            h1 {
+                font-size: 33px;
+            }
+
+            .blog-banner {
+                height: 360px;
+            }
+
+            .vission-main-img {
+                width: 900px;
+                background-size: 900px 464px;
+                margin-top: -179px;
+                height: 464px;
+            }
+
+            .blog-heading {
+                top: 28%;
+
+            }
+
+            .blog-posts-div {
+
+                margin-top: -140px;
+
+            }
+        }
+
+        @media only screen and (min-width: 1281px) and (max-width: 1366px) {
+
+            .blog-posts-div {
+                padding: 0 0 0 8.5%;
+                margin-top: -120px;
+                max-width: 650px;
+            }
+
+            .blog-banner {
+                height: 307px;
+            }
+
+            .neha {
+                width: 100%;
+            }
+
+            .akshata {
+                width: 130%;
+            }
+
+            .patel {
+                width: 100%;
+            }
+
+            .vission-main-img {
+                width: 720px;
+                background-size: 720px 371px;
+                margin-top: -153px;
+                margin-left: 58px;
+                height: 371px;
+            }
+
+            .blog-heading {
+                top: 31%;
+
+                font-size: 28px;
+            }
+        }
+
+        @media only screen and (min-width: 1025px) and (max-width: 1280px) {
+            .blog-banner {
+                height: 288px;
+            }
+
+            .vission-main-img {
+                margin-left: 47px;
+                margin-top: -144px;
+                background-size: 715px 369px;
+                height: 369px;
+                width: 715px;
+            }
+
+            .blog-heading {
+                top: 29%;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            .blog-posts-div {
+                margin-top: -110px;
+                width: 650px;
+            }
+        }
+
+        @media only screen and (min-width: 1000px) and (max-width: 1024px) {
+            .blog-banner {
+                height: 230px;
+            }
+
+            .vission-main-img {
+                width: 98%;
+                background-size: 677px 420px;
+                margin-left: 10px;
+                margin-top: -116px;
+                height: 420px;
+            }
+
+            .blog-heading {
+                top: 26.5%;
+            }
+
+            h1 {
+                font-size: 26.5px;
+            }
+        }
+
+        /* For Mobile Devices */
+
+        @media only screen and (min-width: 320px) and (max-width: 992px) {
+            .blog-banner {
+                height: 221px;
+                width: 50em;
+            }
+
+            .blog-heading {
+                position: relative;
+                top: 25%;
+                font-size: 20px;
+                width: 50%;
+            }
+
+            .patel,.neha {
+                width: 100%;
+            }
+
+            .akshata{
+                width: 105%;
+            }
+
+            .sanjay-heading-parent{
+                margin-top: 120px;
+            }
+
+            .img-1{
+                margin-top: 150px;
+            }
+
+            .blog-posts-div h1 {
+                max-width: 350px;
+            }
+
+            .blog-posts-pic img {
+                margin-right: 300px;
+            }
+
+            .blog-description,.blog-posts-bottom-line{
+                width: 90%;
+            }
+
+            .carousel-nav {
+                position: static;
+                margin-left: 10px;
+            }
+
+            .carousel-nav a {
+                font-size: 0.85rem !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top " style="top: 27px;">
+        <a class="navbar-brand ml-5 mt-n4" href="../index.html"><img class="logo" src="../resources/logo.png" alt=""
+                loading="lazy"></a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="top-nav bg-light">
+            <ul class="d-flex justify-content-end top-nav-buttons ">
+
+                <li class=" nav-item" style="border-right: none">
+                    <a class="" href="./csr.html">CSR
+                        <img src="../resources/navbar_arrow.png" class="nav-arrow"></a>
+                </li>
+                <li class="nav-item" style="border-right: none">
+                    <a class="" href="./careers.html">Careers
+                        <img src="../resources/navbar_arrow.png" class="nav-arrow"></a>
+                </li>
+                <li class="nav-item" style="border-right: none">
+                    <a class="" href="./contact.html">Contact
+                        <img src="../resources/navbar_arrow.png" class="nav-arrow"></a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar  ml-auto display-list-mob">
+                <li class="nav-item home-icon-li "><a href="../index.html" class=" "><img class="home-icon-img"
+                            src="../resources/Home icon.png" alt=""></a></li>
+
+                <li class="nav-item dropdown" style="color: black !important;">
+                    <a class=" nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                        style="color: black !important; font-size: 16px; ">
+                        Industry
+                        Solutions
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                        <a class=" dropdown-item " href=" ./healthcare.html"
+                            style="color: black !important; font-size: 16px; ">Healthcare</a>
+                        <a class="dropdown-item" href="./retail.html"
+                            style="color: black !important; font-size: 16px; ">Retail</a>
+
+                        <a class="dropdown-item" href="./automotive.html"
+                            style="color: black !important; font-size: 16px; ">Automotive</a>
+                        <a class="dropdown-item" href="./financial_services.html"
+                            style="color: black !important; font-size: 16px; ">Financial Services</a>
+                    </div>
+                </li>
+
+
+                <li class="nav-item">
+                    <a href="./Services.html" class=" nav-link"
+                        style="color: black !important; font-size: 16px; ">Services</a>
+                </li>
+                <li class="nav-item border-0">
+                    <a href="./AboutKushagramati.html" class=" nav-link"
+                        style="color: black !important; font-size: 16px; ">About Us</a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+    <!-- Navbar Ends -->
+
+    <!-- cover image -->
+    <div class="blog-banner">
+        <div class="  carousel-nav text-light mt-1 row">
+            <a href="./leadership.html">LEADERSHIP</a>
+            <a href="./partners.html">PARTNERS</a>
+            <a href="#">AWARDS</a>
+            <a href="./values.html">VALUES</a>
+            <a href="./vision_and_mission.html">VISION & MISSION</a>
+            <a href="#" class="border-0">USE CASES</a>
+        </div>
+        <h1 class="blog-heading">BLOG</h1>
+    </div>
+    <div class="blog-posts-div">
+        <!-- Blog 1 -->
+        <div class="">
+            <div class="d-flex justify-content-between">
+                <div class="sanjay-heading-parent">
+                    <h1>Predicting Michael Jordan’s Scoring with Machine Learning</h1>
+                    <h5>by Rishan Sanjay</h5>
+                    <hr class="blog-posts-heading-line">
+                </div>
+                <div class="blog-posts-pic img-1">
+                    <img src="../resources/rishan_shetty.png" alt="">
+                </div>
+            </div>
+            <div class="blog-description">
+                <p>I began my journey in the vast world of data with Kushagramati Analytics. The avenues of training
+                    afforded to me by this job have been extraordinary to say the least and the freedom to learn has
+                    been tremendously encouraging. I started off with learning Python, Pandas and Numpy and subsequently
+                    moved on to ML concepts. I decided to use an NBA dataset (upto 2017, found on Kaggle) as a part of
+                    my learning owing to my passion for the game of basketball and what better way to begin my journey
+                    in predictive analytics than predicting MJ’s scoring.</p>
+                <a href="./blog_1.html" class="btn-read-more">Read More</a>
+            </div>
+            <hr class="blog-posts-bottom-line">
+
+        </div>
+
+        <!-- Blog 1 ends-->
+
+        <!-- Blog 2 -->
+        <div class="">
+            <div class="d-flex justify-content-between">
+                <div class="">
+                    <h1>Sentiment Analysis using NLP on a Hotel Review Dataset</h1>
+                    <h5>by Rishan Sanjay</h5>
+                    <hr class="blog-posts-heading-line">
+                </div>
+                <div class="blog-posts-pic">
+                    <img src="../resources/rishan_shetty.png" alt="">
+                </div>
+            </div>
+            <div class="blog-description">
+                <p>Hotel booking companies have been amassing tremendous amounts of data. The reviews left by users are
+                    of value to the hotels but due to the volume, extracting insights is no easy task. Using Natural
+                    Language Processing (NLP) techniques we carry out a sentiment analysis based on the given review
+                    data and visualize it. Further, the data is analyzed for the negative and positive sentiments to
+                    point out Key strengths and weaknesses based on the given reviews.</p>
+                <a href="./blog_2.html" class="btn-read-more">Read More</a>
+            </div>
+            <hr class="blog-posts-bottom-line">
+
+        </div>
+
+        <!-- Blog 2 ends-->
+
+        <!-- Blog 3 -->
+        <div class="">
+            <div class="d-flex justify-content-between">
+                <div class="">
+                    <h1 class="blog-3-h1">Hyperparameter Tuning in Classification Models</h1>
+                    <h5>by Ajay Manoharan</h5>
+                    <hr class="blog-posts-heading-line">
+                </div>
+                <div class="blog-posts-pic">
+                    <img src="../resources/aj.png" alt="">
+                </div>
+            </div>
+            <div class="blog-description">
+                <p>Flourishing companies that make the most effective use of data science create exceptional models. A
+                    model is a Machine Learning algorithm that is a combination of model data and prediction algorithm.
+                    The biggest challenge for data scientists and ML researchers is to improve the accuracy of the model
+                    using different methods and techniques.</p>
+                <a href="./blog_3.html" class="btn-read-more">Read More</a>
+            </div>
+            <hr class="blog-posts-bottom-line">
+
+        </div>
+
+        <!-- Blog 3 ends-->
+
+        <!-- Blog 4 -->
+        <div class="">
+            <div class="d-flex justify-content-between">
+                <div class="">
+                    <h1 class="blog-3-h1">Activation Functions in Deep Learning</h1>
+                    <h5>by Vivek Patel</h5>
+                    <hr class="blog-posts-heading-line patel">
+                </div>
+                <div class="blog-posts-pic">
+                    <img src="../resources/vivek_patel.png" alt="">
+                </div>
+            </div>
+            <div class="blog-description">
+                <p>In artificial neural networks(ANN), the activation function helps us to determine the output of
+                    Neural Network. They decide whether the neuron should be activated or not. It determines the output
+                    of a model, its accuracy, and computational efficiency.</p>
+                <a href="./blog_4.html" class="btn-read-more">Read More</a>
+            </div>
+            <hr class="blog-posts-bottom-line">
+
+        </div>
+
+        <!-- Blog 4 ends-->
+
+        <!-- Blog 5 -->
+        <div class="">
+            <div class="d-flex justify-content-between">
+                <div class="">
+                    <h1 class="blog-3-h1">How to make Multi Label predictions using Multi Label Classifiers <br> for
+                        text
+                        data</h1>
+                    <h5>by Rashmi P G</h5>
+                    <hr class="blog-posts-heading-line">
+                </div>
+                <div class="blog-posts-pic">
+                    <img src="../resources/rashmi_1.png" alt="">
+                </div>
+            </div>
+            <div class="blog-description">
+                <p>One of the successful implementations of Artificial Intelligence is Natural Language Processing
+                    (NLP). NLP is extensively used by industry to understand the customer sentiment and derive more
+                    insights from the data. Any successful business operates on the fundamental of its customers’ likes
+                    and dislikes, and continuously improve its quality of products and services. Analyzing the sentiment
+                    of consumers/users is most required for social media platforms like facebook and twitter to keep the
+                    posts and tweets well within the community standards.</p>
+                <a href="./blog_5.html" class="btn-read-more">Read More</a>
+            </div>
+            <hr class="blog-posts-bottom-line">
+
+        </div>
+
+        <!-- Blog 5 ends-->
+
+        <!-- Blog 6 -->
+        <div class="">
+            <div class="d-flex justify-content-between">
+                <div class="">
+                    <h1 class="blog-3-h1">Role of OpenCV in Image Preprocessing</h1>
+                    <h5>by Neha V S</h5>
+                    <hr class="blog-posts-heading-line neha">
+                </div>
+                <div class="blog-posts-pic">
+                    <img src="../resources/neha.png" alt="">
+                </div>
+            </div>
+            <div class="blog-description">
+                <p>Open CV is a huge open-source library for Computer Vision, Machine Learning and Image Processing. It
+                    focuses on image processing, video capture and analysis including face-detection and object
+                    detection. It can identify faces, objects or even the hand-writing of a human.</p>
+                <a href="./blog_6.html" class="btn-read-more">Read More</a>
+            </div>
+            <hr class="blog-posts-bottom-line">
+
+        </div>
+
+        <!-- Blog 6 ends-->
+
+        <!-- Blog 7 -->
+        <div class="">
+            <div class="d-flex justify-content-between">
+                <div class="">
+                    <h1 class="blog-3-h1">How to Create a Virtual environment and Setup Django project</h1>
+                    <h5>Sudharshan Reddy</h5>
+                    <hr class="blog-posts-heading-line">
+                </div>
+                <div class="blog-posts-pic">
+                    <img src="../resources/Sudharshan Reddy.jpg" alt="" style="border-radius: 50px;">
+                </div>
+            </div>
+            <div class="blog-description">
+                <p>Django is a Web framework written in Python. A Web framework is a software that supports the
+                    development of dynamic Web sites, applications, and services. It provides a set of tools and
+                    functionalities that solves many common problems associated with Web development, such as security
+                    features, database access, sessions, template processing, URL routing, internationalization,
+                    localization, and much more.</p>
+                <a href="./blog_7.html" class="btn-read-more">Read More</a>
+            </div>
+            <hr class="blog-posts-bottom-line">
+
+        </div>
+
+        <!-- Blog 7 ends-->
+
+        <!-- Blog 8 -->
+        <div class="">
+            <div class="d-flex justify-content-between">
+                <div class="">
+                    <h1 class="blog-3-h1">Time Series Forecasting on COVID 19 using ARIMA</h1>
+                    <h5>Mohan Baabu</h5>
+                    <hr class="blog-posts-heading-line">
+                </div>
+                <div class="blog-posts-pic">
+                    <img src="../resources/Mohan Baabu.jpg" alt="" style="border-radius: 70px;width: 100px;">
+                </div>
+            </div>
+            <div class="blog-description">
+                <p>Time Series data is experimental data that has been observed at different points in time (usually
+                    evenly spaced, like once a day). For example, the data of airline ticket sales per day is a time
+                    series. However, just because a series of events has a time element does not automatically make it a
+                    time series, such as the dates of major airline disasters, which are randomly spaced and are not
+                    time series. These types of random processes are known as point process.</p>
+                <a href="./blog_8.html" class="btn-read-more">Read More</a>
+            </div>
+            <hr class="blog-posts-bottom-line">
+
+        </div>
+
+        <!-- Blog 8 ends-->
+
+        <!-- Blog 9 -->
+        <div class="">
+            <div class="d-flex justify-content-between">
+                <div class="">
+                    <h1 class="blog-3-h1">What's New in Flutter 2.2</h1>
+                    <h5>Akshata Ghorpade</h5>
+                    <hr class="blog-posts-heading-line akshata">
+                </div>
+                <div class="blog-posts-pic">
+                    <img src="../resources/Akshata Ghorpade.jpeg" alt=""
+                        style="border-radius: 70px;width: 110px;height: 110px;">
+                </div>
+            </div>
+            <div class="blog-description">
+                <p>The Flutter 2.2 release focuses on polish and optimization, including iOS performance improvements,
+                    Android deferred components, updated service worker For Flutter web and more.</p>
+                <a href="./blog_9.html" class="btn-read-more">Read More</a>
+            </div>
+            <!-- <hr class="blog-posts-bottom-line"> -->
+
+        </div>
+
+        <!-- Blog 9 ends-->
+
+        <div>&nbsp</div>
+        <div>&nbsp</div>
+        <div>&nbsp</div>
+    </div>
+
+
+</body>
+
+</html>

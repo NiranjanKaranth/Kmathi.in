@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+            /* color: rgba(255, 255, 255, 0.9); */
+
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 115%;
+            margin-bottom: 40px;
+        }
+
+        ul {
+            font-size: 14px;
+        }
+
+        li {
+            font-size: 14px;
+        }
+
+        .vission-banner {
+            width: 100%;
+            height: 427px;
+            background: url(../resources/blog_cover.png);
+            margin-top: 69px;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            margin-top: 83px;
+        }
+
+        .vission-main-img {
+            width: 1027px;
+            height: 530px;
+            background: url(../resources/vision_mission_main.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            margin-left: 63px;
+            margin-top: -213px;
+        }
+
+        .vission-heading {
+            position: absolute;
+            left: 8.5%;
+            top: 25%;
+        }
+
+        /* Blog css */
+        .blog-content {
+            padding: 0px 0px 0px 8.5%;
+            width: 1010px;
+            margin-top: -200px;
+        }
+
+        .blog-heading {
+            color: #5d318a;
+            letter-spacing: 7px;
+            font-size: 17px;
+            margin-top: 69px;
+        }
+
+        .blog-title {
+            margin: 20px 0 20px 0;
+            font-size: 30px;
+            color: rgba(0, 0, 0, 0.9);
+        }
+
+        .gray-bg {
+            background-color: #F2F2F2;
+            padding: 20px;
+            color: rgba(0, 0, 0, 0.8);
+            font-size: 17px;
+        }
+
+        .blog-image-div img {
+
+            display: block;
+            margin: 0 auto;
+        }
+
+        .gray-text {
+            color: #757575;
+            margin: 15px 0px 40px 0px;
+            font-size: 14px;
+
+        }
+
+        .rishan-img {
+            width: 130px;
+        }
+
+        .blog-author-div {
+            width: 60%;
+        }
+
+        .author-details {
+            margin-right: 30px;
+        }
+
+        .author-details p {
+            margin-top: 15px;
+            margin-bottom: 0;
+        }
+
+        .author-line {
+            background-color: #5d318a;
+            height: 1px;
+            margin: 0;
+        }
+
+        .blog-comment {
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        .blog-comment textarea {
+            display: block;
+            width: 60%;
+            height: 150px;
+            padding: 10px 20px;
+        }
+
+        #submit-comment {
+            background-color: #FF4500;
+            color: rgba(255, 255, 255, 0.9);
+            border: none;
+            border-radius: 5px;
+            padding: 5px 20px;
+            margin-top: 10px;
+        }
+
+        .blog-categories-heading {
+            font-size: 25px;
+
+            margin-bottom: 12px;
+        }
+
+        .blog-desc-links,
+        .blog-desc-links:visited,
+        .blog-desc-links:active {
+            color: rgba(0, 0, 0, 0.9);
+            text-decoration: underline;
+        }
+
+        .blog-desc-links:hover {
+            color: rgba(0, 0, 0, 0.9);
+            text-decoration: none;
+        }
+
+        .blog-categories-list {
+            padding-left: 16px;
+            margin-bottom: 35px;
+
+        }
+
+        .blog-categories-list {
+            font-size: 20px;
+            padding-left: 16px;
+
+        }
+
+        .ordered-list {
+            margin-left: 12px;
+        }
+
+        .ordered-list>li {
+            font-size: 20px;
+
+
+        }
+
+        .blog-categories-list>li>p {
+            margin: 0px 0 8px 0;
+
+        }
+
+        .the-best-reviewers {
+            margin-bottom: 12px;
+        }
+
+        .margin-heading {
+            margin-bottom: 25px;
+        }
+
+        .fig-1 {
+            width: 329px;
+        }
+
+        .fig-2a {
+            width: 295px;
+        }
+
+        .fig-2b {
+            width: 321px;
+        }
+
+        .fig-3a {
+            width: 287px;
+        }
+
+        .fig-3b {
+            width: 320px;
+        }
+
+        .fig-4a {
+            width: 280px;
+        }
+
+        .fig-4b {
+            width: 291px;
+        }
+
+        .fig-5a {
+            width: 275px;
+        }
+
+        .fig-5b {
+            width: 275px;
+        }
+
+        .fig-6a {
+            width: 259px;
+        }
+
+        .fig-6b {
+            width: 259px;
+        }
+
+        .fig-7a {
+            width: 267px;
+        }
+
+        .fig-7b {
+            width: 247px;
+        }
+
+        .fig-8 {
+            width: 628px;
+        }
+
+
+
+        /* Blog css ends*/
+
+
+        /* Media Query */
+        @media only screen and (min-width: 1367px) and (max-width: 1600px) {
+            h1 {
+                font-size: 33px;
+            }
+
+            .blog-content {
+                width: 750px;
+                margin-top: -170px;
+            }
+
+            .blog-author-div {
+                width: 80%;
+            }
+
+            .vission-banner {
+                height: 360px;
+            }
+
+            .vission-main-img {
+                width: 900px;
+                background-size: 900px 464px;
+                margin-top: -179px;
+                height: 464px;
+            }
+
+            .vission-heading {
+                top: 28%;
+
+            }
+
+            .thus-a-great {
+                width: 96%;
+            }
+
+            .the-best-reviewers {
+                width: 95%;
+            }
+
+            .by-aggregating {
+                width: 95%;
+            }
+        }
+
+        @media only screen and (min-width: 1281px) and (max-width: 1366px) {
+            .vission-banner {
+                height: 307px;
+            }
+
+            .vission-main-img {
+                width: 720px;
+                background-size: 720px 371px;
+                margin-top: -153px;
+                margin-left: 58px;
+                height: 371px;
+            }
+
+            .vission-heading {
+                top: 31%;
+
+                font-size: 28px;
+            }
+
+            .blog-content {
+                width: 700px;
+                margin-top: -140px;
+            }
+
+            .blog-author-div {
+                width: 80%;
+            }
+        }
+
+        @media only screen and (min-width: 1025px) and (max-width: 1280px) {
+            .vission-banner {
+                height: 288px;
+            }
+
+            .vission-main-img {
+                margin-left: 47px;
+                margin-top: -144px;
+                background-size: 715px 369px;
+                height: 369px;
+                width: 715px;
+            }
+
+            .vission-heading {
+                top: 29%;
+
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            .blog-content {
+
+                width: 650px;
+                margin-top: -130px;
+            }
+
+            .blog-author-div {
+                width: 80%;
+            }
+        }
+
+        @media only screen and (min-width: 1000px) and (max-width: 1024px) {
+            .vission-banner {
+                height: 230px;
+            }
+
+            .vission-main-img {
+                width: 98%;
+                background-size: 677px 420px;
+                margin-left: 10px;
+                margin-top: -116px;
+                height: 420px;
+            }
+
+            .vission-heading {
+                top: 26.5%;
+            }
+
+            h1 {
+                font-size: 26.5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand ml-5 mt-1" href="../index.html"><img class="logo" src="../resources/logo.png" alt=""
+                loading="lazy"></a>
+        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button> -->
+        <div class="navbar-items  ml-auto  ">
+            <div class=" navbar-expand float-right mt-n2" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <!-- <li class="nav-item active">
+      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+    </li> -->
+                    <!-- <li class="nav-item">
+                        <a class="" href="./newsroom.html">Newsroom
+                            <img src="../resources/navbar_arrow.png" class="nav-arrow"></a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="" href="./csr.html">CSR
+                            <img src="../resources/navbar_arrow.png" class="nav-arrow"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="" href="./careers.html">Careers
+                            <img src="../resources/navbar_arrow.png" class="nav-arrow"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="" href="./contact.html">Contact
+                            <img src="../resources/navbar_arrow.png" class="nav-arrow"></a>
+                    </li>
+
+            </div>
+            <div>&nbsp;</div>
+            <div class="navbar-items2 d-flex align-items-end ml-auto mt-4 float-right mb-n4 ">
+                <ul class="ul right-bar-nav ">
+
+                    <li class="home-icon-li "><a href="../index.html" class="list-a"><img class="home-icon-img"
+                                src="../resources/Home icon.png" width="24px" height="22px" alt=""></a></li>
+                    <li class="li nav-item dropdown ">
+                        <a class=" nav-link dropdown-toggle industry-dropdown-heading" href="#" data-toggle="dropdown"
+                            style="color: black !important;padding: 0;">Industry
+                            Solutions</a>
+                        <ul class="dropdown-menu bg-light ">
+                            <li><a class=" dropdown-item " href=" ./healthcare.html"
+                                    style="color: black !important;">Healthcare</a>
+                            </li>
+                            <li><a class="dropdown-item" href="./retail.html"
+                                    style="color: black !important;">Retail</a></li>
+                            <li><a class="dropdown-item" href="./automotive.html"
+                                    style="color: black !important;">Automotive</a></li>
+                            <li><a class="dropdown-item" href="./financial_services.html"
+                                    style="color: black !important;">Financial Services</a></li>
+                        </ul>
+
+                    </li>
+
+
+                    <li class="li "><a href="./Services.html" class="list-a">Services</a></li>
+                    <li class="li li1"><a href="./AboutKushagramati.html" class="list-a">About Us</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+    <!-- navbar ends -->
+    <!-- <div class="navbar-bottom-right">
+        <a href="./leadership.html">Leadership</a>
+        <a href="#">Partners</a>
+        <a href="./values.html">Values</a>
+        <a href="./vision_and_mission.html">Vision and Mission</a>
+        <a href="#" style="border: none;">Awards</a>
+    </div> -->
+    <!-- cover image -->
+    <div class="vission-banner">
+        <div class="  carousel-nav text-light mt-1 row">
+            <a href="./leadership.html">LEADERSHIP</a>
+            <a href="./partners.html">PARTNERS</a>
+            <a href="#">AWARDS</a>
+            <a href="./values.html">VALUES</a>
+            <a href="./vision_and_mission.html">VISION & MISSION</a>
+            <a href="./blog_main.html" class="border-0">USE CASES</a>
+        </div>
+        <h1 class="vission-heading text-light">BLOG</h1>
+    </div>
+    <!-- Blog  -->
+    <div class="blog-content">
+        <!-- <h1 class="blog-heading">BLOG</h1> -->
+        <h1 class="blog-title">Sentiment Analysis using NLP on a Hotel Review Dataset</h1>
+        <p>Hotel booking companies have been amassing tremendous amounts of data. The reviews left by users are
+            of value to the hotels but due to the volume, extracting insights is no easy task. Using Natural
+            Language Processing (NLP) techniques we carry out a sentiment analysis based on the given review
+            data and visualize it. Further, the data is analyzed for the negative and positive sentiments to
+            point out Key strengths and weaknesses based on the given reviews.</p>
+        <h1 class="blog-categories-heading">Data Sources</h1>
+
+        <p>The data is obtained from the Booking.com website &#40;<span><a class="blog-desc-links"
+                    href="https://www.kaggle.com/jiashenliu/515k-hotel-reviews-data-in-europe"
+                    target="_blank">Dataset</a></span>&#41;, The data was
+            scraped from <span><a class="blog-desc-links" href="https://www.booking.com/"
+                    target="_blank">Booking.com</a></span>. All data
+            in the file is publicly available to everyone already. Data is originally owned by <span><a
+                    class="blog-desc-links" href="https://www.booking.com/" target="_blank">Booking.com</a></span>.&
+            This dataset
+            contains 515,000 customer reviews and scoring of 1493 luxury hotels across Europe.</p>
+
+
+        <h1 class="blog-categories-heading">Libraries Used:</h1>
+        <ul class="blog-categories-list">
+            <li class="">
+                <p><b>Pandas</b> – DataFrames and Manipulation</p>
+            </li>
+            <li>
+                <p><b>Numpy</b> – Numerical Library</p>
+            </li>
+            <li>
+                <p><b>Matplotlib</b> – Visualization</p>
+            </li>
+            <li>
+                <p><b>Seaborn</b> – Visualization</p>
+            </li>
+            <li>
+                <p><b>Natural Language Toolkit</b> – Library for NLP</p>
+            </li>
+            <li>
+                <p><b>Scikit-learn</b> – Processing techniques</p>
+            </li>
+
+        </ul>
+
+        <h1 class="blog-categories-heading">Pre-Processing steps:</h1>
+
+        <p>The first step as with all data is to <b>handle the Null values.</b> Since there is a minimal set of null
+            values,
+            they are simply dropped from our analysis. It is also imperative to remove all symbols and characters other
+            than letters. </p>
+        <p>The text must be parsed to exclude some words in order to use textual data for predictive modeling. This
+            technique is called <b>tokenization.</b> They are all then converted into their lower case. The <b>removal
+                of stop
+                words</b> such as ‘and’, ‘but’ etc. is done as these words do not have any significance in our analysis.
+            Finally, <b>lemmatization</b> is done and the values are stored.</p>
+
+        <p>Note: All above steps are done for both negative and positive cases.</p>
+
+        <h1 class="blog-categories-heading">Using the Most Common Words in Positive/Negative Sentiments to find Pain
+            Areas:</h1>
+
+        <p>The <b>CountVectorizer</b> from the Scikit-learn library is used to transform a collection of text data to
+            <b>vectors.</b>
+            A myriad of pre-processing techniques are also available prior to the generation of the vector
+            representation and this makes it a powerful, versatile feature representation module for text.
+        </p>
+        <p>Note: All above steps are done for both negative and positive cases.</p>
+
+        <h1 class="blog-categories-heading">Key Insights from the data:</h1>
+        <p class="by-aggregating">By aggregating the user review scores and analyzing them through Seaborn’s graphing
+            tools, it is perspicuous
+            that the <b>Ritz Paris</b> is the <b>best</b> hotel and that Hotel Liberty appears to be the worst. We
+            observe that <b>70%</b> of
+            the people who have left reviews are from <b>Europe</b> and a large portion of them originate from the
+            United
+            Kingdom.</p>
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-1 " src="../resources/fig1.png" alt="">
+            <p class=" d-flex justify-content-center gray-text">Fig 1 Continent of reviewer</p>
+        </div>
+
+        <p>The reviewer’s scores seem fairly consistent and <b>independent of the number of days</b> stayed, with the
+            exception
+            of the loss occurring at <b>21 days</b>. The scores left by the reviewers appear to be <b>independent</b> of
+            the
+            <b>month/year</b> of stay.
+        </p>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a " src="../resources/fig_2a.png" alt="">
+            <p class=" d-flex justify-content-center gray-text">Fig 2(a) Month of stay vs. Reviewer score</p>
+            <img class="blog-graphs fig-2b " src="../resources/fig_2b.png" alt="">
+            <p class=" d-flex justify-content-center gray-text">Fig 2(b) Number of days stayed vs. Reviewer score </p>
+        </div>
+
+        <p class="the-best-reviewers">The <b>best reviewers</b> are written by <b>couples</b> and <b>solo travelers</b>
+            seem to leave the
+            <b>worst</b> ones. “Whom” in the
+            dataset represents the following:
+        </p>
+
+        <ol class="blog-categories-list ordered-list">
+            <li>
+                <p>Solo Traveler</p>
+            </li>
+            <li>
+                <p>Couple</p>
+            </li>
+            <li>
+                <p>Group</p>
+            </li>
+            <li>
+                <p>Family with young children</p>
+            </li>
+            <li>
+                <p>Family with older children</p>
+            </li>
+        </ol>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-3a" src="../resources/fig_3a.png" alt="">
+            <p class=" d-flex justify-content-center gray-text">Fig 3(a) Country of Hotel vs. Reviewer score</p>
+            <img class="blog-graphs fig-3b" src="../resources/fig_3b.png" alt="">
+            <p class=" d-flex justify-content-center gray-text">Fig 3(b) “Whom” vs. Reviewer score </p>
+        </div>
+
+
+        <p>The best hotels are present in <b>Austria</b> and <b>Spain</b>.</p>
+
+        <h1 class="blog-categories-heading margin-heading">Referencing the Grouped Categories in Bar Charts:</h1>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-4a" src="../resources/fig_4a.png" alt="">
+            <p class=" d-flex justify-content-center gray-text">Fig 4(a) Air conditioning vs. Reviewer score</p>
+            <img class="blog-graphs fig-4b" src="../resources/fig_4b.png" alt="">
+            <p class=" d-flex justify-content-center gray-text">Fig 4(b) Room size vs. Reviewer score</p>
+        </div>
+
+
+
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-5a" src="../resources/fig_5a.png" alt="">
+            <p class=" d-flex justify-content-center gray-text">Fig 5(a) Room problem vs. Reviewer score </p>
+            <img class="blog-graphs fig-5b" src="../resources/fig_5b.png" alt="">
+            <p class="d-flex justify-content-center gray-text">Fig 5(b) Location vs. Reviewer score</p>
+        </div>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-6a" src="../resources/fig_6a.png" alt="">
+            <p class=" d-flex justify-content-center gray-text">Fig 6(a) Staff vs. Reviewer score </p>
+            <img class="blog-graphs fig-6b" src="../resources/fig_6b.png" alt="">
+            <p class="d-flex justify-content-center gray-text">Fig 6(b) Bed/ Room vs. Reviewer score</p>
+        </div>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-7a" src="../resources/fig_7a.png" alt="">
+            <p class=" d-flex justify-content-center gray-text">Fig 7(a) Mobile review vs. Reviewer score </p>
+            <img class="blog-graphs fig-7b" src="../resources/fig_7b.png" alt="">
+            <p class="d-flex justify-content-center gray-text">Fig 7(b) Trip type vs. Reviewer score</p>
+        </div>
+        <h1 class="blog-categories-heading margin-heading">Pearson Correlation Matrix for the features:</h1>
+        <div class="blog-image-div">
+            <img class="fig-8" src="../resources/fig8.png" alt="">
+            <p class=" d-flex justify-content-center gray-text">Fig 8 Pearson Correlation Matrix for features </p>
+
+        </div>
+
+        <p class="thus-a-great">Thus a great amount of insights can be extracted from observing the review data. This
+            can be further extended
+            by selecting a particular hotel from the dataset and observing each feature involved. Using data to
+            meticulously observe the nuances of the reviews can greatly aid in increasing customer satisfaction and by
+            extension improve customer retention, loyalty and generate interest among new prospects.</p>
+
+        <div class="d-flex justify-content-around gray-bg blog-author-div">
+            <div class="author-details">
+                <h5>Rishan Sanjay</h5>
+                <hr class="author-line">
+                <p>Software (Data) Engineer and<br>Product Management<br>at Kushagramati</p>
+            </div>
+            <div class="author-image">
+                <img class="rishan-img" src="../resources/rishan_shetty.png" alt="rishan shetty">
+            </div>
+        </div>
+        <div class="blog-comment">
+            <form>
+                <textarea name="Blog" placeholder="Comment here" id=""></textarea>
+                <a href="sales@kmathi.in"><input type="submit" id="submit-comment" value="Submit"></a>
+            </form>
+        </div>
+
+    </div>
+
+
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+            /* color: rgba(255, 255, 255, 0.9); */
+
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+
+        h3 {
+            font-size: 22px;
+            line-height: 115%;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 115%;
+            margin-bottom: 35px;
+        }
+
+        ul {
+            font-size: 14px;
+        }
+
+        li {
+            font-size: 14px;
+        }
+
+        .vission-banner {
+            width: 100%;
+            height: 427px;
+            background: url(../resources/blog_cover.png);
+            margin-top: 69px;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            margin-top: 83px;
+        }
+
+        .vission-main-img {
+            width: 1027px;
+            height: 530px;
+            background: url(../resources/vision_mission_main.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            margin-left: 63px;
+            margin-top: -213px;
+        }
+
+        .vission-heading {
+            position: absolute;
+            left: 8.5%;
+            top: 25%;
+        }
+
+        /* Blog css */
+        .blog-content {
+            padding: 0px 0px 0px 8.5%;
+            width: 1010px;
+            margin-top: -200px;
+        }
+
+        .blog-heading {
+            color: #5d318a;
+            letter-spacing: 7px;
+            font-size: 17px;
+            margin-top: 69px;
+        }
+
+        .blog-title {
+            margin: 20px 0 20px 0;
+            font-size: 30px;
+            color: rgba(0, 0, 0, 0.9);
+        }
+
+        .gray-bg {
+            background-color: #F2F2F2;
+            padding: 20px;
+            color: rgba(0, 0, 0, 0.8);
+            font-size: 17px;
+        }
+
+        .blog-image-div img {
+
+            display: block;
+            margin: 0 auto;
+        }
+
+        .gray-text {
+            color: #757575;
+            margin: 15px 0px 40px 0px;
+            font-size: 14px;
+
+        }
+
+        .akshata-img {
+            width: 145px;
+            height: 155px;
+            border-radius: 70px !important;
+        }
+
+        .blog-author-div {
+            width: 60%;
+        }
+
+        .author-details {
+            margin-right: 30px;
+        }
+
+        .author-details p {
+            margin-top: 15px;
+            margin-bottom: 0;
+        }
+
+        .author-line {
+            background-color: #5d318a;
+            height: 1px;
+            margin: 0;
+        }
+
+        .blog-comment {
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        .blog-comment textarea {
+            display: block;
+            width: 60%;
+            height: 150px;
+            padding: 10px 20px;
+        }
+
+        #submit-comment {
+            background-color: #FF4500;
+            color: rgba(255, 255, 255, 0.9);
+            border: none;
+            border-radius: 5px;
+            padding: 5px 20px;
+            margin-top: 10px;
+        }
+
+        .blog-categories-heading {
+            font-size: 25px;
+
+            margin-bottom: 12px;
+        }
+
+        .blog-desc-links,
+        .blog-desc-links:visited,
+        .blog-desc-links:active {
+            color: rgba(0, 0, 0, 0.9);
+            text-decoration: underline;
+        }
+
+        .blog-desc-links:hover {
+            color: rgba(0, 0, 0, 0.9);
+            text-decoration: none;
+        }
+
+        .blog-categories-list {
+            padding-left: 16px;
+            margin-bottom: 35px;
+        }
+
+        .blog-categories-list {
+            font-size: 20px;
+            padding-left: 16px;
+        }
+
+        .ordered-list {
+            margin-left: 12px;
+        }
+
+        .ordered-list>li {
+            font-size: 20px;
+        }
+
+        .blog-categories-list>li>p {
+            margin: 0px 0 8px 0;
+        }
+
+        .blog8-img1-fig {
+            margin-bottom: 20px !important;
+        }
+
+        .edge-detection {
+            margin-top: 40px;
+        }
+
+        .margin-heading {
+            margin-bottom: 25px;
+        }
+
+        .fig-2a {
+            width: 295px;
+        }
+
+        .p-img-desc {
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .a-instagram,
+        .a-disqus,
+        .a-mozilla,
+        .a-bitbucket,
+        .a-pyton {
+            font-weight: bold;
+            color: black;
+        }
+
+        .a-instagram:hover,
+        .a-disqus:hover,
+        .a-mozilla:hover,
+        .a-bitbucket:hover,
+        .a-pyton:hover {
+            text-decoration: none;
+        }
+
+        .blog-graphs {
+            width: 628px;
+        }
+
+        /* Blog css ends*/
+
+
+        /* Media Query */
+        @media only screen and (min-width: 1367px) and (max-width: 1600px) {
+            h1 {
+                font-size: 33px;
+            }
+
+            .blog-content {
+                width: 750px;
+                margin-top: -170px;
+            }
+
+            .blog-author-div {
+                width: 80%;
+            }
+
+            .vission-banner {
+                height: 360px;
+            }
+
+            .vission-main-img {
+                width: 900px;
+                background-size: 900px 464px;
+                margin-top: -179px;
+                height: 464px;
+            }
+
+            .vission-heading {
+                top: 28%;
+
+            }
+
+            .thus-a-great {
+                width: 96%;
+            }
+
+            .the-best-reviewers {
+                width: 95%;
+            }
+
+            .by-aggregating {
+                width: 95%;
+            }
+        }
+
+        @media only screen and (min-width: 1281px) and (max-width: 1366px) {
+            .vission-banner {
+                height: 307px;
+            }
+
+            .vission-main-img {
+                width: 720px;
+                background-size: 720px 371px;
+                margin-top: -153px;
+                margin-left: 58px;
+                height: 371px;
+            }
+
+            .vission-heading {
+                top: 31%;
+
+                font-size: 28px;
+            }
+
+            .blog-content {
+                width: 700px;
+                margin-top: -140px;
+            }
+
+            .blog-author-div {
+                width: 80%;
+            }
+        }
+
+        @media only screen and (min-width: 1025px) and (max-width: 1280px) {
+            .vission-banner {
+                height: 288px;
+            }
+
+            .vission-main-img {
+                margin-left: 47px;
+                margin-top: -144px;
+                background-size: 715px 369px;
+                height: 369px;
+                width: 715px;
+            }
+
+            .vission-heading {
+                top: 29%;
+
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            .blog-content {
+
+                width: 650px;
+                margin-top: -130px;
+            }
+
+            .blog-author-div {
+                width: 80%;
+            }
+        }
+
+        @media only screen and (min-width: 1000px) and (max-width: 1024px) {
+            .vission-banner {
+                height: 230px;
+            }
+
+            .vission-main-img {
+                width: 98%;
+                background-size: 677px 420px;
+                margin-left: 10px;
+                margin-top: -116px;
+                height: 420px;
+            }
+
+            .vission-heading {
+                top: 26.5%;
+            }
+
+            h1 {
+                font-size: 26.5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand ml-5 mt-1" href="../index.html"><img class="logo" src="../resources/logo.png" alt=""
+                loading="lazy"></a>
+        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button> -->
+        <div class="navbar-items  ml-auto  ">
+            <div class=" navbar-expand float-right mt-n2" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <!-- <li class="nav-item active">
+      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+    </li> -->
+                    <!-- <li class="nav-item">
+                        <a class="" href="./newsroom.html">Newsroom
+                            <img src="../resources/navbar_arrow.png" class="nav-arrow"></a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="" href="./csr.html">CSR
+                            <img src="../resources/navbar_arrow.png" class="nav-arrow"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="" href="./careers.html">Careers
+                            <img src="../resources/navbar_arrow.png" class="nav-arrow"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="" href="./contact.html">Contact
+                            <img src="../resources/navbar_arrow.png" class="nav-arrow"></a>
+                    </li>
+
+            </div>
+            <div>&nbsp;</div>
+            <div class="navbar-items2 d-flex align-items-end ml-auto mt-4 float-right mb-n4 ">
+                <ul class="ul right-bar-nav ">
+
+                    <li class="home-icon-li "><a href="../index.html" class="list-a"><img class="home-icon-img"
+                                src="../resources/Home icon.png" width="24px" height="22px" alt=""></a></li>
+                    <li class="li nav-item dropdown ">
+                        <a class=" nav-link dropdown-toggle industry-dropdown-heading" href="#" data-toggle="dropdown"
+                            style="color: black !important;padding: 0;">Industry
+                            Solutions</a>
+                        <ul class="dropdown-menu bg-light ">
+                            <li><a class=" dropdown-item " href=" ./healthcare.html"
+                                    style="color: black !important;">Healthcare</a>
+                            </li>
+                            <li><a class="dropdown-item" href="./retail.html"
+                                    style="color: black !important;">Retail</a></li>
+                            <li><a class="dropdown-item" href="./automotive.html"
+                                    style="color: black !important;">Automotive</a></li>
+                            <li><a class="dropdown-item" href="./financial_services.html"
+                                    style="color: black !important;">Financial Services</a></li>
+                        </ul>
+
+                    </li>
+
+
+                    <li class="li "><a href="./Services.html" class="list-a">Services</a></li>
+                    <li class="li li1"><a href="./AboutKushagramati.html" class="list-a">About Us</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+    <!-- navbar ends -->
+    <!-- <div class="navbar-bottom-right">
+        <a href="./leadership.html">Leadership</a>
+        <a href="#">Partners</a>
+        <a href="./values.html">Values</a>
+        <a href="./vision_and_mission.html">Vision and Mission</a>
+        <a href="#" style="border: none;">Awards</a>
+    </div> -->
+    <!-- cover image -->
+    <div class="vission-banner">
+        <div class="  carousel-nav text-light mt-1 row">
+            <a href="./leadership.html">LEADERSHIP</a>
+            <a href="./partners.html">PARTNERS</a>
+            <a href="#">AWARDS</a>
+            <a href="./values.html">VALUES</a>
+            <a href="./vision_and_mission.html">VISION & MISSION</a>
+            <a href="./blog_main.html" class="border-0">USE CASES</a>
+        </div>
+        <h1 class="vission-heading text-light">BLOG</h1>
+    </div>
+
+    <!-- Blog  -->
+    <div class="blog-content">
+        <!-- <h1 class="blog-heading">BLOG</h1> -->
+
+        <h1 class="blog-title">What's New in Flutter 2.2</h1>
+        <h1 class="blog-categories-heading">The Flutter 2.2 release focuses on polish and optimization, including iOS
+            performance improvements, Android deferred components, updated service worker For Flutter web and more.</h1>
+        <h1 class="blog-categories-heading">Flutter 2.2 updates in stable</h1>
+        <p>This release covers a wide range of improvements on top of Flutter 2, including updates across Android,
+            iOS, and web, new Material icons, updates to text handling, scrollbar behavior, and mouse cursor support
+            for the Text Span widget and new guidance on how to best support multiple kinds of platforms from a
+            single source code base. All of these features are available in stable now and available for your use in
+            production apps. And all of them are built on a new release of Dart.</p>
+        <h1 class="blog-categories-heading">Dart 2.13</h1>
+        <p>Flutter 2.2 comes with the Dart 2.13 release. Among other things, this Dart update contains a new type
+            aliases feature, which enables you to create aliases for types as well as for functions:</p>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a blog8-img1-fig" src="../resources/blog_9_pic_1.png" alt="">
+        </div>
+
+        <p>Type aliases make it possible to give nice short names to long, complicated types, and it also lets you
+            rename your classes in a non-breaking way.</p>
+        <h1 class="blog-categories-heading">Flutter web updates</h1>
+        <p>Flutter’s newest stable platform, web, has been improved in this release.</p>
+        <p>To start, we optimized caching behavior with a new service worker-loading mechanism, and fixed
+            double-downloading of main.dart.js. In previous versions of Flutter web, the service worker downloaded
+            updates to your app in the background while giving your user access to the stale version of your app. Once
+            that update was downloaded, the user wouldn’t see those changes until they refreshed the browser page a
+            couple times. As of Flutter 2.2, when the new service worker detects a change, the user will wait until the
+            updates are downloaded to use the app, but then they’ll see the updates without requiring a second manual
+            refresh of the page.</p>
+        <p>Enabling this change requires you to regenerate the index.html of your Flutter app. To do that, save your
+            modifications, delete the index.html file, and then run flutter create. In your project directory to
+            recreate it.</p>
+        <p>We also made improvements to both web renderers. For HTML, we added support for font features to enable
+            setting Font Feature as well as using canvas APIs to render text so that it appears in the correct place
+            when hovering. For both HTML and CanvasKit, we added support for shader masks and computeLineMetrics,
+            addressing the parity gaps between Flutter web and mobile apps. For example, developers can now use opacity
+            masks to perform fade-out transitions with shader masks, and use computeLineMetrics as they would for mobile
+            apps.</p>
+        <p>For Flutter web, as well as Flutter in general, accessibility is one of our top priorities. As designed,
+            Flutter implements accessibility by building a SemanticsNode tree. Once a Flutter web app user enables
+            accessibility, the framework generates a DOM tree parallel to the RenderObject DOM tree, and translates the
+            semantic properties to Aira. In this release, we improved semantic node position to close the gap between
+            mobile and desktop web apps when using transforms, which means that the focus box should appear properly
+            over elements when widgets are styled with transforms.</p>
+        <p>We also exposed the semantics node debug tree with a command line flag in profile and release modes to help
+            developers debug accessibility by visualizing the semantic nodes created for their web app.</p>
+        <p>To enable this for your own Flutter web app, run the following:</p>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a blog8-img1-fig" src="../resources/blog_9_pic_2.png" alt="">
+        </div>
+
+        <p>In builds available on the master and dev channels beyond the 2.2 stable release, we’ve added an API to let
+            developers programmatically auto-enable accessibility for their apps and are fixing issues with using Tab
+            with screen readers.</p>
+        <p>And last but certainly not least, the latest version of Flutter DevTools now supports the layout explorer for
+            your Flutter web apps.</p>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a blog8-img1-fig" src="../resources/blog_9_pic_3.png" alt="">
+        </div>
+
+        <p>This update gives you the same layout debugging tool on the web that we used to with your mobile and desktop
+            apps.</p>
+        <h1 class="blog-categories-heading">IOS page transitions and incremental installs</h1>
+        <p>For iOS, in this release the page transition smoother in Cupertino by reducing the time it takes to render
+            the frames of the animation by 75%, and potentially more on low-end phones. We don’t just look for end-user
+            performance improvements; we’re always looking for ways to improve the development performance as well.</p>
+        <p>In this release, we have implemented incremental iOS installs during the development process. In our
+            benchmarks, we’ve seen a 40% decrease in the amount of time to install an updated version of your iOS app,
+            which decreases your turn-around time when testing app changes.</p>
+        <h1 class="blog-categories-heading">Use Flutter to build platform adaptive apps</h1>
+        <p>As Flutter expands to support more platforms in stable, it becomes useful to consider apps that support not
+            just different form factors, such as mobile, tablet, and desktop, but also different input types (touch vs.
+            mouse keyboard) and platforms with different idioms, such as navigation drawers vs. system menus for
+            navigation. We call apps that can adjust to the details of different target platforms to be “platform
+            adaptive” apps.</p>
+        <p>For an introduction to the considerations you’ll want to keep in mind when building platform adaptive apps,
+            point you at the Building platform adaptive apps session from Kevin More.</p>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a blog8-img1-fig" src="../resources/blog_9_pic_4.png" alt="">
+        </div>
+
+        <p>Therefore, until now, the only way to avoid this jank on iOS was to simplify scenes and animations, which was
+            not ideal.</p>
+        <p>However, right now on the dev channel is a preview of the new support in Skia for shader warm-up for Metal.
+            Through Skia, Flutter now compiles the bundled shaders before the first frame workload begins.</p>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs fig-2a blog8-img1-fig" src="../resources/blog_9_pic_5.png" alt="">
+        </div>
+
+        <p>Traces showing precompilation occurring during application launch</p>
+        <h1 class="blog-categories-heading">Flutter Package updates</h1>
+        <p>As part of this release, the Flutter Ecosystem Committee has been working hard to certify 24 new Flutter
+            Favorite packages, our largest expansion yet. The newly tagged Flutter Favorites include:</p>
+        <p><b>FlutterFire packages in production:</b></p>
+        <p>cloud_firestore, cloud_functions, firebase_auth, firebase_core, firebase_crashlytics, firebase_messaging, and
+            firebase_storage</p>
+        <p><b>Flutter Community “plus” packages:</b></p>
+        <p>android_alarm_manager_plus, android_intent_plus, battery_plus, connectivity_plu, device_info_plus,
+            network_info_plus, package_info_plus, sensors_plus, and share_plus</p>
+        <p><b>googleapis package</b></p>
+        <p><b>win32 package</b></p>
+        <p><b>intl and characters packages</b></p>
+        <p><b>Sentry packages:</b>sentry and sentry_flutter</p>
+        <p><b>infinite_scroll_pagination and flutter_native_splash packages</b></p>
+        <p>All of these packages have been migrated to null safety and support Android, iOS, and web as appropriate. For
+            example, firebase_crashlytics has no underlying SDK on the web, and android_alarm_manager_plus is
+            specifically designed for Android.</p>
+        <p>The Flutter Community “plus” packages provide a superset of the corresponding packages from the Flutter team.
+            For example, the battery package has been provided by the Flutter team at Google since before the initial
+            Flutter release and has been migrated to null safety, but is only supported on Android and iOS. The Flutter
+            Community battery_plus package, on the other hand, supports all six Flutter platforms, including web,
+            Windows, macOS, and Linux. The award of the Flutter Favorite awards for all 9 of the “plus” packages
+            represents a big step forward in maturity for the Flutter community as a whole. Flutter is much, much larger
+            than just what the teams of engineers at Google are doing.</p>
+
+        <!-- Blog ends.... -->
+
+        <div class="d-flex justify-content-around gray-bg blog-author-div">
+            <div class="author-details">
+                <h5>Akshata Ghorpade</h5>
+                <hr class="author-line">
+                <p>Kushagramati</p>
+                <p style="visibility: hidden;">Software (Data) Engineer and<br>Product
+                    Management<br>at Kushagramati
+                </p>
+            </div>
+            <div class="author-image">
+                <img class="akshata-img" src="../resources/Akshata Ghorpade.jpeg" alt="Akshata Ghorpade"
+                    style="border-radius: 50px;">
+            </div>
+        </div>
+        <div class="blog-comment">
+            <form>
+                <textarea name="Blog" placeholder="Comment here" id=""></textarea>
+                <a href="sales@kmathi.in"><input type="submit" id="submit-comment" value="Submit"></a>
+            </form>
+        </div>
+
+    </div>
+
+
+
+    </div>
+
+</body>
+
+</html>

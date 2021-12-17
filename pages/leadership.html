@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style.css?v=timestamp">
+    <title>Leadership</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 115%;
+            margin: 0;
+        }
+
+        h3 {
+            font-size: 30px;
+        }
+
+        .whole-wrap {
+            width: 100%;
+        }
+
+        .wrap {
+            width: 100%;
+            margin-top: 69px;
+        }
+
+        .leadership-card-maindiv {
+            width: 100%;
+        }
+
+        .leadership-cards {
+            display: grid;
+            grid-template-columns: auto auto;
+            width: 80%;
+            margin: 10px auto;
+        }
+
+        .main-cover {
+            width: 100%;
+            height: 432px;
+            background: url(../resources/leadership\ banner.png);
+            background-repeat: no-repeat;
+            margin-top: 83px;
+            background-size: 100%;
+        }
+
+        .leadership-h1 {
+            color: white;
+            position: absolute;
+            font-size: 40px;
+            top: 25%;
+            left: 8%;
+        }
+
+        .leadership-card1,
+        .leadership-card2,
+        .leadership-card3,
+        .leadership-card4,
+        .leadership-card5,
+        .leadership-card6 {
+            margin: -194px auto;
+            margin-left: -35px;
+            width: 100%;
+            display: flex;
+        }
+
+        .leadership-card1 img,
+        .leadership-card2 img,
+        .leadership-card3 img,
+        .leadership-card4 img,
+        .leadership-card5 img,
+        .leadership-card6 img {
+            /* width: 141px;
+            height: 140px; */
+            width: 150px;
+            height: 189 px;
+        }
+
+        .pl-2 {
+            padding-left: 10px;
+            margin-top: -15px;
+        }
+
+        .leadership-card1 h3,
+        .leadership-card2 h3,
+        .leadership-card3 h3,
+        .leadership-card4 h3,
+        .leadership-card5 h3,
+        .leadership-card6 h3 {
+            margin-bottom: 10px;
+            text-align: left;
+            padding: 10px 10px 0px 10px;
+            color: #777777;
+            font-weight: 500;
+        }
+
+        .leadership-card1 p,
+        .leadership-card2 p,
+        .leadership-card3 p,
+        .leadership-card4 p,
+        .leadership-card5 p,
+        .leadership-card6 p {
+            text-align: left;
+            padding: 0px 10px 10px 10px;
+            margin-top: 0;
+            width: 372px;
+            /* width: 81%; */
+        }
+
+        .leadership-card2 p {
+            width: 335px;
+            /* width: 85%; */
+        }
+
+        .leadership-card3 p {
+            width: 320px;
+            /* width: 100%; */
+        }
+
+        .leadership-card4 p {
+            width: 332px;
+            /* width: 72%; */
+        }
+
+        .leadership-card5 p {
+            width: 335px;
+            /* width: 70%; */
+        }
+
+        .leadership-card6 p {
+            width: 331px;
+            /* width: 75%; */
+        }
+
+        /* .leadership-card2 {
+            margin: -194px auto;
+            margin-left: -35px;
+            width: 100%;
+            display: flex;
+        }
+
+        .leadership-card2 img {
+            width: 150px;
+            height: 189px;
+        } */
+
+        /* .pl-2 {
+            padding-left: 10px;
+            margin-top: -15px;
+        }
+
+        .leadership-card2 h3 {
+            margin-bottom: 10px;
+            text-align: left;
+            padding: 10px 10px 0px 10px;
+            color: #777777;
+            font-weight: 500;
+        }
+
+        .leadership-card2 p {
+            text-align: left;
+            padding: 0px 10px 10px 10px;
+            margin-top: 0;
+            width: 335px;
+        } */
+
+        .healthcare-nav {
+            background-color: #5c3285;
+            height: 20px;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            color: white;
+        }
+
+        .healthcare-nav li {
+            display: inline-block;
+            margin-right: 15px;
+        }
+
+        .healthcare-nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 12px;
+        }
+
+        .healthcare-nav-items {
+            margin-left: 430px;
+        }
+
+        .dropbtn {
+            background-color: #5c3285;
+            display: inline;
+            color: white;
+            border: none;
+            font-size: 12px;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            /* position: absolute; */
+            z-index: 1;
+            min-width: 800px;
+        }
+
+        .dropdown-content a {
+            /* padding: 12px 16px; */
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: inline-block;
+        }
+
+        /* 1366*768 devices */
+        @media only screen and (max-width: 1366px) {
+            .whole-wrap {
+                width: 100%;
+            }
+
+            .wrap {
+                width: 100%;
+                margin-top: 78px;
+            }
+
+            .main-cover {
+                width: 100%;
+                height: 307px;
+                background-size: 100%;
+            }
+
+            .leadership-h1 {
+                color: rgba(255, 255, 255, 0.9);
+                position: absolute;
+                font-size: 28px;
+                top: 31%;
+            }
+
+            .leadership-card-maindiv {
+                width: 100%;
+                margin-top: -125px !important;
+            }
+
+            .leadership-cards {
+                display: grid;
+                grid-template-columns: auto auto;
+                width: 85%;
+                margin: 10px auto;
+            }
+
+            .leadership-card1,
+            .leadership-card2,
+            .leadership-card3,
+            .leadership-card4,
+            .leadership-card5,
+            .leadership-card6 {
+                margin: 7px auto;
+                width: 100%;
+                display: flex;
+            }
+
+            .pl-2 {
+                padding-left: 10px;
+                margin-top: -15px;
+                margin-left: -12px;
+            }
+
+            .leadership-card1 h3,
+            .leadership-card2 h3,
+            .leadership-card3 h3,
+            .leadership-card4 h3,
+            .leadership-card5 h3,
+            .leadership-card6 h3 {
+                margin-bottom: 0px;
+                text-align: left;
+                padding: 10px 10px 0px 10px;
+            }
+
+            .leadership-card1 p,
+            .leadership-card2 p,
+            .leadership-card3 p,
+            .leadership-card4 p,
+            .leadership-card5 p,
+            .leadership-card6 p {
+                text-align: left;
+                padding: 0px 10px 10px 10px;
+                margin-top: 0;
+                /* width: 372px; */
+                width: 415px;
+                /* width: 81%; */
+            }
+
+            .leadership-card2 p {
+                width: 440px;
+                /* width: 85%; */
+            }
+
+            .leadership-card3 p {
+                width: 360px;
+                /* width: 100%; */
+            }
+
+            .leadership-card4 p {
+                width: 375px;
+                /* width: 72%; */
+            }
+
+            .leadership-card5 p {
+                width: 375px;
+                /* width: 70%; */
+            }
+
+            .leadership-card6 p {
+                width: 335px;
+                /* width: 75%; */
+            }
+
+            .healthcare-nav-items {
+                margin-left: 100px;
+            }
+        }
+
+        /* 1600*900 devices */
+        @media only screen and (min-width: 1367px) and (max-width: 1600px) {
+            .whole-wrap {
+                width: 100%;
+            }
+
+            .wrap {
+                width: 100%;
+                margin-top: 78px;
+            }
+
+            .main-cover {
+                height: 360px;
+                background-size: 100%;
+            }
+
+            .leadership-h1 {
+
+                position: absolute;
+                font-size: 40px;
+                top: 28%;
+                left: 7.2%;
+            }
+
+            .leadership-card-maindiv {
+                width: 100%;
+                margin-top: -75px;
+            }
+
+            .leadership-cards {
+                display: grid;
+                grid-template-columns: auto auto;
+                width: 85%;
+                margin: 40px auto;
+            }
+/* 
+            .leadership-card2 {
+                margin: -113px auto 0px auto;
+                width: 100%;
+                display: flex;
+            } */
+
+            .leadership-card1,
+            .leadership-card2,
+            .leadership-card3,
+            .leadership-card4,
+            .leadership-card5,
+            .leadership-card6 {
+                margin: -113px auto 80px auto;
+                width: 100%;
+                display: flex;
+            }
+
+            .leadership-card1 h3,
+            .leadership-card2 h3,
+            .leadership-card3 h3,
+            .leadership-card4 h3,
+            .leadership-card5 h3,
+            .leadership-card6 h3 {
+                margin-bottom: 0px;
+                text-align: left;
+                padding: 10px 10px 0px 10px;
+            }
+
+            .leadership-card1 p,
+            .leadership-card2 p,
+            .leadership-card3 p,
+            .leadership-card4 p,
+            .leadership-card5 p,
+            .leadership-card6 p {
+                text-align: left;
+                padding: 0px 10px 10px 10px;
+                margin-top: 0;
+                width: 372px;
+            }
+
+            .leadership-card2 p {
+                width: 535px;
+            }
+
+            .leadership-card3 p {
+                width: 360px;
+            }
+
+            .leadership-card4 p {
+                width: 375px;
+            }
+
+            .leadership-card5 p {
+                width: 375px;
+            }
+
+            .leadership-card6 p {
+                width: 335px;
+            }
+
+            .healthcare-nav-items {
+                margin-left: 120px;
+            }
+        }
+
+        /* 1024*576 devices */
+        @media only screen and (min-width: 1000px) and (max-width: 1024px) {
+            .whole-wrap {
+                width: 100%;
+            }
+
+            .wrap {
+                width: 100%;
+            }
+
+            .main-cover {
+                height: 360px;
+            }
+
+            .leadership-h1 {
+                font-size: 26.5px;
+                top: 26.5%;
+            }
+
+            .mastead {
+                width: 100%;
+                height: 354px;
+            }
+
+            .leadership-card-maindiv {
+                width: 100%;
+                margin-top: -254px !important;
+            }
+
+            .leadership-cards {
+                display: grid;
+                grid-template-columns: auto auto;
+                width: 85%;
+                margin: 30px auto;
+            }
+
+            .leadership-card1,
+            .leadership-card2,
+            .leadership-card3,
+            .leadership-card4,
+            .leadership-card5,
+            .leadership-card6 {
+                margin: 10px auto;
+                width: 100%;
+                display: flex;
+            }
+
+            .leadership-card1 img,
+            .leadership-card2 img,
+            .leadership-card3 img,
+            .leadership-card4 img,
+            .leadership-card5 img,
+            .leadership-card6 img {
+                width: 131px;
+                height: 130px;
+            }
+
+            .pl-2 {
+                padding-left: 10px;
+                margin-top: -15px;
+            }
+
+            .leadership-card1 h3,
+            .leadership-card2 h3,
+            .leadership-card3 h3,
+            .leadership-card4 h3,
+            .leadership-card5 h3,
+            .leadership-card6 h3 {
+                margin-bottom: 0px;
+                text-align: left;
+                padding: 10px 10px 0px 10px;
+            }
+
+            .leadership-card1 p,
+            .leadership-card2 p,
+            .leadership-card3 p,
+            .leadership-card4 p,
+            .leadership-card5 p,
+            .leadership-card6 p {
+                text-align: left;
+                padding: 0px 10px 10px 10px;
+                margin-top: 0;
+                width: 328px;
+            }
+
+            .leadership-card2 p {
+                width: 300px;
+            }
+
+            .leadership-card3 p {
+                width: 315px;
+            }
+
+            .leadership-card4 p {
+                width: 330px;
+            }
+
+            .leadership-card5 p {
+                width: 335px;
+            }
+
+            .leadership-card6 p {
+                width: 290px;
+            }
+
+            .healthcare-nav-items {
+                margin-left: 75px;
+            }
+        }
+
+            /* .leadership-card2 {
+                margin: 10px auto;
+                width: 100%;
+                display: flex;
+            }
+
+            .pl-2 {
+                padding-left: 10px;
+                margin-top: -15px;
+            }
+
+            .leadership-card2 h3 {
+                margin-bottom: 10px;
+                text-align: left;
+                padding: 10px 10px 0px 10px;
+            }
+
+            .leadership-card2 p {
+                text-align: left;
+                padding: 0px 10px 10px 10px;
+                margin-top: 0;
+                width: 328px;
+            }
+
+            .leadership-card2 p {
+                width: 330px;
+            }
+
+            .healthcare-nav-items {
+                margin-left: 75px;
+            }
+        } */
+
+        /* 992px * 320px */
+        @media only screen and (min-width: 320px) and (max-width: 992px) {
+            * {
+                color: rgba(0, 0, 0, 0.9);
+            }
+
+            .carousel-nav a {
+                font-size: 0.85rem !important;
+                padding-right: 10px !important;
+            }
+
+            .main-cover {
+                height: 300px;
+                width: 80em;
+            }
+
+            /* .leadership-card2{
+                float: initial;
+            } */
+
+            .leadership-card2 img {
+                width: 300px;
+                height: 379px;
+                margin-top: 100px;
+            }
+
+            .leadership-cards{
+                display: list-item;
+            }
+
+            .pl-2 {
+                margin-top: 100px;
+            }
+
+            .leadership-h1 {
+                top: 8%;
+            }
+
+            p {
+                font-size: 24px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="whole-wrap">
+        <!-- Navbar -->
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top " style="top: 27px;">
+            <a class="navbar-brand ml-5 mt-n4" href="../index.html"><img class="logo" src="../resources/logo.png" alt=""
+                    loading="lazy"></a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="top-nav bg-light">
+                <ul class="d-flex justify-content-end top-nav-buttons ">
+    
+                    <li class=" nav-item" style="border-right: none">
+                        <a class="" href="./csr.html">CSR
+                            <img src="../resources/navbar_arrow.png" class="nav-arrow"></a>
+                    </li>
+                    <li class="nav-item" style="border-right: none">
+                        <a class="" href="./careers.html">Careers
+                            <img src="../resources/navbar_arrow.png" class="nav-arrow"></a>
+                    </li>
+                    <li class="nav-item" style="border-right: none">
+                        <a class="" href="./contact.html">Contact
+                            <img src="../resources/navbar_arrow.png" class="nav-arrow"></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar  ml-auto display-list-mob">
+                    <li class="nav-item home-icon-li "><a href="../index.html" class=" "><img class="home-icon-img"
+                                src="../resources/Home icon.png" alt=""></a></li>
+
+                    <li class="nav-item dropdown" style="color: black !important;">
+                        <a class=" nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                            style="color: black !important; font-size: 16px; ">
+                            Industry
+                            Solutions
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                            <a class=" dropdown-item " href=" ./healthcare.html"
+                                style="color: black !important; font-size: 16px; ">Healthcare</a>
+                            <a class="dropdown-item" href="./retail.html"
+                                style="color: black !important; font-size: 16px; ">Retail</a>
+
+                            <a class="dropdown-item" href="./automotive.html"
+                                style="color: black !important; font-size: 16px; ">Automotive</a>
+                            <a class="dropdown-item" href="./financial_services.html"
+                                style="color: black !important; font-size: 16px; ">Financial Services</a>
+                        </div>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a href="./Services.html" class=" nav-link"
+                            style="color: black !important; font-size: 16px; ">Services</a>
+                    </li>
+                    <li class="nav-item border-0">
+                        <a href="./AboutKushagramati.html" class=" nav-link"
+                            style="color: black !important; font-size: 16px; ">About Us</a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+        <!-- Navbar Ends -->
+
+        <div class="wrap">
+            <div class="main-cover">
+                <div class="  carousel-nav text-light mt-1 row">
+                    <a href="./leadership.html">LEADERSHIP</a>
+                    <a href="./partners.html">PARTNERS</a>
+                    <a href="#">AWARDS</a>
+                    <a href="./values.html">VALUES</a>
+                    <a href="./vision_and_mission.html">VISION & MISSION</a>
+                    <a href="./blog_main.html" class="border-0">USE CASES</a>
+                </div>
+                <h1 class="leadership-h1">
+                    LEADERSHIP</h1>
+            </div>
+        </div>
+
+        <div class="leadership-card-maindiv">
+
+            <div class="leadership-cards">
+                <div class="leadership-card2 d-flex">
+                    <div class="leadership-card-img-bg "><img src="../resources/Cooper- Leadership.jpg" alt=""> </div>
+                    <div class="pl-2">
+                        <h3>Dr. Anant R Koppar</h3>
+                        <p style="color:#777777">Chief Executive Officer and Managing Director</p>
+                        <p>Dr. Anant R Koppar drives business strategy and relationships in Kushagramati Analytics.</p>
+                        <p>He was the Founder President of Kshema Technologies, one of India's first venture
+                            capital-funded software services companies. He worked as the President of the Technologies
+                            Division of MphasiS BFL Limited post the acquisition of Kshema by MphasiS. A certified
+                            "Project Management Professional" by PMI, Anant Koppar was the first CEO in India to get
+                            this certification. His last venture was KTwo Technology Solutions.</p>
+                        <p>He is a recognized leader in the software industry and has been awarded the highest civilian
+                            award “Karnataka Rajyotsava “by the Karnataka Government for outstanding contributions to
+                            the growth of the IT Industry in Karnataka, India.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="leadership-cards">
+                <div class="leadership-card2">
+                    <div class="leadership-card-img-bg "> <img src="../resources/Cooper- Leadership.jpg" alt=""> </div>
+                    <div class="pl-2">
+                        <h3>Vishwanath Honnungar</h3>
+                        <p style="color:#777777">Chief Technology Officer</p>
+                        <p>With 30 years of experience in the IT services industry, Vishwanath brings strategic insight
+                            to Kushagramati’s leadership team, and deep operational knowledge of driving business
+                            growth, furthering partnerships, and leading cross-cultural teams. In his role he will be
+                            responsible for focus on strategy, business development, account management and digital
+                            transformation solutions, with a special focus on Data Analytics services, to leverage the
+                            company’s strengths in cognitive solutions.</p>
+                        <p>He has in-depth global experience in the services industry with an outstanding track record
+                            in leading and growing small and large business units. Vishwanth brings in extensive
+                            knowledge and experience in architecture, design, development methodologies, testing, and
+                            quality processes.</p>
+                    </div>
+                    <div class="leadership-card-img-bg "> <img src="../resources/Cooper- Leadership.jpg" alt=""> </div>
+                    <div class="pl-2">
+                        <h3>Pradeep N</h3>
+                        <p style="color:#777777">Industry Expert and Operations</p>
+                        <p>With 6 years in Manufacturing and 30 years in IT services industry, Pradeep brings in a rich
+                            domain experience in the process automation of Manufacturing, Healthcare, Financial Services
+                            and Logistics.</p>
+                        <p>In in pervious organizations, he has brought about improvement in operational efficiency,
+                            closer integration of various departments and businesses, risk management and operational
+                            cost effectiveness. His specialization is in Digital Transformation, Program Management,
+                            Delivery Management and Process re-engineering.</p>
+                        <p>In his role, he is responsible for scoping, delivering, and successfully closing projects,
+                            managing and accelerating account growth, augment revenue with existing & prospective
+                            clients.</p>
+                        <p>On the technology front, he is exposed to Big Data Analytics, Master Data Management for
+                            Business 360 view and on using Automation Tools in all stages of Software Design,
+                            Development and Testing.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="leadership-cards">
+                <div class="leadership-card2 d-flex">
+                    <div class="leadership-card-img-bg "> <img src="../resources/Cooper- Leadership.jpg" alt=""> </div>
+                    <div class="pl-2">
+                        <h3>Dayanand Yardi</h3>
+                        <p style="color:#777777">Finance and Administration</p>
+                        <p>As an established finance leader for 30 plus years’, Dayanand has extensive global leadership
+                            experience including shareholder value creation, mergers and acquisitions, financial and
+                            strategic planning, and budgeting. He has vast experience in managing finance and account
+                            functions in corporate as well as public sector companies. In his role at Kushagramti,
+                            Dayanand is responsible for the finance function which includes Corporate Finance, Business
+                            Finance, Business Planning, Treasury, Taxation, and Investor relations.</p>
+                    </div>
+                    <div class="leadership-card-img-bg "> <img src="../resources/Cooper- Leadership.jpg" alt=""> </div>
+                    <div class="pl-2">
+                        <h3>Nikhil Dev</h3>
+                        <p style="color:#777777">Project Management</p>
+                        <p>Seasoned Leader with over 17 years’ experience in enabling success of technology
+                            organizations with dynamic outreach. Proven ability to scale and equip business in a
+                            strategic manner, communicate big picture opportunities and make data-driven decisions.</p>
+                        <p>Having actively worked with clients in United States, Canada, UK, Europe, his role is to
+                            build and lead teams with high performers. And to be instrumental in research, innovation,
+                            and design of large & innovative products + services at Kushagramati. He specializes in
+                            Operations, Delivery, People management, Datacenter Consulting & Business Development across
+                            India and overseas market.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="leadership-cards">
+                <div class="leadership-card2 d-flex">
+                    <div class="leadership-card-img-bg "> <img src="../resources/Cooper- Leadership.jpg" alt=""> </div>
+                    <div class="pl-2">
+                        <h3>Nikhil Deshkari</h3>
+                        <p style="color:#777777">Sales & Strategy</p>
+                        <p>Nikhil Balwant Patil Deshkari has 20 plus years of rich experience in Business Development,
+                            Sales, Marketing, Strategy, Consulting, Project, Product and Team Management. He is life
+                            sciences graduate with post-graduate qualifications in marketing, software, and project
+                            management.</p>
+                        <p>He worked in information and communication technology products and services, pharmaceuticals,
+                            biotechnology and healthcare services industries across India, Europe, and North Americas.
+                            He helped many clients with defining and refining their vision, goals, challenges,
+                            opportunities, business transformation, digital technology solutions conceptualization for a
+                            sustainable growth and happiness of each of stakeholders across value chain. He also
+                            volunteers for NCD, TB awareness, diagnosis, treatment, preventive healthcare, and air
+                            pollution.</p>
+                    </div>
+                    <div class="leadership-card-img-bg "> <img src="../resources/Cooper- Leadership.jpg" alt=""> </div>
+                    <div class="pl-2">
+                        <h3>Shruthi Malagi</h3>
+                        <p style="color:#777777">Business Development</p>
+                        <p>Shruthi Malagi is an astute & result oriented Bid management professional with more than a
+                            decade of experience working in a leading IT services company. Her career growth has been in
+                            IT & ITES in strategic Business Development, Pre-sales and complex Bid Management across
+                            industries and geographies. With strong passion towards business development, she drives
+                            company operations, human resources and manages vendor relations.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        window.scrollTo(0, 0);
+        AOS.init();
+    </script>
+</body>
+
+</html>

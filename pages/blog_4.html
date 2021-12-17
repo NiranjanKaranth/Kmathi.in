@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+            /* color: rgba(255, 255, 255, 0.9); */
+
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 115%;
+            margin-bottom: 35px;
+        }
+
+        h3 {
+            font-size: 22px;
+            line-height: 115%;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            font-size: 14px;
+        }
+
+        li {
+            font-size: 14px;
+        }
+
+        .p-headings {
+            margin-bottom: 15px;
+        }
+
+        .vission-banner {
+            width: 100%;
+            height: 427px;
+            background: url(../resources/blog_cover.png);
+            margin-top: 69px;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            margin-top: 83px;
+        }
+
+        .vission-main-img {
+            width: 1027px;
+            height: 530px;
+            background: url(../resources/vision_mission_main.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            margin-left: 63px;
+            margin-top: -213px;
+        }
+
+        .vission-heading {
+            position: absolute;
+            left: 8.5%;
+            top: 25%;
+        }
+
+        /* Blog css */
+        .blog-content {
+            padding: 0px 0px 0px 8.5%;
+            width: 1010px;
+            margin-top: -200px;
+        }
+
+        .blog-heading {
+            color: #5d318a;
+            letter-spacing: 7px;
+            font-size: 17px;
+            margin-top: 69px;
+        }
+
+        .blog-title {
+            margin: 20px 0 20px 0;
+            font-size: 30px;
+            color: rgba(0, 0, 0, 0.9);
+        }
+
+        .gray-bg {
+            background-color: #F2F2F2;
+            padding: 20px;
+            color: rgba(0, 0, 0, 0.8);
+            font-size: 17px;
+        }
+
+        .blog-image-div img {
+
+            display: block;
+            margin: 0 auto;
+        }
+
+        .gray-text {
+            color: #757575;
+            margin: 15px 0px 40px 0px;
+            font-size: 14px;
+
+        }
+
+        .rishan-img {
+            width: 130px;
+        }
+
+        .blog-author-div {
+            width: 60%;
+        }
+
+        .author-details {
+            margin-right: 30px;
+        }
+
+        .author-details p {
+            margin-top: 15px;
+            margin-bottom: 0;
+        }
+
+        .author-line {
+            background-color: #5d318a;
+            height: 1px;
+            margin: 0;
+        }
+
+        .blog-comment {
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        .blog-comment textarea {
+            display: block;
+            width: 60%;
+            height: 150px;
+            padding: 10px 20px;
+        }
+
+        #submit-comment {
+            background-color: #FF4500;
+            color: rgba(255, 255, 255, 0.9);
+            border: none;
+            border-radius: 5px;
+            padding: 5px 20px;
+            margin-top: 10px;
+        }
+
+        .blog-categories-heading {
+            font-size: 25px;
+
+            margin-bottom: 25px;
+        }
+
+        .blog-desc-links,
+        .blog-desc-links:visited,
+        .blog-desc-links:active {
+            color: rgba(0, 0, 0, 0.9);
+            text-decoration: underline;
+        }
+
+        .blog-desc-links:hover {
+            color: rgba(0, 0, 0, 0.9);
+            text-decoration: none;
+        }
+
+        .blog-categories-list {
+            padding-left: 16px;
+            margin-bottom: 35px;
+
+        }
+
+        .blog-categories-list {
+            font-size: 20px;
+            padding-left: 16px;
+
+        }
+
+        .ordered-list {
+            margin-left: 12px;
+        }
+
+        .ordered-list>li {
+            font-size: 20px;
+
+
+        }
+
+        .blog-categories-list>li>p {
+            margin: 0px 0 8px 0;
+
+        }
+
+        .the-best-reviewers {
+            margin-bottom: 12px;
+        }
+
+        .margin-heading {
+            margin-bottom: 25px;
+        }
+
+        .blog-4-pic-1 a {
+            text-decoration: underline;
+        }
+
+        .blog-4-pic-1 a:hover {
+            color: #757575;
+        }
+
+        .fig-1 {
+            width: 329px;
+        }
+
+        .fig-2a {
+            width: 295px;
+        }
+
+        .fig-2b {
+            width: 321px;
+        }
+
+        .fig-3a {
+            width: 287px;
+        }
+
+        .fig-3b {
+            width: 320px;
+        }
+
+        .fig-4a {
+            width: 280px;
+        }
+
+        .fig-4b {
+            width: 291px;
+        }
+
+        .fig-5a {
+            width: 275px;
+        }
+
+        .fig-5b {
+            width: 275px;
+        }
+
+        .fig-6a {
+            width: 259px;
+        }
+
+        .fig-6b {
+            width: 259px;
+        }
+
+        .fig-7a {
+            width: 267px;
+        }
+
+        .fig-7b {
+            width: 247px;
+        }
+
+        .fig-8 {
+            width: 628px;
+        }
+
+
+
+        /* Blog css ends*/
+
+
+        /* Media Query */
+        @media only screen and (min-width: 1367px) and (max-width: 1600px) {
+            h1 {
+                font-size: 33px;
+            }
+
+            .blog-content {
+                width: 750px;
+                margin-top: -170px;
+            }
+
+            .blog-author-div {
+                width: 80%;
+            }
+
+            .blog-image-div img {
+
+                max-width: 600px;
+            }
+
+            .vission-banner {
+                height: 360px;
+            }
+
+            .vission-main-img {
+                width: 900px;
+                background-size: 900px 464px;
+                margin-top: -179px;
+                height: 464px;
+            }
+
+            .vission-heading {
+                top: 28%;
+
+            }
+
+            .thus-a-great {
+                width: 96%;
+            }
+
+            .the-best-reviewers {
+                width: 95%;
+            }
+
+            .by-aggregating {
+                width: 95%;
+            }
+        }
+
+        @media only screen and (min-width: 1281px) and (max-width: 1366px) {
+            .vission-banner {
+                height: 307px;
+            }
+
+            .vission-main-img {
+                width: 720px;
+                background-size: 720px 371px;
+                margin-top: -153px;
+                margin-left: 58px;
+                height: 371px;
+            }
+
+            .vission-heading {
+                top: 31%;
+
+                font-size: 28px;
+            }
+
+            .blog-content {
+                width: 700px;
+                margin-top: -140px;
+            }
+
+            .blog-author-div {
+                width: 80%;
+            }
+
+
+            .blog-image-div img {
+
+                max-width: 600px;
+            }
+        }
+
+        @media only screen and (min-width: 1025px) and (max-width: 1280px) {
+            .vission-banner {
+                height: 288px;
+            }
+
+            .vission-main-img {
+                margin-left: 47px;
+                margin-top: -144px;
+                background-size: 715px 369px;
+                height: 369px;
+                width: 715px;
+            }
+
+            .vission-heading {
+                top: 29%;
+
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            .blog-content {
+
+                width: 650px;
+                margin-top: -130px;
+            }
+
+            .blog-author-div {
+                width: 80%;
+            }
+
+            .blog-image-div img {
+
+                max-width: 450px;
+            }
+        }
+
+        @media only screen and (min-width: 1000px) and (max-width: 1024px) {
+            .vission-banner {
+                height: 230px;
+            }
+
+            .vission-main-img {
+                width: 98%;
+                background-size: 677px 420px;
+                margin-left: 10px;
+                margin-top: -116px;
+                height: 420px;
+            }
+
+            .vission-heading {
+                top: 26.5%;
+            }
+
+            h1 {
+                font-size: 26.5px;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand ml-5 mt-1" href="../index.html"><img class="logo" src="../resources/logo.png" alt=""
+                loading="lazy"></a>
+        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button> -->
+        <div class="navbar-items  ml-auto  ">
+            <div class=" navbar-expand float-right mt-n2" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <!-- <li class="nav-item active">
+      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+    </li> -->
+                    <!-- <li class="nav-item">
+                        <a class="" href="./newsroom.html">Newsroom
+                            <img src="../resources/navbar_arrow.png" class="nav-arrow"></a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="" href="./csr.html">CSR
+                            <img src="../resources/navbar_arrow.png" class="nav-arrow"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="" href="./careers.html">Careers
+                            <img src="../resources/navbar_arrow.png" class="nav-arrow"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="" href="./contact.html">Contact
+                            <img src="../resources/navbar_arrow.png" class="nav-arrow"></a>
+                    </li>
+
+            </div>
+            <div>&nbsp;</div>
+            <div class="navbar-items2 d-flex align-items-end ml-auto mt-4 float-right mb-n4 ">
+                <ul class="ul right-bar-nav ">
+
+                    <li class="home-icon-li "><a href="../index.html" class="list-a"><img class="home-icon-img"
+                                src="../resources/Home icon.png" width="24px" height="22px" alt=""></a></li>
+                    <li class="li nav-item dropdown ">
+                        <a class=" nav-link dropdown-toggle industry-dropdown-heading" href="#" data-toggle="dropdown"
+                            style="color: black !important;padding: 0;">Industry
+                            Solutions</a>
+                        <ul class="dropdown-menu bg-light ">
+                            <li><a class=" dropdown-item " href=" ./healthcare.html"
+                                    style="color: black !important;">Healthcare</a>
+                            </li>
+                            <li><a class="dropdown-item" href="./retail.html"
+                                    style="color: black !important;">Retail</a></li>
+                            <li><a class="dropdown-item" href="./automotive.html"
+                                    style="color: black !important;">Automotive</a></li>
+                            <li><a class="dropdown-item" href="./financial_services.html"
+                                    style="color: black !important;">Financial Services</a></li>
+                        </ul>
+
+                    </li>
+
+
+                    <li class="li "><a href="./Services.html" class="list-a">Services</a></li>
+                    <li class="li li1"><a href="./AboutKushagramati.html" class="list-a">About Us</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+    <!-- navbar ends -->
+    <!-- <div class="navbar-bottom-right">
+        <a href="./leadership.html">Leadership</a>
+        <a href="#">Partners</a>
+        <a href="./values.html">Values</a>
+        <a href="./vision_and_mission.html">Vision and Mission</a>
+        <a href="#" style="border: none;">Awards</a>
+    </div> -->
+    <!-- cover image -->
+    <div class="vission-banner">
+        <div class="  carousel-nav text-light mt-1 row">
+            <a href="./leadership.html">LEADERSHIP</a>
+            <a href="./partners.html">PARTNERS</a>
+            <a href="#">AWARDS</a>
+            <a href="./values.html">VALUES</a>
+            <a href="./vision_and_mission.html">VISION & MISSION</a>
+            <a href="./blog_main.html" class="border-0">USE CASES</a>
+        </div>
+        <h1 class="vission-heading text-light">BLOG</h1>
+    </div>
+
+    <!-- Blog  -->
+    <div class="blog-content">
+        <!-- <h1 class="blog-heading">BLOG</h1> -->
+        <h1 class="blog-title">Activation Functions in Deep Learning</h1>
+        <p>In artificial neural networks(ANN), the activation function helps us to determine the output of Neural
+            Network. They decide whether the neuron should be activated or not. It determines the output of a model,
+            its
+            accuracy, and computational efficiency.</p>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs " src="../resources/blog_4_pic_1.jpeg" alt="">
+            <p class=" d-flex justify-content-center gray-text blog-4-pic-1">Single neuron structure. Source
+                <span>&nbsp;<a class="gray-text"
+                        href="https://wiki.tum.de/display/lfdv/Artificial+Neural+Networks">wiki.tum.de</a></span>
+            </p>
+        </div>
+
+        <p>Inputs are fed into the neurons in the input layer. Inputs(Xi) are then multiplied with their weights(Wi)
+            and
+            add the bias gives the output(y=(Xi*Wi)+b) of the neuron. We apply our activation function on Y then it
+            is
+            transfer to the next layer.</p>
+        <h1 class="blog-categories-heading">Properties that Activation function should hold?</h1>
+        <p><span><b>Derivative or Differential:</b></span> Change in y-axis w.r.t. change in x-axis.It is also known
+            as
+            slope.(Back prop)</p>
+        <p><span><b>Monotonic function:</b></span> A function which is either entirely non-increasing or
+            non-decreasing.
+        </p>
+
+        <p>The choice of activation functions in Deep Neural Networks has a significant impact on the training
+            dynamics
+            and task performance.</p>
+
+        <h1 class="blog-categories-heading">Most popular activation functions</h1>
+        <h3>1. Sigmoid function(Logistic function)</h3>
+        <p>It is one of the commonly used activation function. The <b>Sigmoid</b> function was introduced to ANN in
+            the
+            1990s
+            to replace the <b>Step</b> function.</p>
+        <div class="blog-image-div">
+            <img class="blog-graphs " src="../resources/blog_4_pic_2.png" alt="">
+            <p class=" d-flex justify-content-center gray-text blog-4-pic-1">Sigmoid activation function
+            </p>
+        </div>
+
+        <p>The function formula and it derivative.</p>
+        <div class="blog-image-div">
+            <img class="blog-graphs " src="../resources/blog_4_pic_3.png" alt="">
+            <p class=" d-flex justify-content-center gray-text blog-4-pic-1">Sigmoid function and its derivative</p>
+        </div>
+        <p>In the sigmoid function, we can see that its output is in the open interval (0,1)</p>
+        <ul class="blog-categories-list">
+            <li class="">
+                <p>The output will always ranges between 0 to 1</p>
+            </li>
+            <li>
+                <p>Sigmoid is S-shaped , ‘<b>monotonic</b>’ & ‘<b>differential</b>’ function</p>
+            </li>
+            <li>
+                <p>Derivative of the sigmoid function (f’(x)) will lies between 0 and 0.25</p>
+            </li>
+            <li>
+                <p>The function is <b>differentiable</b>. That means we can find the slope of the sigmoid curve at
+                    any
+                    two points</p>
+            </li>
+            <li>
+                <p><b>Natural Language Toolkit</b> – Library for NLP</p>
+            </li>
+            <li>
+                <p>The function is <b>monotonic</b> but the function’s derivative is not</p>
+            </li>
+
+        </ul>
+
+
+        <p>Whenever we try to find the derivative of sigmoid in back propagation the value ranges between 0-0.25.
+            Every
+            activation function has its own pros and cons, sigmoid is not an exception.</p>
+
+        <p class="p-headings"><b>Pros:</b></p>
+        <ul class="blog-categories-list">
+            <li class="">
+                <p><b>Output values bound</b> between 0 and 1</p>
+            </li>
+            <li>
+                <p>Smooth gradient, preventing “jumps” in output values</p>
+            </li>
+
+        </ul>
+        <p class="p-headings"><b>Cons:</b></p>
+        <ul class="blog-categories-list">
+            <li class="">
+                <p>Derivative of sigmoid function suffers<b>“Vanishing gradient”</b>. Looking at the function plot,
+                    you
+                    can
+                    see that when inputs become small or large, the function saturates at 0 or 1, with a derivative
+                    extremely close to 0. Thus it has almost no gradient to propagate back through the network, so
+                    there
+                    is almost nothing left for lower layers. i.e takes time to reach convergence point(global
+                    minima)</p>
+            </li>
+            <li>
+                <p><b>Computationally expensive:</b> The function performs an exponential operation which in result
+                    takes more computation time</p>
+            </li>
+            <li>
+                <p>Sigmoid function in <b>“non-zero-centric”</b>. This makes the gradient
+                    updates go too far in different directions. <b>0 &#60; output &#60; 1, and it makes optimization
+                        harder
+                    </b></p>
+            </li>
+
+        </ul>
+
+        <p><b>Vanishing gradient problem</b>is encountered when training <span><a class="blog-desc-links"
+                    href="https://en.wikipedia.org/wiki/Artificial_neural_network" target="_blank">artificial neural
+                    networks</a></span> with <span><a class="blog-desc-links"
+                    href="https://en.wikipedia.org/wiki/Stochastic_gradient_descent" target="_blank">gradient-based
+                    learning methods </a></span>and <span><a class="blog-desc-links"
+                    href="https://en.wikipedia.org/wiki/Backpropagation" target="_blank">backpropagation</a></span>.
+            In
+            such methods, each of the neural network’s weights receives an update
+            proportional to the <span><a class="blog-desc-links" href="https://en.wikipedia.org/wiki/Partial_derivative"
+                    target="_blank">partial
+                    derivative</a></span> of the error function with respect to the current
+            weight in each
+            iteration of training. The problem is that in some cases, the gradient will be vanishingly small,
+            effectively
+            preventing the weight from changing its value. In the worst case, this may completely stop the neural
+            network
+            from further training.</p>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs " src="../resources/blog_4_pic_4.gif" alt="">
+            <p class=" d-flex justify-content-center gray-text blog-4-pic-1">Vanishing Gradient. Source
+                <span>&nbsp;<a class="gray-text"
+                        href="https://blog.paperspace.com/intro-to-optimization-in-deep-learning-gradient-descent/">click</a></span>
+            </p>
+        </div>
+
+        <h3>2. Tanh Activation Function:</h3>
+        <p>Hyperbolic Tangent(Tanh) similar to sigmoid with slight variation. Basically you can say it overcomes
+            problem
+            which is present in sigmoid.
+        </p>
+        <div class="blog-image-div">
+            <img class="blog-graphs " src="../resources/blog_4_pic_5.png" alt="">
+            <p class=" d-flex justify-content-center gray-text blog-4-pic-1">tanh function</p>
+        </div>
+        <p>The plot of the function and its derivative:</p>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs " src="../resources/blog_4_pic_6.png" alt="">
+            <p class=" d-flex justify-content-center gray-text blog-4-pic-1">The plot of tanh and its derivative</p>
+        </div>
+
+        <ul class="blog-categories-list">
+            <li class="">
+                <p>The function is a common <b>S-shaped</b> curve as well</p>
+            </li>
+            <li>
+                <p>The difference is that the output of <b>Tanh</b> is <b>zero centered</b> with a range from
+                    <b>-1</b>
+                    to <b>1</b> (instead of 0 to
+                    1 in the case of the Sigmoid function)
+                </p>
+            </li>
+            <li>
+                <p>The function is <b>differentiable</b> same as Sigmoid</p>
+            </li>
+            <li>
+                <p>Same as the Sigmoid, the function is <b>monotonic</b>, but the function’s derivative is not</p>
+            </li>
+
+        </ul>
+
+        <p class="p-headings"><b>Pros:</b></p>
+        <ul class="blog-categories-list">
+            <li class="">
+                <p>The whole function is <b>zero-centic</b> which is better than sigmoid</p>
+            </li>
+            <li>
+                <p>Optimization is easy</p>
+            </li>
+            <li>
+                <p>Derivative of tanh function lies between 0 to 1</p>
+            </li>
+
+        </ul>
+
+        <p><b>Tanh</b> tends to make each layer’s output more or less centered around 0 and this often helps speed
+            up
+            convergence.</p>
+
+        <p>Since, sigmoid and tanh are almost similar they also faces the same problem.</p>
+
+
+        <p class="p-headings"><b>Cons:</b></p>
+        <ul class="blog-categories-list">
+            <li class="">
+                <p>Derivative of Tanh function suffers <b>“Vanishing gradient”</b></p>
+            </li>
+            <li>
+                <p><b>Computationally expensive</b></p>
+            </li>
+        </ul>
+        <p>It is used for the hidden layer in binary classification problem while sigmoid function is used in the
+            output
+            layer.</p>
+
+
+
+        <h3>3. ReLU( Rectified Linear Units) Activation Function:
+        </h3>
+        <p>This the most popular activation function in Deep learning(used in hidden layer).
+        </p>
+
+        <p class="gray-bg">f(x) = max(0,x)</p>
+        <div class="blog-image-div">
+            <img class="blog-graphs " src="../resources/blog_4_pic_7.png" alt="">
+            <p class=" d-flex justify-content-center gray-text blog-4-pic-1">ReLU function</p>
+        </div>
+        <p>This can represented as :</p>
+        <p>ReLU = max(0,x)</p>
+        <p>If the input is negative the function returns 0, but for any positive input, it returns that value back.
+        </p>
+
+        <p>The plot of the function and its derivative:</p>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs " src="../resources/blog_4_pic_8.png" alt="">
+            <p class=" d-flex justify-content-center gray-text blog-4-pic-1">ReLU function and its derivative.
+                Source
+                <span>&nbsp;<a class="gray-text"
+                        href="https://mmuratarat.github.io/2019-02-10/some-basic-activation-functions">here</a></span>
+            </p>
+        </div>
+
+        <ul class="blog-categories-list">
+            <li class="">
+                <p>It does not activate all the neurons at the same time</p>
+            </li>
+            <li>
+                <p>ReLU function is non-linear around 0, but the slope is always either 0 (for negative inputs) or 1
+                    (for positive inputs)</p>
+            </li>
+
+
+        </ul>
+
+        <p class="p-headings"><b>Pros:</b></p>
+        <ul class="blog-categories-list">
+            <li class="">
+                <p>Computationally efficient : The function is very fast to compute (Compare to Sigmoid and Tanh) it
+                    doesn’t calculate exponent</p>
+            </li>
+            <li>
+                <p>Converge very fast</p>
+            </li>
+            <li>
+                <p>Solve gradient saturation problem if input is positive</p>
+            </li>
+
+        </ul>
+
+
+
+
+        <p class="p-headings"><b>Cons:</b></p>
+        <ul class="blog-categories-list">
+            <li class="">
+                <p>ReLU function is <b>not zero-centric</b></p>
+            </li>
+            <li>
+                <p>The major problem is that it suffers from <b>dying ReLU</b></p>
+            </li>
+        </ul>
+
+
+
+        <p><b>Dying ReLU</b></p>
+
+        <p>“Whenever we get the input as negative in ReLU the output will become 0. In back-propagation network
+            doesn’t
+            learn anything(because you can’t backpropagate into it) since it just keeps outputting 0s for the
+            negative
+            input, the gradient descent does not affect it anymore. In other word if the derivative is 0 the whole
+            activation becomes zero hence no contribution of that neuron into the network.”</p>
+
+
+
+        <h3>4. Leaky ReLU:</h3>
+        <p>To overcome the problems in ReLU, Leaky ReLU was introduced. It has all properties and advantages of
+            ReLU,
+            plus it will never have dying ReLU problem.
+        </p>
+
+        <p>Improved version of the ReLU function with introduction of “constant slope”</p>
+        <p>Leaky ReLU is defined as:</p>
+        <p class="gray-bg">f(x) = max(αx, x) ,where α is small value usually 0.01</p>
+
+        <p>We give some small positive alpha value so that whole activation will not becomes zero. The
+            hyperparameter α
+            defines how much the function leaks. It is the slope of the function for x &#60; 0 and is typically set
+            to
+            0.01.
+            The small slope ensures that Leaky ReLU never dies.</p>
+        <div class="blog-image-div">
+            <img class="blog-graphs " src="../resources/blog_4_pic_9.png" alt="">
+            <p class=" d-flex justify-content-center gray-text blog-4-pic-1">Leaky ReLU and its derivatives. Source
+                <span>&nbsp;<a class="gray-text"
+                        href="https://learnopencv.com/wp-content/uploads/2017/10/leaky-relu-activation.png">click</a></span>
+            </p>
+        </div>
+
+
+
+        <p class="p-headings"><b>Pros:</b></p>
+        <ul class="blog-categories-list">
+            <li class="">
+                <p>It Address the problem of <b>dying neuron/dead neuron</b></p>
+            </li>
+            <li>
+                <p>Introduced a slope, small α value ensures that neurons never dies i.e helps neuron to “stay
+                    alive”
+                </p>
+            </li>
+            <li>
+                <p>It allows negative value during back propagation</p>
+            </li>
+
+        </ul>
+
+
+
+
+        <p class="p-headings"><b>Cons:</b></p>
+        <ul class="blog-categories-list">
+            <li class="">
+                <p>Prone to Vanishing gradient</p>
+            </li>
+            <li>
+                <p>Computationally intensive</p>
+            </li>
+        </ul>
+
+
+
+
+
+        <h3>5. Exponential Linear Units(ELU):
+        </h3>
+        <p>ELU is also proposed to solve the problems of ReLU. It is variation of <b>ReLU</b> with a better output.
+            ELU
+            outperformed all the ReLU variants.
+        </p>
+        <p class="gray-bg">f(x)= |x &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; x&#62;0 &emsp;| <br>
+            &emsp;&emsp; |α(e^x -1) &emsp;&emsp;&emsp;x&#60;=0&nbsp;&nbsp;|</p>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs " src="../resources/blog_4_pic_10.png" alt="">
+            <p class=" d-flex justify-content-center gray-text blog-4-pic-1">ELU Function. Source
+                <span>&nbsp;<a class="gray-text"
+                        href="https://upload.wikimedia.org/math/8/0/a/80af52c2fada6c7d7f6971e8fce61807.png">click</a></span>
+            </p>
+        </div>
+
+        <p>ELU tends to converge cost to zero faster and produce more accurate results. ELU has a extra alpha(α)
+            constant which should be positive number.</p>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs " src="../resources/blog_4_pic_11.png" alt="">
+            <p class=" d-flex justify-content-center gray-text blog-4-pic-1">ELU function and deivative. Source
+                <span>&nbsp;<a class="gray-text"
+                        href="https://www.mdpi.com/sensors/sensors-20-01068/article_deploy/html/images/sensors-20-01068-g0A3.png">click</a></span>
+            </p>
+        </div>
+
+        <p><b>ELU</b> modified the slope of the negative part of the function. Instead of a straight line,
+            <b>ELU</b>
+            uses a log curve
+            for the negative values. While training faster convergence rate but computation is slow due to the use
+            of
+            the exponential function.
+        </p>
+
+
+        <p class="p-headings"><b>Pros:</b></p>
+        <ul class="blog-categories-list">
+            <li>
+                <p>No Dead ReLU issues</p>
+            </li>
+            <li class="">
+                <p>Solve the <b>problem of dying neuron</b></p>
+            </li>
+            <li>
+                <p><b>Zero-centered</b> output</p>
+            </li>
+
+        </ul>
+
+        <p class="p-headings"><b>Cons:</b></p>
+        <ul class="blog-categories-list">
+            <li class="">
+                <p>Computationally intensive</p>
+            </li>
+            <li>
+                <p>Slow convergence due to exponential function</p>
+            </li>
+        </ul>
+
+
+
+
+
+        <h3>6. Parametric ReLU(PReLU):</h3>
+        <p>The idea of leaky ReLU can be extended even further. Instead of multiplying x with a constant term we can
+            multiply it with a hyperparameter which seems to work better than the leaky ReLU. This extension to
+            leaky
+            ReLU is known as Parametric ReLU.
+        </p>
+        <div class="blog-image-div">
+            <img class="blog-graphs " src="../resources/blog_4_pic_12.png" alt="">
+            <p class=" d-flex justify-content-center gray-text blog-4-pic-1">PReLU function</p>
+        </div>
+
+
+        <p>Here <span style=" background-color: #F2F2F2;">&nbsp;α&nbsp;</span> is authorized to be learned during
+            training
+            (instead
+            of being a hyperparameter, it becomes a parameter
+            that can be modified by backpropagation like any other parameters). This outperform ReLU on large image
+            datasets, but on smaller datasets it overfits the training set.</p>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs " src="../resources/blog_4_pic_13.jpeg" alt="">
+            <p class=" d-flex justify-content-center gray-text blog-4-pic-1">ReLU vs. PReLU. Source <span>&nbsp;<a
+                        class="gray-text"
+                        href="https://www.i-programmer.info/images/stories/News/2015/Feb/B/Prelu.jpg">click</a></span>
+            </p>
+        </div>
+
+        <p>In the negative region, PReLU has a small slope, which can also avoid the problem of dying ReLU. Although
+            the
+            slope is small, it does not tend to 0, which is an advantage.</p>
+        <p>We look at the formula of PReLU. The parameter α is relatively small generally a number between 0 and 1.
+            yᵢ
+            is any input on the ith channel and αᵢ is the negative slope which is a learnable parameter. If α=0 then
+            PReLU becomes ReLU. While the positive part is linear, the negative part of the function adaptively
+            learns
+            during the training phase.</p>
+
+        <ul class="blog-categories-list">
+            <li>
+                <p>If <b>αᵢ=0</b>, f becomes <b>ReLU</b> </p>
+            </li>
+            <li class="">
+                <p>If <b>αᵢ&#62;0</b>, f becomes <b>leaky ReLU</b></p>
+            </li>
+            <li>
+                <p>If αᵢ is a learnable parameter, f becomes PReLU</p>
+            </li>
+
+        </ul>
+
+        <p class="p-headings"><b>Pros:</b></p>
+        <ul class="blog-categories-list">
+            <li>
+                <p>Avoid the <b>problem of dying neuron</b></p>
+            </li>
+            <li class="">
+                <p>Perform better with <b>Large datasets</b></p>
+            </li>
+            <li>
+                <p>Added parameter <b>α</b>(which controls the negative slope) that can be modified while
+                    backpropagation</p>
+            </li>
+
+        </ul>
+
+        <p class="p-headings"><b>Cons:</b></p>
+        <ul class="blog-categories-list">
+            <li>
+                <p>Though the lower bound parameter <b>α</b> induce variation, the one-sided saturation doesn’t lead
+                    to
+                    better saturation</p>
+            </li>
+        </ul>
+
+
+
+
+        <h3>7. Softmax:</h3>
+        <p>Softmax function calculates the probabilities distribution of the event over ‘n’ different events. In
+            general
+            way of saying, this function will calculate the probabilities of each target class over all possible
+            target
+            classes(which helps for determining the target class).</p>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs " src="../resources/blog_4_pic_14.png" alt="">
+            <p class=" d-flex justify-content-center gray-text blog-4-pic-1">Softmax function. Source
+                <span>&nbsp;<a class="gray-text"
+                        href="https://dataaspirant.com/how-logistic-regression-model-works/">click</a></span>
+            </p>
+        </div>
+
+        <p>Softmax ensures that smaller values have a smaller probability and will not be discarded directly. It is
+            a
+            “max” that is “soft”. It returns the probability for a datapoint belonging to each individual class.
+            Note
+            that the sum of all the values is 1.</p>
+
+        <p>Softmax can be described as the combination of multiple sigmoid function.</p>
+
+        <p>Softmax normalizes an input value into a vector of values that follows a probability distribution whose
+            total
+            sums up to 1. The output values are between the range [0,1] which is nice because we are able to avoid
+            binary classification and accommodate as many classes or dimensions in our neural network model.</p>
+
+        <p>For the multiclass problem, the output layer will have as many neuron as the target class. Typically it
+            is
+            used on output layer for NN to classify inputs into multiple categories.</p>
+
+        <p>For example, suppose you have 4 class[A,B,C,D]. There would be 4 neurons in the output layer. Assume you
+            got
+            output from the neurons as[2.5,5.7,1.6,4.3]. After applying softmax function you will get
+            [0.26,0.14,0.41,0.19]. These represent the probability for the data point belonging to each class. By
+            seeing
+            the probability value we can say input belong to class C.</p>
+
+
+
+
+
+        <h3>8. Swish Function:
+        </h3>
+        <p>Swish function is known as a self-gated activation function, has recently been released by researchers at
+            Google. Mathematically it is represented as</p>
+        <div class="blog-image-div">
+            <img class="blog-graphs " src="../resources/blog_4_pic_15_a.png" alt="">
+            <p class=" d-flex justify-content-center gray-text blog-4-pic-1">Swish function</p>
+        </div>
+        <p>According to the <span><a class="blog-desc-links" href="https://arxiv.org/abs/1710.05941v1"
+                    target="_blank">paper</a></span> , the SWISH activation function performs better than ReLU.</p>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs " src="../resources/blog_4_pic_15_b.png" alt="">
+            <p class=" d-flex justify-content-center gray-text blog-4-pic-1">Swish activation function. source
+                <span>&nbsp;<a class="gray-text"
+                        href="https://learnopencv.com/wp-content/uploads/2017/10/swish.png">click</a></span>
+            </p>
+        </div>
+
+        <p>From the figure, we can observe that in the negative region of the x-axis the shape of the tail is
+            different
+            from the ReLU activation function and because of this the output from the Swish activation function may
+            decrease even when the input value increases. Most activation functions are monotonic, i.e., their value
+            never decreases as the input increases. Swish has one-sided boundedness property at zero, it is smooth
+            and
+            is non-monotonic.</p>
+
+        <p>The formula is :</p>
+
+        <p class="gray-bg">f(x) = x*sigmoid(x)</p>
+
+        <p>From the research <span><a class="blog-desc-links" href="https://arxiv.org/abs/1710.05941v1"
+                    target="_blank">paper</a></span> their experiments show that <b>Swish tends to work better than
+                ReLU
+                on
+                deeper models
+                across a number of challenging data sets</b>. For example, simply replacing ReLUs with Swish units
+            improves
+            top-1 classification accuracy on <span><a class="blog-desc-links" href="http://www.image-net.org/"
+                    target="_blank">ImageNet</a></span> by 0.9% for Mobile NASNetA and 0.6% for <span><a
+                    class="blog-desc-links"
+                    href="https://github.com/Trangle/mxnet-inception-v4/blob/master/inception-resnet-v2.pdf"
+                    target="_blank">Inception-ResNet-v2</a></span>. <b>The
+                simplicity of Swish and its similarity to ReLU make it easy for practitioners to replace ReLUs with
+                Swish
+                units in any neural network.</b></p>
+
+        <ul class="blog-categories-list">
+            <li class="">
+                <p>Swish activation function f(x)= x*sigmoid(x)</p>
+            </li>
+            <li>
+                <p>The curve of <b>Swish is a smooth :</b> which makes it less sensitive to initializing weights and
+                    learning
+                    rate. It plays important role in generalization and optimization</p>
+            </li>
+            <li>
+                <p><b>Non-monotonic function</b> that consistently matches or outperforms ReLU</p>
+            </li>
+            <li>
+                <p>It is <b>unbounded above</b>(which makes it useful near the gradients with values near to 0. This
+                    feature avoids Saturation as training becomes slow near 0 gradient values)<b> and bounded
+                        below</b>(helps in strong regularization, and larger negative inputs will be resolved)</p>
+            </li>
+
+            <li>
+                <p>It is the non-monotonic attribute that actually creates the difference</p>
+            </li>
+            <li>
+                <p><b>With self-gating, it requires just a scalar input</b> whereas in multi-gating scenario, it
+                    would
+                    require
+                    multiple two-scalar input. It has been <b>inspired by the use of Sigmoid function in LSTM
+                        (Hochreiter &
+                        Schmidhuber, 1997) and <span><a class="blog-desc-links"
+                                href="http://people.idsia.ch/~rupesh/very_deep_learning/" target="_blank">Highway
+                                networks (Srivastava et al., 2015)</a></span> </b> where
+                    ‘self-gated’ means that the
+                    gate is actually the ‘sigmoid’ of activation itself</p>
+            </li>
+            <li>
+                <p>Unboundedness is helpful to prevent gradient from gradually approaching 0 during slow training
+                </p>
+            </li>
+        </ul>
+
+
+
+        <h3>9. Softplus:
+        </h3>
+        <p>It is similar to the ReLU function, but it is relatively smoother. Function of Softplus:</p>
+
+        <p class="gray-bg">f(x) = ln(1+exp x)</p>
+        <div class="blog-image-div">
+            <img class="blog-graphs " src="../resources/blog_4_pic_16.png" alt="">
+            <p class=" d-flex justify-content-center gray-text blog-4-pic-1">Softplus activation function, Source
+                <span>&nbsp;<a class="gray-text"
+                        href="https://www.gabormelli.com/RKB/Softplus_Activation_Function">click</a></span>
+            </p>
+        </div>
+
+        <p>Derivative of the Softplus function is</p>
+
+        <p class="gray-bg">f’(x) is <span><a class="blog-desc-links"
+                    href="https://en.wikipedia.org/wiki/Logistic_function">logistic function</a></span> (1/(1+exp
+            x))
+        </p>
+
+        <p>Function has wide acceptance ranges from (0, + inf).</p>
+
+        <p>Both the ReLU and Softplus are largely similar, except near 0 where the softplus is enticingly smooth and
+            differentiable. It is much easier and efficient to compute ReLU and its derivative than for the softplus
+            function which has log and exp.
+        </p>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs " src="../resources/blog_4_pic_17.gif" alt="">
+            <p class=" d-flex justify-content-center gray-text blog-4-pic-1">Activation functions. Source
+                <span>&nbsp;<a class="gray-text"
+                        href="https://mlfromscratch.com/activation-functions-explained/">click</a></span>
+            </p>
+        </div>
+
+        <p>Summary for all the activation in these images. Have a look and recollect all the thinks whatever we have
+            learn so far.
+        </p>
+
+        <div class="blog-image-div">
+            <img class="blog-graphs " src="../resources/blog_4_pic_18.png" alt="">
+            <p class=" d-flex justify-content-center gray-text blog-4-pic-1">Activation functions. Source
+                <span>&nbsp;<a class="gray-text"
+                        href="https://sefiks.com/2020/02/02/dance-moves-of-deep-learning-activation-functions/">click</a></span>
+            </p>
+        </div>
+
+        <h1 class="blog-categories-heading">How to decide which one to choose or which is the right one?</h1>
+
+        <p>Selection of activation functions is critical. So, which one to select!! There are no statement which
+            indicates which activation function one can select. Each activation function as its own pro’s and con’s.
+            All
+            the good and bad will be decided based on the trail and error.</p>
+
+        <p>But based on the properties of the problem we might able to make a better choice for easy and quicker
+            convergence of the network.</p>
+
+
+        <ul class="blog-categories-list">
+
+            <li>
+                <p>Sigmoid functions and their combinations generally work better in the case of classification
+                    problems. But it suffers from Vanishing gradient</p>
+            </li>
+            <li>
+                <p>We generally use ReLU in hidden layer</p>
+            </li>
+            <li>
+                <p>In case of dead neurons leaky ReLU function can be use</p>
+            </li>
+            <li>
+                <p>PReLU if you have a huge training set</p>
+            </li>
+            <li>
+                <p>Softmax is used in output layer for classification problem(mostly multiclass)</p>
+            </li>
+            <li>
+                <p>Convergence and computation is the tradeoff</p>
+            </li>
+        </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="d-flex justify-content-around gray-bg blog-author-div">
+            <div class="author-details">
+                <h5>Vivek patel</h5>
+                <hr class="author-line">
+                <p>Data Scientist <br> at Kushagramati</p>
+                <p style="visibility: hidden;">Software (Data) Engineer and<br>Product Management<br>at Kushagramati
+                </p>
+
+            </div>
+            <div class="author-image">
+                <img class="rishan-img" src="../resources/vivek_patel.png" alt="rishan shetty">
+            </div>
+        </div>
+        <div class="blog-comment">
+            <form>
+                <textarea name="Blog" placeholder="Comment here" id=""></textarea>
+                <a href="sales@kmathi.in"><input type="submit" id="submit-comment" value="Submit"></a>
+            </form>
+        </div>
+
+    </div>
+
+
+
+
+
+</body>
+
+</html>

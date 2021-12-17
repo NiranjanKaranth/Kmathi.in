@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+            /* color: rgba(255, 255, 255, 0.9); */
+
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 115%;
+            margin-bottom: 40px;
+        }
+
+        ul {
+            font-size: 14px;
+        }
+
+        li {
+            font-size: 14px;
+        }
+
+        .vission-banner {
+            width: 100%;
+            height: 427px;
+            background: url(../resources/blog_cover.png);
+            margin-top: 69px;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            margin-top: 83px;
+        }
+
+        .vission-main-img {
+            width: 1027px;
+            height: 530px;
+            background: url(../resources/vision_mission_main.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            margin-left: 63px;
+            margin-top: -213px;
+        }
+
+        .vission-heading {
+            position: absolute;
+            left: 8.5%;
+            top: 25%;
+        }
+
+        /* Blog css */
+        .blog-content {
+            padding: 0px 0px 0px 8.5%;
+            width: 1010px;
+            margin-top: -200px;
+        }
+
+        .blog-heading {
+            color: #5d318a;
+            letter-spacing: 7px;
+            font-size: 17px;
+            margin-top: 69px;
+        }
+
+        .blog-title {
+            margin: 20px 0 20px 0;
+            font-size: 30px;
+            color: rgba(0, 0, 0, 0.9);
+        }
+
+
+
+        .blog-table-img {
+            width: 100%;
+            display: block;
+            margin: 0 auto;
+
+        }
+
+        .blog-code-img {
+            width: 100%;
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 10px;
+        }
+
+        .blog-code-img2 {
+            width: 100%;
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 10px;
+        }
+
+        .gray-bg {
+            background-color: #F2F2F2;
+            padding: 20px;
+            color: rgba(0, 0, 0, 0.8);
+            font-size: 17px;
+        }
+
+        .blog-image-div img {
+            width: 70%;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .gray-text {
+            color: #757575;
+            margin: 15px auto 40px auto;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        /* 
+        .gray-text2 {
+            margin: 15px 70px 40px 0px;
+        } */
+
+        .blog-bargraph-div {
+            display: flex;
+        }
+
+        .blog-bargraph-p {
+            max-width: 500px;
+            margin: 15px auto 40px auto;
+            text-align: left;
+        }
+
+        .blog-p-heading {
+            font-size: 25px;
+            margin-bottom: 12px;
+        }
+
+        .blog-bargraph-img1,
+        .blog-bargraph-img2 {
+            margin-bottom: 10px;
+            width: 280px;
+            height: 192px;
+
+            margin: 0 auto;
+        }
+
+        .rishan-img {
+            width: 130px;
+        }
+
+        .blog-author-div {
+            width: 60%;
+        }
+
+        .author-details {
+            margin-right: 30px;
+        }
+
+        .author-details p {
+            margin-top: 15px;
+            margin-bottom: 0;
+        }
+
+        .author-line {
+            background-color: #5d318a;
+            height: 1px;
+            margin: 0;
+        }
+
+        .blog-comment {
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        .blog-comment textarea {
+            display: block;
+            width: 60%;
+            height: 150px;
+            padding: 10px 20px;
+        }
+
+        #submit-comment {
+            background-color: #FF4500;
+            color: rgba(255, 255, 255, 0.9);
+            border: none;
+            border-radius: 5px;
+            padding: 5px 20px;
+            margin-top: 10px;
+        }
+
+
+        /* Blog css ends*/
+
+
+        /* Media Query */
+        @media only screen and (min-width: 1367px) and (max-width: 1600px) {
+            h1 {
+                font-size: 33px;
+            }
+
+            .blog-content {
+                width: 750px;
+                margin-top: -170px;
+            }
+
+            .blog-author-div {
+                width: 80%;
+            }
+
+            .vission-banner {
+                height: 360px;
+            }
+
+            .vission-main-img {
+                width: 900px;
+                background-size: 900px 464px;
+                margin-top: -179px;
+                height: 464px;
+            }
+
+            .vission-heading {
+                top: 28%;
+
+            }
+        }
+
+        @media only screen and (min-width: 1281px) and (max-width: 1366px) {
+            .vission-banner {
+                height: 307px;
+            }
+
+            .vission-main-img {
+                width: 720px;
+                background-size: 720px 371px;
+                margin-top: -153px;
+                margin-left: 58px;
+                height: 371px;
+            }
+
+            .vission-heading {
+                top: 31%;
+
+                font-size: 28px;
+            }
+
+            .blog-content {
+                width: 700px;
+                margin-top: -140px;
+            }
+
+            .blog-author-div {
+                width: 80%;
+            }
+        }
+
+        @media only screen and (min-width: 1025px) and (max-width: 1280px) {
+            .vission-banner {
+                height: 288px;
+            }
+
+            .vission-main-img {
+                margin-left: 47px;
+                margin-top: -144px;
+                background-size: 715px 369px;
+                height: 369px;
+                width: 715px;
+            }
+
+            .vission-heading {
+                top: 29%;
+
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            .blog-content {
+                width: 650px;
+                margin-top: -130px;
+            }
+
+            .blog-author-div {
+                width: 80%;
+            }
+        }
+
+        @media only screen and (min-width: 1000px) and (max-width: 1024px) {
+            .vission-banner {
+                height: 230px;
+            }
+
+            .vission-main-img {
+                width: 98%;
+                background-size: 677px 420px;
+                margin-left: 10px;
+                margin-top: -116px;
+                height: 420px;
+            }
+
+            .vission-heading {
+                top: 26.5%;
+            }
+
+            h1 {
+                font-size: 26.5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand ml-5 mt-1" href="../index.html"><img class="logo" src="../resources/logo.png" alt=""
+                loading="lazy"></a>
+        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button> -->
+        <div class="navbar-items  ml-auto  ">
+            <div class=" navbar-expand float-right mt-n2" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <!-- <li class="nav-item active">
+      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+    </li> -->
+                    <!-- <li class="nav-item">
+                        <a class="" href="./newsroom.html">Newsroom
+                            <img src="../resources/navbar_arrow.png" class="nav-arrow"></a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="" href="./csr.html">CSR
+                            <img src="../resources/navbar_arrow.png" class="nav-arrow"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="" href="./careers.html">Careers
+                            <img src="../resources/navbar_arrow.png" class="nav-arrow"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="" href="./contact.html">Contact
+                            <img src="../resources/navbar_arrow.png" class="nav-arrow"></a>
+                    </li>
+
+            </div>
+            <div>&nbsp;</div>
+            <div class="navbar-items2 d-flex align-items-end ml-auto mt-4 float-right mb-n4 ">
+                <ul class="ul right-bar-nav ">
+
+                    <li class="home-icon-li "><a href="../index.html" class="list-a"><img class="home-icon-img"
+                                src="../resources/Home icon.png" width="24px" height="22px" alt=""></a></li>
+                    <li class="li nav-item dropdown ">
+                        <a class=" nav-link dropdown-toggle industry-dropdown-heading" href="#" data-toggle="dropdown"
+                            style="color: black !important;padding: 0;">Industry
+                            Solutions</a>
+                        <ul class="dropdown-menu bg-light ">
+                            <li><a class=" dropdown-item " href=" ./healthcare.html"
+                                    style="color: black !important;">Healthcare</a>
+                            </li>
+                            <li><a class="dropdown-item" href="./retail.html"
+                                    style="color: black !important;">Retail</a></li>
+                            <li><a class="dropdown-item" href="./automotive.html"
+                                    style="color: black !important;">Automotive</a></li>
+                            <li><a class="dropdown-item" href="./financial_services.html"
+                                    style="color: black !important;">Financial Services</a></li>
+                        </ul>
+
+                    </li>
+
+
+                    <li class="li "><a href="./Services.html" class="list-a">Services</a></li>
+                    <li class="li li1"><a href="./AboutKushagramati.html" class="list-a">About Us</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+    <!-- navbar end -->
+    <!-- <div class="navbar-bottom-right">
+        <a href="./leadership.html">Leadership</a>
+        <a href="#">Partners</a>
+        <a href="./values.html">Values</a>
+        <a href="./vision_and_mission.html">Vision and Mission</a>
+        <a href="#" style="border: none;">Awards</a>
+    </div> -->
+    <!-- cover image -->
+    <div class="vission-banner">
+        <div class="  carousel-nav text-light mt-1 row">
+            <a href="./leadership.html">LEADERSHIP</a>
+            <a href="./partners.html">PARTNERS</a>
+            <a href="#">AWARDS</a>
+            <a href="./values.html">VALUES</a>
+            <a href="./vision_and_mission.html">VISION & MISSION</a>
+            <a href="./blog_main.html" class="border-0">USE CASES</a>
+        </div>
+        <h1 class="vission-heading text-light">BLOG</h1>
+    </div>
+    <!-- Blog  -->
+    <div class="blog-content">
+        <!-- <h1 class="blog-heading">BLOG</h1> -->
+        <h1 class="blog-title">Hyperparameter Tuning in Classification Models</h1>
+        <p>Flourishing companies that make the most effective use of data science create exceptional models. A model is
+            a Machine Learning algorithm that is a combination of model data and prediction algorithm. The biggest
+            challenge for data scientists and ML researchers is to improve the accuracy of the model using different
+            methods and techniques.</p>
+        <p>Among them, one of the biggest challenges is tuning the <b>Hyperparameters and model parameters.</b>
+            Hyperparameter
+            Tuning is the process of determining the right combinations of hyperparameters that allows the model to
+            maximize performance.
+        </p>
+        <p> A Hyperparameter is something external to the model are often used in processes to help estimate model
+            parameters, while a model parameter is learned from the data and is internal to the model and is needed
+            while making predictions. The coefficients in linear regression are a good example of the model parameter,
+            and <b>K in KNN</b> is an example of a hyperparameter. In short, the parameters which can't be estimated
+            from the
+            data are called model hyperparameters which are specified manually.</p>
+        <p class="blog-p-heading">Why Hyperparameter tuning?</p>
+        <p>Having an optimal combination of hyperparameters and tuning it according to the dataset can improve the
+            predictive accuracy of the model. It controls the overall behaviour of the ML model. The most commonly used
+            types of hyperparameter tuning are <b>Grid Search</b> and <b>Random Search.</b></p>
+        <p>Let’s understand hyperparameter tuning better with the help of a dataset.
+            We will consider the stroke prediction dataset from the healthcare domain. It has 12 features as shown:</p>
+        <img src="../resources/blog-table.png" class="blog-table-img">
+        <p class="gray-text">The target variable is the stroke column - whether a person has a stroke or not.</p>
+        <p>I have done some basic data cleaning such as encoding categorical variables, null value treatment and I built
+            different classification models for the dataset. Random forest and KNN models gave us the highest accuracy
+            of 88% and 90%.</p>
+        <p> Random search runs the search over some number of random parameter combinations while Grid
+            search runs the search over all parameter sets in the grid.
+            I did grid search and random search for KNN and Random forest to get to an optimal set of hyperparameters
+            which gave us an improved predictive accuracy on the model as shown below:
+        </p>
+        <div class="blog-code-div">
+            <img src="../resources/blog-code-img.png" alt="" class="blog-code-img">
+            <p class=" d-flex justify-content-center gray-text">N_estimators , max_features, max_depth,min_samples_leaf
+                are the hyperparameters used.</p>
+            <img src="../resources/blog-code-img2.png" alt="" class="blog-code-img2">
+            <p class=" d-flex justify-content-center gray-text gray-text2">N_neighbors (K) is the hyperparameter used
+                here and the optimal value of K is 19.</p>
+            <p class="d-flex justify-content-center">Let's compare the accuracies of the classifiers before and after
+                hyperparameter tuning by plotting bar plots.</p>
+        </div>
+        <div class="blog-bargraph-div">
+            <img src="../resources/blog-bargraph1.png" alt="" class="blog-bargraph-img1">
+            <img src="../resources/blog-bargraph2.png" alt="" class="blog-bargraph-img2">
+        </div>
+        <p class=" d-flex justify-content-center gray-text blog-bargraph-p">As we can clearly see from the above bar
+            plots, the
+            accuracy of Random forest classifier and KNN classifier has improved after hyperparameter tuning.</p>
+        <p>Finally, I would say, <b>“A data scientist who works to get a good predictive accuracy should focus on
+                feature
+                engineering at first and finally work on hyperparameter tuning to reduce overfitting and improve model
+                performance as without having good features, there will be no effect of hyperparameter tuning on the
+                model.”</b>
+        </p>
+        <div class="d-flex justify-content-around gray-bg blog-author-div">
+            <div class="author-details">
+                <h5>Ajay Manoharan</h5>
+
+
+                <hr class="author-line">
+                <p style="visibility: hidden;">Software (Data) Engineer and<br>Product Management<br>at Kushagramati</p>
+                <!-- <p>Software (Data) Engineer and<br>Product Management<br>at Kushagramati</p> -->
+                <!-- <p>Kushagramati </p> -->
+            </div>
+            <div class="author-image">
+                <img class="rishan-img" src="../resources/aj.png" alt="rishan shetty">
+            </div>
+        </div>
+        <div class="blog-comment">
+            <form>
+                <textarea name="Blog" placeholder="Comment here" id=""></textarea>
+                <a href="sales@kmathi.in"><input type="submit" id="submit-comment" value="Submit"></a>
+            </form>
+        </div>
+
+    </div>
+
+
+
+</body>
+
+</html>

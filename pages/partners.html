@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partners</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+            color: rgba(255, 255, 255, 0.9);
+
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 115%;
+        }
+
+        ul {
+            font-size: 14px;
+        }
+
+        li {
+            font-size: 14px;
+        }
+
+        .values-banner {
+            width: 100%;
+            height: 427px;
+            background: url(../resources/partners_banner.png);
+            margin-top: 83px;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+
+
+
+        .values-heading {
+            position: absolute;
+            left: 8.5%;
+            top: 25%;
+        }
+
+
+        .partners-main-div {
+            display: flex;
+            margin: -180px auto 0 auto;
+            width: 45%;
+            flex-wrap: wrap;
+            margin-left: 8.5%;
+        }
+
+
+
+
+        .microsoft,
+        .chamber,
+        .startup,
+        .aws,
+        .msme,
+        .bcic {
+            margin: 45px;
+        }
+
+        .microsoft {
+            margin-top: 74px;
+            width: 200px;
+            height: 50px;
+            margin-left: 0;
+        }
+
+        .chamber {
+            width: 280px;
+            height: 78px;
+            margin-top: 63px;
+
+        }
+
+        .startup {
+            width: 134px;
+            height: 110px;
+
+        }
+
+        .aws {
+            width: 200px;
+            height: 100px;
+            margin-left: 0;
+        }
+
+        .msme {
+            width: 280px;
+            height: 118px;
+        }
+
+        .bcic {
+            width: 134px;
+            height: 94px;
+        }
+
+
+
+        /* Media Query */
+        @media only screen and (min-width: 1367px) and (max-width: 1600px) {
+            .values-banner {
+
+                height: 360px;
+
+            }
+
+
+
+
+            .values-heading {
+
+                top: 28%;
+
+            }
+
+            h1 {
+                font-size: 33px;
+            }
+
+            .partners-main-div {
+
+                margin-top: -165px;
+
+            }
+
+
+            .microsoft,
+            .chamber,
+            .startup,
+            .aws,
+            .msme,
+            .bcic {
+                margin: 28px;
+            }
+
+            .microsoft {
+                margin-top: 62px;
+                width: 175px;
+                height: 44px;
+                margin-left: 0;
+            }
+
+            .chamber {
+                width: 234px;
+                height: 65px;
+                margin-top: 55px;
+
+            }
+
+            .startup {
+                width: 116px;
+                height: 95px;
+            }
+
+            .aws {
+                width: 175px;
+                height: 88px;
+                margin-left: 0;
+            }
+
+            .msme {
+                width: 234px;
+                height: 99px;
+            }
+
+            .bcic {
+                width: 122px;
+                height: 86px;
+            }
+
+
+
+        }
+
+        @media only screen and (min-width: 1281px) and (max-width: 1366px) {
+            .values-banner {
+
+                height: 307px;
+
+            }
+
+
+
+
+            .values-heading {
+
+                top: 31%;
+
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+
+            .partners-main-div {
+
+                margin-top: -150px;
+
+            }
+
+            .microsoft,
+            .chamber,
+            .startup,
+            .aws,
+            .msme,
+            .bcic {
+                margin: 26px;
+            }
+
+            .microsoft {
+                margin-top: 52px;
+                width: 147px;
+                height: 37px;
+                margin-left: 0;
+            }
+
+            .chamber {
+                width: 200px;
+                height: 55px;
+                margin-top: 47px;
+            }
+
+            .startup {
+                width: 98px;
+                height: 80px;
+            }
+
+            .aws {
+                width: 147px;
+                height: 74px;
+                margin-left: 0;
+
+            }
+
+            .msme {
+                width: 200px;
+                height: 85px;
+            }
+
+            .bcic {
+                width: 100px;
+                height: 70px;
+            }
+
+        }
+
+        @media only screen and (min-width: 1025px) and (max-width: 1280px) {
+            .values-banner {
+
+                height: 288px;
+
+            }
+
+            .values-heading {
+
+                top: 31%;
+            }
+
+
+
+
+            h1 {
+                font-size: 28px;
+            }
+
+            .microsoft,
+            .chamber,
+            .startup,
+            .aws,
+            .msme,
+            .bcic {
+                margin: 19px;
+            }
+
+            .partners-main-div {
+
+                margin-top: -115px;
+
+            }
+
+            .microsoft {
+                margin-top: 45px;
+                width: 148px;
+                height: 37px;
+                margin-left: 0;
+            }
+
+            .chamber {
+                width: 188px;
+                height: 52px;
+                margin-top: 40px;
+            }
+
+            .startup {
+                width: 98px;
+                height: 80px;
+            }
+
+            .aws {
+                width: 148px;
+                height: 75px;
+                margin-left: 0;
+            }
+
+            .msme {
+                width: 188px;
+                height: 79px;
+            }
+
+            .bcic {
+                width: 100px;
+                height: 70px;
+            }
+
+        }
+
+        @media only screen and (min-width: 1000px) and (max-width: 1024px) {
+            .values-banner {
+
+                height: 230px;
+
+            }
+
+
+
+            .values-heading {
+
+                top: 26.5%;
+
+            }
+
+            h1 {
+                font-size: 26.5px;
+            }
+
+            .partners-main-div {
+
+                margin-top: -90px;
+
+            }
+
+            .microsoft,
+            .chamber,
+            .startup,
+            .aws,
+            .msme,
+            .bcic {
+                margin: 15px;
+            }
+
+            .microsoft {
+                margin-top: 35px;
+                width: 110px;
+                height: 28px;
+                margin-left: 0;
+            }
+
+            .chamber {
+                width: 157px;
+                height: 43px;
+                margin-top: 29px;
+            }
+
+            .startup {
+                width: 73px;
+                height: 60px;
+            }
+
+            .aws {
+                width: 110px;
+                height: 56px;
+                margin-left: 0;
+            }
+
+            .msme {
+                width: 157px;
+                height: 66px;
+            }
+
+            .bcic {
+                width: 76px;
+                height: 53px;
+            }
+
+        }
+
+         /* 992px * 320px */
+         @media only screen and (min-width: 320px) and (max-width: 992px) {
+            .partners-main-div{
+                height: 221px;
+            }
+            
+            .values-banner{
+                width: 110%;
+                height: 155px;
+            }
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <!-- Navbar -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top " style="top: 27px;">
+        <a class="navbar-brand ml-5 mt-n4" href="../index.html"><img class="logo" src="../resources/logo.png" alt=""
+                loading="lazy"></a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="top-nav bg-light">
+            <ul class="d-flex justify-content-end top-nav-buttons ">
+    
+                <li class=" nav-item" style="border-right: none">
+                    <a class="" href="./csr.html">CSR
+                        <img src="../resources/navbar_arrow.png" class="nav-arrow"></a>
+                </li>
+                <li class="nav-item" style="border-right: none">
+                    <a class="" href="./careers.html">Careers
+                        <img src="../resources/navbar_arrow.png" class="nav-arrow"></a>
+                </li>
+                <li class="nav-item" style="border-right: none">
+                    <a class="" href="./contact.html">Contact
+                        <img src="../resources/navbar_arrow.png" class="nav-arrow"></a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar  ml-auto display-list-mob">
+                <li class="nav-item home-icon-li "><a href="../index.html" class=" "><img class="home-icon-img"
+                            src="../resources/Home icon.png" alt=""></a></li>
+
+                <li class="nav-item dropdown" style="color: black !important;">
+                    <a class=" nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                        style="color: black !important; font-size: 16px; ">
+                        Industry
+                        Solutions
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                        <a class=" dropdown-item " href=" ./healthcare.html"
+                            style="color: black !important; font-size: 16px; ">Healthcare</a>
+                        <a class="dropdown-item" href="./retail.html"
+                            style="color: black !important; font-size: 16px; ">Retail</a>
+
+                        <a class="dropdown-item" href="./automotive.html"
+                            style="color: black !important; font-size: 16px; ">Automotive</a>
+                        <a class="dropdown-item" href="./financial_services.html"
+                            style="color: black !important; font-size: 16px; ">Financial Services</a>
+                    </div>
+                </li>
+
+
+                <li class="nav-item">
+                    <a href="./Services.html" class=" nav-link"
+                        style="color: black !important; font-size: 16px; ">Services</a>
+                </li>
+                <li class="nav-item border-0">
+                    <a href="./AboutKushagramati.html" class=" nav-link"
+                        style="color: black !important; font-size: 16px; ">About Us</a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+    <!-- Navbar Ends -->
+    <!-- cover image -->
+    <div class="values-banner">
+        <div class="  carousel-nav text-light mt-1 row">
+            <a href="./leadership.html">LEADERSHIP</a>
+            <a href="./partners.html">PARTNERS</a>
+            <a href="#">AWARDS</a>
+            <a href="./values.html">VALUES</a>
+            <a href="./vision_and_mission.html">VISION & MISSION</a>
+            <a href="./blog_main.html" class="border-0">USE CASES</a>
+        </div>
+        <h1 class="values-heading">PARTNERS</h1>
+    </div>
+
+    <!-- main image -->
+    <div class="partners-main-div">
+        <img class="microsoft" src="../resources/Microsoft.png" alt="Microsoft">
+        <img class="chamber" src="../resources/chamber1.png" alt="">
+        <img class="startup" src="../resources/startup1.png" alt="">
+        <img class="aws" src="../resources/aws.png" alt="">
+        <img class="msme" src="../resources/msme.png" alt="">
+        <img class="bcic" src="../resources/bcic.png" alt="">
+        <img class="aws" src="../resources/databricks_Logo.png" alt="">
+        <img class="msme" src="../resources/lambdatest.svg" alt="">
+
+    </div>
+    <!-- footer -->
+
+    </div>
+
+</body>
+
+</html>
