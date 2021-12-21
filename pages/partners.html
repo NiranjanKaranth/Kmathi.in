@@ -3,13 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <title>Partners</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../style.css?v=timestamp">
     <style>
         html {
             scroll-behavior: smooth;
@@ -23,7 +23,6 @@
         * {
             box-sizing: border-box;
             color: rgba(255, 255, 255, 0.9);
-
         }
 
         h1 {
@@ -43,7 +42,7 @@
             font-size: 14px;
         }
 
-        .values-banner {
+        .partners-banner {
             width: 100%;
             height: 427px;
             background: url(../resources/partners_banner.png);
@@ -52,14 +51,11 @@
             background-size: 100% 100%;
         }
 
-
-
-        .values-heading {
+        .partners-heading {
             position: absolute;
             left: 8.5%;
             top: 25%;
         }
-
 
         .partners-main-div {
             display: flex;
@@ -68,9 +64,6 @@
             flex-wrap: wrap;
             margin-left: 8.5%;
         }
-
-
-
 
         .microsoft,
         .chamber,
@@ -92,13 +85,11 @@
             width: 280px;
             height: 78px;
             margin-top: 63px;
-
         }
 
         .startup {
             width: 134px;
             height: 110px;
-
         }
 
         .aws {
@@ -117,23 +108,14 @@
             height: 94px;
         }
 
-
-
         /* Media Query */
         @media only screen and (min-width: 1367px) and (max-width: 1600px) {
-            .values-banner {
-
+            .partners-banner {
                 height: 360px;
-
             }
 
-
-
-
-            .values-heading {
-
+            .partners-heading {
                 top: 28%;
-
             }
 
             h1 {
@@ -141,11 +123,8 @@
             }
 
             .partners-main-div {
-
                 margin-top: -165px;
-
             }
-
 
             .microsoft,
             .chamber,
@@ -167,7 +146,6 @@
                 width: 234px;
                 height: 65px;
                 margin-top: 55px;
-
             }
 
             .startup {
@@ -191,35 +169,23 @@
                 height: 86px;
             }
 
-
-
         }
 
         @media only screen and (min-width: 1281px) and (max-width: 1366px) {
-            .values-banner {
-
+            .partners-banner {
                 height: 307px;
-
             }
 
-
-
-
-            .values-heading {
-
+            .partners-heading {
                 top: 31%;
-
             }
 
             h1 {
                 font-size: 28px;
             }
 
-
             .partners-main-div {
-
                 margin-top: -150px;
-
             }
 
             .microsoft,
@@ -269,19 +235,13 @@
         }
 
         @media only screen and (min-width: 1025px) and (max-width: 1280px) {
-            .values-banner {
-
+            .partners-banner {
                 height: 288px;
-
             }
 
-            .values-heading {
-
+            .partners-heading {
                 top: 31%;
             }
-
-
-
 
             h1 {
                 font-size: 28px;
@@ -297,9 +257,7 @@
             }
 
             .partners-main-div {
-
                 margin-top: -115px;
-
             }
 
             .microsoft {
@@ -339,18 +297,12 @@
         }
 
         @media only screen and (min-width: 1000px) and (max-width: 1024px) {
-            .values-banner {
-
+            .partners-banner {
                 height: 230px;
-
             }
 
-
-
-            .values-heading {
-
+            .partners-heading {
                 top: 26.5%;
-
             }
 
             h1 {
@@ -358,9 +310,7 @@
             }
 
             .partners-main-div {
-
                 margin-top: -90px;
-
             }
 
             .microsoft,
@@ -408,16 +358,48 @@
 
         }
 
-         /* 992px * 320px */
-         @media only screen and (min-width: 320px) and (max-width: 992px) {
-            .partners-main-div{
+        /* 992px * 320px */
+        @media only screen and (min-width: 320px) and (max-width: 992px) {
+            .partners-main-div {
+                height: 221px;
+                display: inline;
+            }
+
+            .partners-banner {
+                width: 100%;
                 height: 221px;
             }
-            
-            .values-banner{
-                width: 110%;
-                height: 155px;
+
+            .partners-heading {
+                position: relative;
+                top: 32%;
+                left: 0;
+                font-size: 20px;
+                margin-left: 30px;
             }
+
+            .carousel-nav {
+                left: 25px;
+            }
+
+            .carousel-nav a {
+                font-size: 0.70rem !important;
+            }
+
+            .microsoft {
+                margin: 50px auto;
+                margin-bottom: 50px;
+            }
+
+            .aws-first{
+                margin: auto;
+                margin-left: 85px !important;
+            }
+
+            .aws{
+                margin-left: 45px;
+            }
+
         }
     </style>
 
@@ -439,7 +421,7 @@
 
         <div class="top-nav bg-light">
             <ul class="d-flex justify-content-end top-nav-buttons ">
-    
+
                 <li class=" nav-item" style="border-right: none">
                     <a class="" href="./csr.html">CSR
                         <img src="../resources/navbar_arrow.png" class="nav-arrow"></a>
@@ -468,19 +450,16 @@
                         Solutions
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-
                         <a class=" dropdown-item " href=" ./healthcare.html"
                             style="color: black !important; font-size: 16px; ">Healthcare</a>
                         <a class="dropdown-item" href="./retail.html"
                             style="color: black !important; font-size: 16px; ">Retail</a>
-
                         <a class="dropdown-item" href="./automotive.html"
                             style="color: black !important; font-size: 16px; ">Automotive</a>
                         <a class="dropdown-item" href="./financial_services.html"
                             style="color: black !important; font-size: 16px; ">Financial Services</a>
                     </div>
                 </li>
-
 
                 <li class="nav-item">
                     <a href="./Services.html" class=" nav-link"
@@ -496,7 +475,7 @@
     </nav>
     <!-- Navbar Ends -->
     <!-- cover image -->
-    <div class="values-banner">
+    <div class="partners-banner">
         <div class="  carousel-nav text-light mt-1 row">
             <a href="./leadership.html">LEADERSHIP</a>
             <a href="./partners.html">PARTNERS</a>
@@ -505,7 +484,7 @@
             <a href="./vision_and_mission.html">VISION & MISSION</a>
             <a href="./blog_main.html" class="border-0">USE CASES</a>
         </div>
-        <h1 class="values-heading">PARTNERS</h1>
+        <h1 class="partners-heading">PARTNERS</h1>
     </div>
 
     <!-- main image -->
@@ -513,12 +492,11 @@
         <img class="microsoft" src="../resources/Microsoft.png" alt="Microsoft">
         <img class="chamber" src="../resources/chamber1.png" alt="">
         <img class="startup" src="../resources/startup1.png" alt="">
-        <img class="aws" src="../resources/aws.png" alt="">
+        <img class="aws aws-first" src="../resources/aws.png" alt="">
         <img class="msme" src="../resources/msme.png" alt="">
         <img class="bcic" src="../resources/bcic.png" alt="">
         <img class="aws" src="../resources/databricks_Logo.png" alt="">
         <img class="msme" src="../resources/lambdatest.svg" alt="">
-
     </div>
     <!-- footer -->
 

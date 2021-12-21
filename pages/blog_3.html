@@ -44,7 +44,7 @@
             font-size: 14px;
         }
 
-        .vission-banner {
+        .blogs-banner {
             width: 100%;
             height: 427px;
             background: url(../resources/blog_cover.png);
@@ -54,17 +54,7 @@
             margin-top: 83px;
         }
 
-        .vission-main-img {
-            width: 1027px;
-            height: 530px;
-            background: url(../resources/vision_mission_main.png);
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-            margin-left: 63px;
-            margin-top: -213px;
-        }
-
-        .vission-heading {
+        .blogs-heading {
             position: absolute;
             left: 8.5%;
             top: 25%;
@@ -225,37 +215,22 @@
                 width: 80%;
             }
 
-            .vission-banner {
+            .blogs-banner {
                 height: 360px;
             }
 
-            .vission-main-img {
-                width: 900px;
-                background-size: 900px 464px;
-                margin-top: -179px;
-                height: 464px;
-            }
-
-            .vission-heading {
+            .blogs-heading {
                 top: 28%;
 
             }
         }
 
         @media only screen and (min-width: 1281px) and (max-width: 1366px) {
-            .vission-banner {
+            .blogs-banner {
                 height: 307px;
             }
 
-            .vission-main-img {
-                width: 720px;
-                background-size: 720px 371px;
-                margin-top: -153px;
-                margin-left: 58px;
-                height: 371px;
-            }
-
-            .vission-heading {
+            .blogs-heading {
                 top: 31%;
 
                 font-size: 28px;
@@ -272,19 +247,11 @@
         }
 
         @media only screen and (min-width: 1025px) and (max-width: 1280px) {
-            .vission-banner {
+            .blogs-banner {
                 height: 288px;
             }
 
-            .vission-main-img {
-                margin-left: 47px;
-                margin-top: -144px;
-                background-size: 715px 369px;
-                height: 369px;
-                width: 715px;
-            }
-
-            .vission-heading {
+            .blogs-heading {
                 top: 29%;
 
             }
@@ -304,19 +271,11 @@
         }
 
         @media only screen and (min-width: 1000px) and (max-width: 1024px) {
-            .vission-banner {
+            .blogs-banner {
                 height: 230px;
             }
 
-            .vission-main-img {
-                width: 98%;
-                background-size: 677px 420px;
-                margin-left: 10px;
-                margin-top: -116px;
-                height: 420px;
-            }
-
-            .vission-heading {
+            .blogs-heading {
                 top: 26.5%;
             }
 
@@ -324,83 +283,118 @@
                 font-size: 26.5px;
             }
         }
+
+          /* For Mobile Devices */
+
+          @media only screen and (min-width: 320px) and (max-width: 992px) {
+            .blogs-banner {
+                height: 221px;
+                width: 50em;
+            }
+
+            .blogs-heading {
+                position: relative;
+                top: 25%;
+                font-size: 20px;
+            }
+
+            .blog-content {
+                margin-top: -120px;
+                width: 500px;
+            }
+
+            .blog-title {
+                width: 330px;
+            }
+
+            .blog-author-div {
+                width: 100%;
+            }
+
+            .carousel-nav {
+                position: static;
+                margin-left: 10px;
+            }
+
+            .carousel-nav a {
+                font-size: 0.70rem !important;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <!-- Navbar -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand ml-5 mt-1" href="../index.html"><img class="logo" src="../resources/logo.png" alt=""
+     <!-- Navbar -->
+
+     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top " style="top: 27px;">
+        <a class="navbar-brand ml-5 mt-n4" href="../index.html"><img class="logo" src="../resources/logo.png" alt=""
                 loading="lazy"></a>
-        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-  <span class="navbar-toggler-icon"></span>
-</button> -->
-        <div class="navbar-items  ml-auto  ">
-            <div class=" navbar-expand float-right mt-n2" id="navbarSupportedContent">
-                <ul class="navbar-nav">
-                    <!-- <li class="nav-item active">
-      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-    </li> -->
-                    <!-- <li class="nav-item">
-                        <a class="" href="./newsroom.html">Newsroom
-                            <img src="../resources/navbar_arrow.png" class="nav-arrow"></a>
-                    </li> -->
-                    <li class="nav-item">
-                        <a class="" href="./csr.html">CSR
-                            <img src="../resources/navbar_arrow.png" class="nav-arrow"></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="" href="./careers.html">Careers
-                            <img src="../resources/navbar_arrow.png" class="nav-arrow"></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="" href="./contact.html">Contact
-                            <img src="../resources/navbar_arrow.png" class="nav-arrow"></a>
-                    </li>
-
-            </div>
-            <div>&nbsp;</div>
-            <div class="navbar-items2 d-flex align-items-end ml-auto mt-4 float-right mb-n4 ">
-                <ul class="ul right-bar-nav ">
-
-                    <li class="home-icon-li "><a href="../index.html" class="list-a"><img class="home-icon-img"
-                                src="../resources/Home icon.png" width="24px" height="22px" alt=""></a></li>
-                    <li class="li nav-item dropdown ">
-                        <a class=" nav-link dropdown-toggle industry-dropdown-heading" href="#" data-toggle="dropdown"
-                            style="color: black !important;padding: 0;">Industry
-                            Solutions</a>
-                        <ul class="dropdown-menu bg-light ">
-                            <li><a class=" dropdown-item " href=" ./healthcare.html"
-                                    style="color: black !important;">Healthcare</a>
-                            </li>
-                            <li><a class="dropdown-item" href="./retail.html"
-                                    style="color: black !important;">Retail</a></li>
-                            <li><a class="dropdown-item" href="./automotive.html"
-                                    style="color: black !important;">Automotive</a></li>
-                            <li><a class="dropdown-item" href="./financial_services.html"
-                                    style="color: black !important;">Financial Services</a></li>
-                        </ul>
-
-                    </li>
-
-
-                    <li class="li "><a href="./Services.html" class="list-a">Services</a></li>
-                    <li class="li li1"><a href="./AboutKushagramati.html" class="list-a">About Us</a></li>
-                </ul>
-            </div>
-
+    
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="top-nav bg-light">
+            <ul class="d-flex justify-content-end top-nav-buttons ">
+    
+                <li class=" nav-item" style="border-right: none">
+                    <a class="" href="./csr.html">CSR
+                        <img src="../resources/navbar_arrow.png" class="nav-arrow"></a>
+                </li>
+                <li class="nav-item" style="border-right: none">
+                    <a class="" href="./careers.html">Careers
+                        <img src="../resources/navbar_arrow.png" class="nav-arrow"></a>
+                </li>
+                <li class="nav-item" style="border-right: none">
+                    <a class="" href="./contact.html">Contact
+                        <img src="../resources/navbar_arrow.png" class="nav-arrow"></a>
+                </li>
+            </ul>
+        </div>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar  ml-auto display-list-mob">
+                <li class="nav-item home-icon-li "><a href="../index.html" class=" "><img class="home-icon-img"
+                            src="../resources/Home icon.png" alt=""></a></li>
+    
+                <li class="nav-item dropdown" style="color: black !important;">
+                    <a class=" nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                        style="color: black !important; font-size: 16px; ">
+                        Industry
+                        Solutions
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    
+                        <a class=" dropdown-item " href=" ./healthcare.html"
+                            style="color: black !important; font-size: 16px; ">Healthcare</a>
+                        <a class="dropdown-item" href="./retail.html"
+                            style="color: black !important; font-size: 16px; ">Retail</a>
+    
+                        <a class="dropdown-item" href="./automotive.html"
+                            style="color: black !important; font-size: 16px; ">Automotive</a>
+                        <a class="dropdown-item" href="./financial_services.html"
+                            style="color: black !important; font-size: 16px; ">Financial Services</a>
+                    </div>
+                </li>
+    
+    
+                <li class="nav-item">
+                    <a href="./Services.html" class=" nav-link"
+                        style="color: black !important; font-size: 16px; ">Services</a>
+                </li>
+                <li class="nav-item border-0">
+                    <a href="./AboutKushagramati.html" class=" nav-link"
+                        style="color: black !important; font-size: 16px; ">About Us</a>
+                </li>
+            </ul>
+    
         </div>
     </nav>
-    <!-- navbar end -->
-    <!-- <div class="navbar-bottom-right">
-        <a href="./leadership.html">Leadership</a>
-        <a href="#">Partners</a>
-        <a href="./values.html">Values</a>
-        <a href="./vision_and_mission.html">Vision and Mission</a>
-        <a href="#" style="border: none;">Awards</a>
-    </div> -->
+    <!-- Navbar Ends -->
     <!-- cover image -->
-    <div class="vission-banner">
+    <div class="blogs-banner">
         <div class="  carousel-nav text-light mt-1 row">
             <a href="./leadership.html">LEADERSHIP</a>
             <a href="./partners.html">PARTNERS</a>
@@ -409,7 +403,7 @@
             <a href="./vision_and_mission.html">VISION & MISSION</a>
             <a href="./blog_main.html" class="border-0">USE CASES</a>
         </div>
-        <h1 class="vission-heading text-light">BLOG</h1>
+        <h1 class="blogs-heading text-light">BLOG</h1>
     </div>
     <!-- Blog  -->
     <div class="blog-content">
